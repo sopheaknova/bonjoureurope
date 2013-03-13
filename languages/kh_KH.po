@@ -1,0 +1,1614 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Betterfactories\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-21 16:06+0700\n"
+"PO-Revision-Date: 2013-02-21 16:09+0700\n"
+"Last-Translator: Dara <dara@fhi.org.kh>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:12
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "នេះជាអ្វីមួយដែលពុំត្រឹមត្រូវហើយ សូមត្រឡប់ទៅ ទំព័រដំបូង?"
+
+#: 404.php:16
+#: archive.php:63
+#: category.php:57
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for..."
+msgstr "យើងមិនអាចស្វែងរកនូវអ្វីដែលអ្នកកំពុងស្វែងរកទេ…"
+
+#: 404.php:17
+#, php-format
+msgid "<strong>Start over again</strong> with the %1$sHomepage%2$s."
+msgstr "<strong>ចាប់ផ្តើមម្តងទៀត</strong> ជាមួយ %1$s ទំព័រដើម %2$s"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "ឯកសារ ប្រចាំថ្ងៃ: %s"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "ឯកសារ ប្រចាំខែ: %s"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "ឯកសារ ប្រចាំឆ្នាំ: %s"
+
+#: archive.php:22
+msgid "Archives"
+msgstr "កន្លែងផ្ទុកឯកសារផេ្សងៗ(Archives)"
+
+#: archive.php:31
+#: category.php:17
+msgid "Nothing Found"
+msgstr "ពុំឃើញអ្វីទាំងអស់"
+
+#: archives.php:18
+msgid "Archive Index Page"
+msgstr "ទំព័រឯកសារ"
+
+#: archives.php:20
+msgid "<p class=\"serif\">Read the rest of this entry &raquo;</p>"
+msgstr "<p class=\"serif\">អានផ្នែកដែលនៅសល់ត្រង់កន្លែងនេះ</p>"
+
+#: archives.php:39
+msgid "Pages"
+msgstr "ទំព័រ"
+
+#: archives.php:47
+msgid "Archives by Year:"
+msgstr "ឯកសារ តាមឆ្នាំ"
+
+#: archives.php:52
+msgid "Archives by Month:"
+msgstr "ឯកសារ តាមខែ"
+
+#: archives.php:57
+msgid "Archives by Subject:"
+msgstr "ឯកសារ តាមមុខវិជ្ជា"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "ឯកសារ តាមផ្នែក: %s"
+
+#: content-audio.php:5
+#: content-link.php:5
+#: content-video.php:5
+#: content.php:5
+#: header.php:161
+#: header.php:169
+#: index.php:64
+#: index.php:71
+#: index.php:111
+#: index.php:115
+#: index.php:151
+#, php-format
+msgid "Permalink to %s"
+msgstr "ភ្ជាបទៅកាន់ %s"
+
+#: content-link.php:24
+msgid "View the source file"
+msgstr "បង្ហាញប្រភពឯកសារ"
+
+#: content-staff.php:10
+#, php-format
+msgid "%s, %s"
+msgstr "%s, %s"
+
+#: content-staff.php:22
+msgid "return to Our Teams"
+msgstr "ត្រលប់ទៅទំព័រ ក្រុម BFC"
+
+#: footer.php:11
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place Newsletter widgets into the <strong><em>Footer Bottom Sidebar</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក Newsletter widgets ដាក់នៅក្នុង <strong><em>Footer Bottom Sidebar</em></strong> Area​ ដើម្បីបង្ហាញប្រអប់ Email Subscribe"
+
+#: footer.php:30
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place Custom Menu widgets into the <strong><em>Footer sidebar</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក Custom Menu widgets ដាក់នៅក្នុង <strong><em>Footer sidebar</em></strong> Area"
+
+#: header.php:173
+#: index.php:77
+msgid "Learn more »"
+msgstr "អានបន្ថែម»"
+
+#: header.php:184
+msgid "Slideshow are not available."
+msgstr "សូមទោស Slideshow មិនទាន់មានទេ"
+
+#: header.php:185
+msgid "Make sure the post/article was checked in Slideshow category"
+msgstr "ត្រូវប្រាកដថា post/article ត្រូវបានជ្រើសរើសនៅក្នុង​ Slideshow category"
+
+#: index.php:18
+#: index.php:31
+msgid "About This Sidebar"
+msgstr ""
+
+#: index.php:19
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place text widgets into the <strong><em>Home sidebar 1</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក text widgets ដាក់នៅក្នុង <strong><em>Home sidebar 1</em></strong> Area"
+
+#: index.php:32
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place Register widgets into the <strong><em>Home Sidebar 2</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក Register widgets ដាក់នៅក្នុង <strong><em>Home Sidebar 2</em></strong> Area"
+
+#: index.php:73
+#: index.php:118
+#: index.php:153
+msgid "Posted on: &mdash; "
+msgstr "Posted on: &mdash; "
+
+#: index.php:84
+#: index.php:125
+#: index.php:160
+msgid "We will update soon."
+msgstr "យើងនឹងធ្វើការកែប្រែបន្ថែម ក្នុងពេលឆាប់ៗ"
+
+#: page-contact.php:12
+msgid "Please enter your name."
+msgstr "សូមបញ្ជូលឈ្មោះរបស់អ្នក"
+
+#: page-contact.php:19
+msgid "Please enter your email address."
+msgstr "សូមបញ្ជូលអ៊ីមែល របស់អ្នក"
+
+#: page-contact.php:29
+msgid "Please enter a message."
+msgstr "សូមបញ្ជូលអត្តបទ"
+
+#: page-contact.php:117
+msgid "Thanks, your email was sent successfully."
+msgstr "អរគុណ! អ៊ីមែលរបស់អ្នកត្រូវបានបញ្ជូនដោយជោគជ័យ"
+
+#: page-contact.php:123
+msgid "Name"
+msgstr "ឈ្មោះ"
+
+#: page-contact.php:130
+msgid "E-mail"
+msgstr "អ៊ីមែល"
+
+#: page-contact.php:137
+msgid "Message"
+msgstr "សារ"
+
+#: page-contact.php:144
+msgid "Send"
+msgstr "បញ្ជូន"
+
+#: page-jobs.php:56
+msgid "Sorry, the job announcement not available yet."
+msgstr "សូមទោស សេចក្តីជូនដំណឹង រកការងារ មិនទាន់មាននៅឡើយទេ"
+
+#: page-media-center.php:91
+msgid "Posted on: "
+msgstr "Posted on: "
+
+#: page-media-center.php:98
+msgid "Latest news are coming soon."
+msgstr "ពត័មានថ្មីបំផុតនឹងមកដល់បន្តិចទៀត "
+
+#: page-media-center.php:158
+#: page-media-center.php:213
+#: page-media-center.php:262
+#: framework/shortcodes.php:547
+msgid "See more "
+msgstr "សូមមើលបន្ថែមអំពី"
+
+#: page-media-center.php:198
+msgid "Video are coming soon."
+msgstr "Video នឺងមកដល់នៅពេលបន្តិចទៀត "
+
+#: page-publication-reports.php:78
+msgid "See more"
+msgstr "សូមមើលបន្ថែមអំពី"
+
+#: page-teams.php:26
+msgid "Featured staff"
+msgstr "បុគ្គលិកពិសេស"
+
+#: page-teams.php:44
+msgid "This post have no photo"
+msgstr "អត្ថបទនេះពុំមានរូបភាពទេ"
+
+#: page-teams.php:52
+msgid "View detail"
+msgstr "បង្ហាញលំអិត"
+
+#: page-teams.php:79
+msgid "Management Teams"
+msgstr "ក្រុមអ្នកគ្រប់គ្រង"
+
+#: page-teams.php:111
+msgid "Sorry, we will update our teams soon."
+msgstr "សូមអភ័យទោស យើងនឹងធ្វើការកែប្រែបន្ងែមក្នុងពេលឆាប់ៗ"
+
+#: page.php:23
+msgid "Edit"
+msgstr "កែតំរូវ"
+
+#: search.php:13
+#, php-format
+msgid "Search Results for: %s"
+msgstr "រកឃើញលទ្ធផលសំរាប់: %s"
+
+#: search.php:48
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "សូមអភ័យទោស ពុំអាចរកឃើញនូវអ្វីដែលអ្នកកំពុងស្វែងរក៕  សូមព្យាយាមជាមួយនឹងពាក្យផ្សេងទៀត"
+
+#: searchform.php:2
+#: searchform.php:3
+msgid "Search"
+msgstr "ស្វែងរក"
+
+#: sidebar.php:11
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place widgets into the <strong><em>"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក widgets ដាក់នៅក្នុង <strong> sidebar </strong>"
+
+#: framework/meta-boxes.php:29
+msgid "General Settings"
+msgstr "ការបង្កើតទូទៅ"
+
+#: framework/meta-boxes.php:35
+msgid "Page Layout"
+msgstr "Page Layout"
+
+#: framework/meta-boxes.php:40
+msgid "Fullwidth - No sidebar"
+msgstr "បណ្តោយពេញ-  គ្មាន ផ្នែកជំហៀង"
+
+#: framework/meta-boxes.php:40
+msgid "Fullwidth - No sidebar\""
+msgstr "បណ្តោយពេញ-  គ្មាន ផ្នែកជំហៀង"
+
+#: framework/meta-boxes.php:42
+msgid "Sidebar on the right"
+msgstr "នៅផ្នែកខាងស្តាំ"
+
+#: framework/meta-boxes.php:46
+msgid "select the layout structure for this page."
+msgstr "ជ្រើសរើស  layout  សំរាប់ទំព័រនេះ"
+
+#: framework/meta-boxes.php:49
+msgid "Choose a sidebar to display"
+msgstr "ជ្រើសរើសsidebar ដើម្បីបង្ហាញ"
+
+#: framework/meta-boxes.php:60
+msgid "Heading Image"
+msgstr "រូបភាពផ្នែកខាងលើគេរបស់ទំព័រ"
+
+#: framework/meta-boxes.php:66
+msgid "Upload heading image"
+msgstr "បញ្ជូលរូបភាពខាងលើគេheading"
+
+#: framework/meta-boxes.php:125
+msgid "Job/Career setting"
+msgstr "ការបង្កើត ការងារ/ មុខរបរ"
+
+#: framework/meta-boxes.php:131
+msgid "Project title"
+msgstr "Project title"
+
+#: framework/meta-boxes.php:138
+msgid "Post level"
+msgstr "Post level"
+
+#: framework/meta-boxes.php:145
+msgid "Contract type"
+msgstr "Contract type"
+
+#: framework/meta-boxes.php:152
+msgid "Duration of contract"
+msgstr "Duration of contract"
+
+#: framework/meta-boxes.php:159
+msgid "Duty station"
+msgstr "Duty station"
+
+#: framework/meta-boxes.php:174
+msgid "Member setting"
+msgstr "Member setting"
+
+#: framework/meta-boxes.php:180
+msgid "Job title"
+msgstr "Job title"
+
+#: framework/meta-boxes.php:187
+msgid "Featured Staff"
+msgstr "បុគ្គលិកពិសេស"
+
+#: framework/meta-boxes.php:204
+msgid "External Video Settings"
+msgstr "External Video Settings"
+
+#: framework/meta-boxes.php:254
+msgid "Video id"
+msgstr "Video id"
+
+#: framework/meta-boxes.php:258
+msgid "ex: http://www.youtube.com/watch?v=sdUUx5FdySs the id is \"sdUUx5FdySs\"."
+msgstr "ឧទារហណ័ :​http://www.youtube.com/watch?v=sdUUx5FdySs the id is \"sdUUx5FdySs\"."
+
+#: framework/meta-boxes.php:268
+msgid "Audio Settings"
+msgstr "Audio Settings"
+
+#: framework/meta-boxes.php:274
+msgid "MP3 File URL"
+msgstr "MP3 File URL"
+
+#: framework/meta-boxes.php:278
+msgid "For Safari, Internet Explorer, Chrome."
+msgstr "For Safari, Internet Explorer, Chrome."
+
+#: framework/meta-boxes.php:281
+msgid "OGG File URL"
+msgstr "OGG File URL"
+
+#: framework/meta-boxes.php:285
+msgid "For Firefox, Opera, Chrome."
+msgstr "For Firefox, Opera, Chrome."
+
+#: framework/meta-boxes.php:288
+msgid "External Audio"
+msgstr "External Audio"
+
+#: framework/meta-boxes.php:292
+msgid "For example embed code. e.g: embeded code from soundcloud.com"
+msgstr "For example embed code. e.g: embeded code from soundcloud.com"
+
+#: framework/meta-boxes.php:304
+msgid "Link Settings"
+msgstr "Link Settings"
+
+#: framework/meta-boxes.php:310
+msgid "Attach file"
+msgstr "Attach file"
+
+#: framework/meta-boxes.php:315
+msgid "Upload news file (.gif, .png, .pdf) that you have scanned from newspaper or from other media."
+msgstr "Upload news file (.gif, .png, .pdf) that you have scanned from newspaper or from other media."
+
+#: framework/meta-boxes.php:318
+msgid "Source"
+msgstr "ប្រភព"
+
+#: framework/meta-boxes.php:322
+msgid "Where is this new come from. e.g: Cambodia Daily or Phnom Penh Post..."
+msgstr "កន្លែងដែលពត័មាននេះមកពី។ ឧទារហណ័: ខេមបូឌាឌៀលីរឺក័ភ្នំពេញប៉ុស្តិ័"
+
+#: framework/admin/classes/class.options_machine.php:481
+msgid "Last Backup : "
+msgstr "Last Backup : "
+
+#: framework/admin/classes/class.options_machine.php:541
+msgid "Upload"
+msgstr "Upload"
+
+#: framework/admin/front-end/options.php:43
+#: framework/admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr "Save All Changes"
+
+#: framework/admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr "Options Reset"
+
+#: framework/admin/functions/functions.mediauploader.php:20
+msgid "Options"
+msgstr "Options"
+
+#: framework/admin/functions/functions.mediauploader.php:210
+#: framework/custom-post/gallery-post-types.php:11
+#: framework/custom-post/gallery-post-types.php:12
+#: framework/custom-post/gallery-post-types.php:22
+msgid "Gallery"
+msgstr "Gallery"
+
+#: framework/admin/functions/functions.mediauploader.php:210
+msgid "Previously Uploaded"
+msgstr "Previously Uploaded"
+
+#: framework/custom-post/gallery-post-types.php:13
+#: framework/custom-post/gallery-post-types.php:14
+msgid "Add New Album"
+msgstr "Add New Album"
+
+#: framework/custom-post/gallery-post-types.php:15
+msgid "Edit Album"
+msgstr "Edit Album"
+
+#: framework/custom-post/gallery-post-types.php:16
+msgid "New Album"
+msgstr "New Album"
+
+#: framework/custom-post/gallery-post-types.php:17
+msgid "View Album"
+msgstr "View Album"
+
+#: framework/custom-post/gallery-post-types.php:18
+msgid "Search Album"
+msgstr "Search Album"
+
+#: framework/custom-post/gallery-post-types.php:19
+msgid "No Album found"
+msgstr "No Album found"
+
+#: framework/custom-post/gallery-post-types.php:20
+msgid "No Album found in Trash"
+msgstr "No Album found in Trash"
+
+#: framework/custom-post/gallery-post-types.php:21
+msgid "Parent Album:"
+msgstr "Parent Album:"
+
+#: framework/custom-post/gallery-post-types.php:55
+msgid "Cover Album"
+msgstr "Cover Album"
+
+#: framework/custom-post/gallery-post-types.php:57
+msgid "Photo number"
+msgstr "Photo number"
+
+#: framework/custom-post/gallery-post-types.php:58
+#: framework/custom-post/slider-post-types.php:57
+#: framework/custom-post/teams-post-types.php:58
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: framework/custom-post/gallery-post-types.php:118
+msgid "Enter gallery name here"
+msgstr "Enter gallery name here"
+
+#: framework/custom-post/job-post-types.php:10
+#: framework/custom-post/job-post-types.php:11
+#: framework/custom-post/job-post-types.php:21
+msgid "Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:12
+#: framework/custom-post/slider-post-types.php:13
+#: framework/custom-post/teams-post-types.php:12
+msgid "Add New"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:13
+msgid "Add New Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:14
+msgid "Edit Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:15
+msgid "New Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:16
+msgid "View Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:17
+msgid "Search Job"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:18
+msgid "No job found"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:19
+msgid "No jobs found in Trash"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:20
+msgid "Parent Job:"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:55
+msgid "Project Title"
+msgstr ""
+
+#: framework/custom-post/job-post-types.php:127
+msgid "Enter job name here"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:11
+#: framework/custom-post/slider-post-types.php:22
+msgid "Sliders"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:12
+msgid "Slider"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:14
+msgid "Add New Slider"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:15
+msgid "Edit Slider"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:16
+msgid "New Slider"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:17
+msgid "View Slider"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:18
+msgid "Search Sliders"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:19
+msgid "No sliders found"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:20
+msgid "No sliders found in Trash"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:21
+msgid "Parent Slider:"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:56
+msgid "Slide Count"
+msgstr ""
+
+#: framework/custom-post/slider-post-types.php:111
+msgid "Enter slider name here"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:10
+#: framework/custom-post/teams-post-types.php:21
+msgid "Staff"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:11
+msgid "Member"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:13
+msgid "Add New Member"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:14
+msgid "Edit Member"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:15
+msgid "New Member"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:16
+msgid "View Member"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:17
+msgid "Search Members"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:18
+msgid "No members found"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:19
+msgid "No members found in Trash"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:20
+msgid "Parent Member:"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:54
+msgid "Photo"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:56
+msgid "Job Title"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:57
+msgid "Description"
+msgstr ""
+
+#: framework/custom-post/teams-post-types.php:121
+msgid "Enter staff name here"
+msgstr ""
+
+#: framework/functions/custom-functions.php:53
+msgid "Add Main menu"
+msgstr ""
+
+#: framework/functions/custom-functions.php:84
+msgid "Add Footer menu"
+msgstr ""
+
+#: framework/functions/custom-functions.php:199
+msgid "Previous"
+msgstr ""
+
+#: framework/functions/custom-functions.php:209
+msgid "Next"
+msgstr ""
+
+#: framework/functions/custom-functions.php:269
+msgid "By: "
+msgstr ""
+
+#: framework/functions/custom-functions.php:272
+msgid " in: "
+msgstr ""
+
+#: framework/functions/custom-functions.php:323
+#, php-format
+msgid "<time datetime=\"%1$s\" pubdate>%2$s</time>"
+msgstr ""
+
+#: framework/functions/setup-theme.php:21
+msgid "Primary Navigation"
+msgstr ""
+
+#: framework/functions/setup-theme.php:22
+msgid "Footer Navigation"
+msgstr ""
+
+#: framework/functions/setup-theme.php:108
+msgid "Main Sidebar"
+msgstr ""
+
+#: framework/functions/setup-theme.php:117
+msgid "Home Sidebar 1"
+msgstr ""
+
+#: framework/functions/setup-theme.php:118
+#: framework/functions/setup-theme.php:128
+msgid "For homepage under slideshow"
+msgstr ""
+
+#: framework/functions/setup-theme.php:127
+msgid "Home Sidebar 2"
+msgstr ""
+
+#: framework/functions/setup-theme.php:137
+msgid "Footer Bottom Sidebar"
+msgstr ""
+
+#: framework/functions/setup-theme.php:138
+msgid "For place email subscibe box like Newsletter widget"
+msgstr ""
+
+#: framework/functions/setup-theme.php:147
+msgid "Footer Sidebar"
+msgstr ""
+
+#: framework/functions/setup-theme.php:148
+msgid "For place pages link in footer, can only support with Sub navigation widget"
+msgstr ""
+
+#: framework/functions/setup-theme.php:354
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: framework/functions/setup-theme.php:357
+#: framework/functions/setup-theme.php:371
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: framework/functions/categories-images/categories-images.php:45
+#: framework/functions/categories-images/categories-images.php:61
+#: framework/functions/categories-images/categories-images.php:159
+msgid "Image"
+msgstr "រូបភាព"
+
+#: framework/functions/categories-images/categories-images.php:48
+#: framework/functions/categories-images/categories-images.php:63
+#: framework/functions/categories-images/categories-images.php:141
+msgid "Upload/Add image"
+msgstr "ដាក់បញ្ជូល/​បន្ថែមរូបភាព"
+
+#: framework/functions/categories-images/categories-images.php:64
+#: framework/functions/categories-images/categories-images.php:142
+msgid "Remove image"
+msgstr ""
+
+#: framework/functions/categories-images/categories-images.php:177
+msgid "Thumbnail"
+msgstr ""
+
+#: framework/meta-box/inc/classes/meta-box.php:285
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+#: framework/meta-box/inc/classes/meta-box.php:343
+msgid "+"
+msgstr ""
+
+#: framework/meta-box/inc/classes/meta-box.php:365
+msgid "&#8211;"
+msgstr ""
+
+#: framework/meta-box/inc/fields/file.php:64
+msgid "Error: Cannot delete file"
+msgstr ""
+
+#: framework/meta-box/inc/fields/image.php:64
+msgid "Order saved"
+msgstr ""
+
+#: framework/meta-box/inc/fields/map.php:46
+msgid "Find Address"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:100
+#: framework/meta-box/inc/fields/slider-slides.php:278
+msgid "Click to toggle"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:102
+#: framework/meta-box/inc/fields/slider-slides.php:280
+msgid "Slide"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:110
+#: framework/meta-box/inc/fields/slider-slides.php:288
+msgid "Button"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:111
+#: framework/meta-box/inc/fields/slider-slides.php:289
+msgid "Content"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:112
+#: framework/meta-box/inc/fields/slider-slides.php:290
+msgid "Link"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:120
+#: framework/meta-box/inc/fields/slider-slides.php:196
+#: framework/meta-box/inc/fields/slider-slides.php:298
+#: framework/meta-box/inc/fields/slider-slides.php:374
+msgid "Image URL"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:125
+#: framework/meta-box/inc/fields/slider-slides.php:201
+#: framework/meta-box/inc/fields/slider-slides.php:253
+#: framework/meta-box/inc/fields/slider-slides.php:303
+#: framework/meta-box/inc/fields/slider-slides.php:379
+#: framework/meta-box/inc/fields/slider-slides.php:431
+msgid "Upload Image"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:137
+#: framework/meta-box/inc/fields/slider-slides.php:315
+msgid "Button Type"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:142
+#: framework/meta-box/inc/fields/slider-slides.php:320
+msgid "Text"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:154
+#: framework/meta-box/inc/fields/slider-slides.php:332
+msgid "Dropcap"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:159
+#: framework/meta-box/inc/fields/slider-slides.php:184
+#: framework/meta-box/inc/fields/slider-slides.php:337
+#: framework/meta-box/inc/fields/slider-slides.php:362
+msgid "(optional)"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:167
+#: framework/meta-box/inc/fields/slider-slides.php:345
+msgid "Title"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:215
+#: framework/meta-box/inc/fields/slider-slides.php:393
+msgid "Slide Content"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:220
+#: framework/meta-box/inc/fields/slider-slides.php:398
+msgid "(optional) HTML tags and WordPress shortcodes are allowed."
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:232
+#: framework/meta-box/inc/fields/slider-slides.php:410
+msgid "Lightbox"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:237
+#: framework/meta-box/inc/fields/slider-slides.php:415
+msgid "Disabled"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:239
+#: framework/meta-box/inc/fields/slider-slides.php:417
+msgid "Iframe"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:248
+#: framework/meta-box/inc/fields/slider-slides.php:426
+msgid "URL"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:254
+#: framework/meta-box/inc/fields/slider-slides.php:432
+msgid "(optional) Any valid URL is allowed, doesn't have to be an image"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:263
+#: framework/meta-box/inc/fields/slider-slides.php:441
+msgid "Remove Slide"
+msgstr ""
+
+#: framework/meta-box/inc/fields/slider-slides.php:453
+msgid "Add New Slide"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:35
+msgid "All shortcodes"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:42
+msgid "Pick a Shortcode"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:43
+msgid "General"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:44
+msgid "Divider"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:45
+msgid "Slogan"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:48
+msgid "Info Box"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:49
+msgid "List"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:50
+msgid "Quote"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:51
+msgid "Content Tabs"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:53
+msgid "Accordion Content"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:54
+msgid "Pricing Tables"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:55
+msgid "Video Player"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:56
+msgid "Audio Player"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:57
+msgid "Video Youtube"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:59
+msgid "Alert Boxes"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:60
+msgid "Error"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:61
+msgid "Success"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:62
+msgid "Info"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:63
+msgid "Notice"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:65
+msgid "Layout"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:66
+#: framework/tinymce/tinymce.php:1172
+#: framework/tinymce/tinymce.php:1305
+msgid "1/2"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:67
+msgid "1/2 Last"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:68
+#: framework/tinymce/tinymce.php:1173
+#: framework/tinymce/tinymce.php:1306
+msgid "1/3"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:69
+msgid "1/3 Last"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:70
+#: framework/tinymce/tinymce.php:1174
+#: framework/tinymce/tinymce.php:1307
+msgid "1/4"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:71
+msgid "1/4 Last"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:72
+msgid "2/3"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:73
+msgid "2/3 Last"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:74
+msgid "3/4"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:75
+msgid "3/4 Last"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:77
+msgid "Template Tags"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:78
+msgid "Post Carousel"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:79
+msgid "Projects Carousel"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:80
+msgid "Portfolio"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:82
+#: framework/tinymce/tinymce.php:1267
+msgid "Team Member"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:83
+#: framework/tinymce/tinymce.php:1336
+msgid "Post list"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:84
+#: framework/tinymce/tinymce.php:1369
+msgid "Page list"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:86
+msgid "Misc"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:87
+msgid "Fullwidth Map"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:88
+msgid "Raw (disable editor formatting)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:102
+msgid "Dotted line"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:135
+msgid "Align"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:142
+#: framework/tinymce/tinymce.php:197
+#: framework/tinymce/tinymce.php:524
+#: framework/tinymce/tinymce.php:668
+msgid "Normal"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:143
+#: framework/tinymce/tinymce.php:235
+msgid "Left"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:144
+msgid "Center"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:145
+#: framework/tinymce/tinymce.php:234
+msgid "Right"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:190
+msgid "Size"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:198
+msgid "Medium"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:199
+msgid "Large"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:210
+msgid "Remove background"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:226
+#: framework/tinymce/tinymce.php:363
+msgid "Arrow"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:233
+#: framework/tinymce/tinymce.php:782
+msgid "No"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:264
+msgid "Background"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:271
+msgid "Light"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:272
+msgid "Dark"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:302
+msgid "Author"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:318
+#: framework/tinymce/tinymce.php:415
+msgid "Type"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:325
+msgid "Default"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:326
+#: framework/tinymce/tinymce.php:634
+msgid "Simple"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:355
+msgid "Icon"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:362
+msgid "None"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:364
+msgid "Arrow 2"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:365
+msgid "Check"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:366
+msgid "Check 2"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:367
+msgid "Circle"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:368
+msgid "Plus"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:369
+msgid "Dash"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:370
+msgid "Star"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:381
+msgid "Dotted Bottom Border"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:422
+msgid "Single image"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:423
+msgid "Image gallery"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:435
+msgid "Full (URL)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:467
+msgid "Group name (lowercase)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:467
+msgid "(Only for image gallery)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:517
+msgid "Title size"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:525
+msgid "Heading 6"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:526
+msgid "Heading 5"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:527
+msgid "Heading 4"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:528
+msgid "Heading 3"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:556
+msgid "Single tab"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:556
+#: framework/tinymce/tinymce.php:645
+msgid "(Remove wrapping shortcode)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:606
+msgid "Table column count"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:613
+msgid "1"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:614
+msgid "2"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:615
+msgid "3"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:616
+msgid "4"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:617
+msgid "5"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:627
+msgid "Table type"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:635
+msgid "Extended"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:645
+msgid "Single column"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:661
+msgid "Column type"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:669
+msgid "Features list (only for Extended tables)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:679
+msgid "Column title"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:695
+msgid "Column price"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:695
+msgid "(With currency)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:711
+msgid "Column period"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:727
+msgid "Column description"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:727
+msgid "(Only for Simple tables)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:743
+msgid "Column Sign Up button title"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:759
+msgid "Column Sign Up button URL"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:775
+msgid "Special column"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:783
+msgid "Free"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:784
+msgid "Featured"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:794
+msgid "Column content (list items)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:801
+#, php-format
+msgid "(Use %1$s shortcode to create a tooltip and %2$s shortcode to create a check icon.)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:813
+msgid "MP4 file URL"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:820
+msgid "(For Safari, Internet Explorer 9, iPhone, iPad, Android, and Windows Phone 7)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:830
+msgid "WebM file URL"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:837
+msgid "(For Firefox4, Opera, and Chrome)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:847
+msgid "OGG file URL"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:854
+msgid "(For older Firefox and Opera versions)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:864
+msgid "Preview image URL"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:881
+msgid "Aspect ratio"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:897
+#: framework/tinymce/tinymce.php:986
+msgid "Extra Info"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:903
+msgid "If video element isn't displayed properly, try to wrap it inside of <code>[raw]</code> shortcode."
+msgstr ""
+
+#: framework/tinymce/tinymce.php:912
+msgid "Video Embed Code"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:959
+msgid "(For Safari, Internet Explorer, Chrome)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:976
+msgid "(For Firefox, Opera, Chrome)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:992
+msgid "If audio element isn't displayed properly, try to wrap it inside of <code>[raw]</code> shortcode."
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1040
+#: framework/tinymce/tinymce.php:1102
+msgid "Custom Title"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1047
+msgid "(Default: Latest stuff from our blog)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1056
+#: framework/tinymce/tinymce.php:1118
+#: framework/tinymce/tinymce.php:1187
+msgid "Limit"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1063
+#: framework/tinymce/tinymce.php:1125
+msgid "(Only numbers! Default: 8)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1072
+#: framework/tinymce/tinymce.php:1135
+#: framework/tinymce/tinymce.php:1204
+msgid "Categories"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1080
+#: framework/tinymce/tinymce.php:1143
+#: framework/tinymce/tinymce.php:1212
+msgid "All"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1090
+#: framework/tinymce/tinymce.php:1153
+#: framework/tinymce/tinymce.php:1222
+msgid "(You can select multiple categories by pressing CTRL key)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1109
+msgid "(Default: Latest projects)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1165
+#: framework/tinymce/tinymce.php:1298
+msgid "Column"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1194
+msgid "(Only numbers! Default: All)"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1234
+msgid "ID"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1242
+msgid "Select slider"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1275
+msgid "Select team member"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1318
+msgid "Last column"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1351
+msgid "Number of post"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1387
+msgid "Map shortcode"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1423
+msgid "Current shortcode with all available attributes"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1424
+msgid "red"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1424
+msgid "required"
+msgstr ""
+
+#: framework/tinymce/tinymce.php:1444
+msgid "Insert Shortcode"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:13
+msgid "Facebook Like Box"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:15
+msgid "BFC - Facebook Likebox"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:67
+msgid "Facebook"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:77
+#: framework/widgets/posts-type-widget.php:87
+#: framework/widgets/training-register-widget.php:63
+#: framework/widgets/video-widget.php:78
+msgid "Title:"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:82
+msgid "Width:"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:87
+msgid "Height:"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:92
+msgid "Background Color: (color code without #)"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:96
+msgid "Box border Color: (color code without #)"
+msgstr ""
+
+#: framework/widgets/fb-likebox-widget.php:101
+msgid "Facebook Page URL:"
+msgstr ""
+
+#: framework/widgets/newsletter-widget.php:12
+msgid "Widget display the Subscribe box"
+msgstr ""
+
+#: framework/widgets/newsletter-widget.php:13
+msgid "BFC - Newsletter"
+msgstr ""
+
+#: framework/widgets/newsletter-widget.php:24
+msgid "Want to be notified when we updated? Enter your email address below to be the first to know."
+msgstr "តើអ្នកចង់បានពត៏មានថ្មី រឺទេ? សូមបញ្ជូល E-mail របស់អ្នកនៅក្នុងប្រអប់ខាងក្រោមនេះ"
+
+#: framework/widgets/newsletter-widget.php:26
+msgid "Email subscription"
+msgstr "ទទួលពត៏មានតាម E-mail"
+
+#: framework/widgets/newsletter-widget.php:27
+msgid "Enter your email"
+msgstr "សូមបញ្ជូល  email  របស់អ្នក"
+
+#: framework/widgets/newsletter-widget.php:51
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: framework/widgets/newsletter-widget.php:57
+msgid "feedburner name: (your name without http://feeds.feedburner.com/) "
+msgstr ""
+
+#: framework/widgets/posts-type-widget.php:13
+msgid "Widget display Posts from a certain category"
+msgstr ""
+
+#: framework/widgets/posts-type-widget.php:14
+msgid "BFC - Posts by Category"
+msgstr ""
+
+#: framework/widgets/posts-type-widget.php:81
+msgid "Post Type"
+msgstr ""
+
+#: framework/widgets/posts-type-widget.php:91
+msgid "select category:"
+msgstr ""
+
+#: framework/widgets/posts-type-widget.php:107
+msgid "Number Of Posts:"
+msgstr ""
+
+#: framework/widgets/subnav-widget.php:27
+msgid "Show Page Name:"
+msgstr ""
+
+#: framework/widgets/subnav-widget.php:34
+msgid "Level:"
+msgstr ""
+
+#: framework/widgets/text-image-widget.php:15
+msgid "Arbitrary link with a simple image."
+msgstr ""
+
+#: framework/widgets/text-image-widget.php:20
+msgid "BFC: Text With Image"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:12
+msgid "Widget display as text and html"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:13
+msgid "BFC - Register for traning"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:55
+msgid "Please join us!"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:57
+msgid "REGISTER TODAY"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:72
+msgid "Button text:"
+msgstr ""
+
+#: framework/widgets/training-register-widget.php:77
+msgid "Button link:"
+msgstr ""
+
+#: framework/widgets/video-widget.php:17
+msgid "A widget that allows to view video to be added to a sidebar"
+msgstr ""
+
+#: framework/widgets/video-widget.php:20
+msgid "BFC: Video"
+msgstr ""
+
+#: framework/widgets/video-widget.php:74
+msgid "Video"
+msgstr ""
+
+#: framework/widgets/video-widget.php:83
+msgid "type"
+msgstr ""
+
+#: framework/widgets/video-widget.php:92
+msgid "Video ID:"
+msgstr ""
+
+#~ msgid "All Articles"
+#~ msgstr "អត្ថបទ ទាំងអស់"
+
+#~ msgid " are coming soon."
+#~ msgstr "Video នឺងមកដល់នៅពេលបន្តិចទៀត "
+
+#~ msgid " are coming soons."
+#~ msgstr "Video នឺងមកដល់នៅពេលបន្តិចទៀត "
