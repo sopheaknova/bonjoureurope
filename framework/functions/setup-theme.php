@@ -30,7 +30,7 @@ if( !function_exists('sp_theme_setup') ) {
 		// Add support for post formats
 		add_theme_support( 'post-formats', array( 'audio', 'video', 'link' ) ); // aside, gallery, image, link, quote, video, audio
 		
-		// Add default posts and comments RSS feed links to head
+		// Add default post and comments RSS feed links to head
 		add_theme_support('automatic-feed-links');
 
 	}
