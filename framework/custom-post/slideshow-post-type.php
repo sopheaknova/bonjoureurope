@@ -25,7 +25,7 @@ function sp_register_post_type_slideshow() {
 	$args = array(
 		'labels'              => $labels,
 		'hierarchical'        => false,
-		'supports'            => array('title', 'thumbnail'),
+		'supports'            => array('title', 'thumbnail', 'page-attributes'),
 		'taxonomies'          => array(''),
 		'public'              => true,
 		'show_ui'             => true,
@@ -93,3 +93,102 @@ function sp_change_slideshow_title( $title ){
 }
 
 add_filter('enter_title_here', 'sp_change_slider_title');
+
+/*-------------------------------------------------------------------------------*/
+/*  Enable Sorting of the Slideshow 
+/*-------------------------------------------------------------------------------*/
+
+add_action('admin_menu', 'sp_slideshow_register_menu');
+
+function sp_slideshow_register_menu() {
+	$order_page 	= add_submenu_page(
+						'edit.php?post_type=slideshow',
+						'Order Slider',
+						'Order',
+						'edit_pages', 'slider-order',
+						'sp_slideshow_order_page'
+					);
+	
+	add_action( 'admin_print_scripts-'.$order_page, 'sp_slideshow_admin_print_scripts' );
+}
+
+// Save Post Data
+		
+add_action( 'wp_ajax_slideshow_update_post_order', 'sp_slideshow_update_post_order' );
+
+function sp_slideshow_update_post_order() {
+	global $wpdb;
+
+	$post_type     = $_POST['postType'];
+	$order        = $_POST['order'];
+	
+	foreach( $order as $menu_order => $post_id )
+	{
+		$post_id         = intval( str_ireplace( 'post-', '', $post_id ) );
+		$menu_order     = intval($menu_order);
+		wp_update_post( array( 'ID' => $post_id, 'menu_order' => $menu_order ) );
+	}
+
+	die( '1' );
+}
+
+// Build the 'Ordering' Page
+function sp_slideshow_order_page() {
+	global $post;
+?>
+	<div class="wrap">
+		<div id="icon-edit" class="icon32 icon32-posts-slideshow"><br></div><h2>Slideshow List</h2>
+		<h2>Order Slideshow</h2>
+		<p>Simply drag the Slideshow member up or down and they will be saved in that order.</p>
+	<?php $sp_query = new WP_Query( array( 'post_type' => 'slideshow', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'menu_order' ) );
+		  if( $sp_query->have_posts() ) : ?>
+
+		<table class="wp-list-table widefat fixed posts" id="sortable-table">
+			<thead>
+				<tr>
+					<th class="column-order">Order</th>
+					<th class="column-photo">Thumbnail</th>
+					<th class="column-name">Name</th>
+				</tr>
+			</thead>
+			<tbody data-post-type="product">
+			<?php while( $sp_query->have_posts() ) : $sp_query->the_post();
+				  $custom = get_post_custom();
+			?>
+				<tr id="post-<?php the_ID(); ?>">
+					<td class="column-order"><img src="<?php echo SP_BASE_URL . 'framework/assets/img/icon-move.png'; ?>" title="" alt="Move Icon" width="24" height="24" class="" /></td>
+					<td class="column-photo"><?php echo '<a href="' . get_edit_post_link( $post->ID ) . '">' . get_the_post_thumbnail( $post->ID, array(50, 50), array( 'title' => get_the_title( $post->ID ) ) ) . '</a>'; ?></td>
+					<td class="column-name"><strong><?php the_title(); ?></strong></td>
+				</tr>
+			<?php endwhile; ?>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th class="column-order">Order</th>
+					<th class="column-photo">Thumbnail</th>
+					<th class="column-name">Name</th>
+				</tr>
+			</tfoot>
+
+		</table>
+
+	<?php else: ?>
+
+		<p>No staff members found, why not <a href="post-new.php?post_type=slideshow">create one?</a></p>
+
+	<?php endif; ?>
+	<?php wp_reset_postdata(); // Don't forget to reset again! ?>
+	</div><!-- .wrap -->
+
+<?php
+
+}
+
+function sp_slideshow_admin_print_scripts() {
+    wp_enqueue_script('jquery-ui-sortable');
+    wp_enqueue_script('sp_slideshow_sort', SP_BASE_URL . 'framework/assets/js/cpt-order-admin-scripts.js');
+}
+
+/*function sp_print_sort_styles() {
+    wp_enqueue_style('nav-menu');
+}*/

@@ -352,6 +352,46 @@ if( !function_exists('sp_posted_on')) {
 
 }
 
+
+/* ---------------------------------------------------------------------- */
+/*	View post by events type (Event in France or Europe)
+/* ---------------------------------------------------------------------- */
+if( !function_exists('get_events')) {
+	
+	function get_events( $posts_per_page = 1, $orderby = 'none', $event_type = null ) {
+		$args = array(
+			'posts_per_page' => (int) $posts_per_page,
+			'post_type' => 'events',
+			/*'tax_query' => array(
+				array(
+					'taxonomy' => 'events-category',
+					'field' => 'slug',
+					'terms' => $event_type
+				)
+			),*/
+			'orderby' => $orderby,
+			'no_found_rows' => true,
+		);
+		
+		$query = new WP_Query( $args  );
+	 
+		$output = '';
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) : $query->the_post();
+	 
+			$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
+			$output .= '<p>' . sp_excerpt_length(40) . '</p>';
+			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
+			   
+			endwhile;
+			wp_reset_postdata();
+		}
+	 
+		return $output;
+	}
+
+}
+
 /* ---------------------------------------------------------------------- */
 /*	VideoJS Flash fallback url
 /* ---------------------------------------------------------------------- */

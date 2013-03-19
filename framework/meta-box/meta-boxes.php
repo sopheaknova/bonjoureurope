@@ -78,6 +78,57 @@ $meta_boxes[] = array(
 );
 
 /* ---------------------------------------------------------------------- */
+/*	Events
+/* ---------------------------------------------------------------------- */
+
+$meta_boxes[] = array(
+	'id'       => 'events-settings',
+	'title'    => __('Events setting', 'sptheme'),
+	'pages'    => array('events'),
+	'context'  => 'normal',
+	'priority' => 'high',
+	'fields'   => array(
+		array(
+			'name'    => 'Is it neat event?',
+			'id'      => $prefix . 'neat_event',
+			'type'    => 'checkbox',
+			'std'  => 1,
+		),
+		
+		array(
+			'name' => 'Event start date',
+			'id'   => $prefix . 'event_start_date',
+			'type' => 'date',
+
+			// jQuery date picker options. See here http://jqueryui.com/demos/datepicker
+			'js_options' => array(
+				'appendText'      => '(dd-mm-yyyy)',
+				'dateFormat'      => 'dd-mm-yy',
+				'changeMonth'     => true,
+				'changeYear'      => true,
+				'showButtonPanel' => true,
+			),
+		),
+		
+		array(
+			'name' => 'Event end date',
+			'id'   => $prefix . 'event_end_date',
+			'type' => 'date',
+
+			// jQuery date picker options. See here http://jqueryui.com/demos/datepicker
+			'js_options' => array(
+				'appendText'      => '(dd-mm-yyyy)',
+				'dateFormat'      => 'dd-mm-yy',
+				'changeMonth'     => true,
+				'changeYear'      => true,
+				'showButtonPanel' => true,
+			),
+		)
+		
+	)
+);
+
+/* ---------------------------------------------------------------------- */
 /*	Post Format: Video
 /* ---------------------------------------------------------------------- */
 

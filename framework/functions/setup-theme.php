@@ -138,13 +138,15 @@ function sp_register_styles() {
 	
 	if( !is_admin() ) {
 
-	wp_register_style( 'g_droidsans', 'http://fonts.googleapis.com/css?family=Droid+Sans', array(), THEME_VERSION ); //wp_register_style( $handle, $src, $deps, $ver, $media ); $media => 'all', 'screen', 'handheld', 'print'. default false
-	wp_register_style( 'g_suwannaphum', 'http://fonts.googleapis.com/css?family=Suwannaphum', array(), THEME_VERSION );
+	//wp_register_style( 'g_droidsans', 'http://fonts.googleapis.com/css?family=Droid+Sans', array(), THEME_VERSION ); //wp_register_style( $handle, $src, $deps, $ver, $media ); $media => 'all', 'screen', 'handheld', 'print'. default false
+	//wp_register_style( 'g_suwannaphum', 'http://fonts.googleapis.com/css?family=Suwannaphum', array(), THEME_VERSION );
 	wp_register_style( 'sp-theme-styles', SP_BASE_URL . 'style.css', array(), THEME_VERSION );
 	
-	if ( ICL_LANGUAGE_CODE == 'kh' ) {
+	/*if ( ICL_LANGUAGE_CODE == 'kh' ) {
 		wp_register_style( 'khcss', SP_BASE_URL . 'css/kh.css', array(), THEME_VERSION );
-	}	
+	}*/
+	wp_register_style( 'khcss', SP_BASE_URL . 'css/kh.css', array(), THEME_VERSION );
+		
 		wp_register_style( 'video-js',         SP_BASE_URL . 'css/video-js.min.css', array(), '3.2.0' );
 		wp_register_style( 'audioplayerv1',    SP_BASE_URL . 'css/audioplayerv1.min.css', array(), '1.1.3' );
 		//addon style 'PrettyPhoto'
@@ -159,14 +161,20 @@ add_action('init', 'sp_register_styles');
 function sp_enqueue_styles() {
 
 	if( !is_admin() ) {
-	if ( ICL_LANGUAGE_CODE == 'en' )	
+	/*if ( ICL_LANGUAGE_CODE == 'en' ) {	
 		wp_enqueue_style('g_droidsans');
 		wp_enqueue_style('g_suwannaphum');
 		wp_enqueue_style('sp-theme-styles');
+	}*/
+	
+	//wp_enqueue_style('g_droidsans');
+	//wp_enqueue_style('g_suwannaphum');
+	wp_enqueue_style('sp-theme-styles');
+	wp_enqueue_style('khcss');
 		
-	if ( ICL_LANGUAGE_CODE == 'kh' ) {	
+	/*if ( ICL_LANGUAGE_CODE == 'kh' ) {	
 		wp_enqueue_style('khcss');
-	}
+	}*/
 		wp_enqueue_style('video-js');
 		wp_enqueue_style('audioplayerv1');
 		if ( !WP_PRETTY_PHOTO_PLUGIN_ACTIVE ) {

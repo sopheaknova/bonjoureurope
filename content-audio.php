@@ -41,6 +41,8 @@
 	
     
 
+	<div class="entry-content">
 	<?php echo sp_post_content(); ?>
+    </div><!-- end .entry-content -->
 
 </div><!-- end .entry-body -->

@@ -739,6 +739,21 @@ add_shortcode('audio', 'sp_audio_sc');
 		return $output;	  	  
 	}
 	add_shortcode('pagelist', 'sp_pagelist_sc');	
+	
+	/* -------------------------------------------------- */
+	/*	 Display post of Events
+	/*   [events posts_per_page="1" orderby="none" event_type=""]
+	/* -------------------------------------------------- */ 
+	function sp_events_shortcode( $atts ) {
+		extract( shortcode_atts( array(
+			'posts_per_page' => '1',
+			'orderby' => 'none',
+			'event_type' => '',
+		), $atts ) );
+	 
+		return get_events( $posts_per_page, $orderby, $event_type );
+	}
+	add_shortcode( 'events', 'sp_events_shortcode' );
 
 /* ---------------------------------------------------------------------- */
 /*	Misc
