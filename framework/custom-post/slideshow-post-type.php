@@ -92,7 +92,7 @@ function sp_change_slideshow_title( $title ){
 
 }
 
-add_filter('enter_title_here', 'sp_change_slider_title');
+add_filter('enter_title_here', 'sp_change_slideshow_title');
 
 /*-------------------------------------------------------------------------------*/
 /*  Enable Sorting of the Slideshow 

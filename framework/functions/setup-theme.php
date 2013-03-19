@@ -19,12 +19,9 @@ if( !function_exists('sp_theme_setup') ) {
 		// Post thumbnails
 		add_theme_support('post-thumbnails');
 
-		add_image_size( 'blog-post', 600, null, true );
-		add_image_size( 'blog-post-thumb', 300, null, true );
-		add_image_size( 'portfolio-one_half', 460, 292, true );
-		add_image_size( 'portfolio-one_third', 288, 140, true );
-		add_image_size( 'portfolio-one_fourth', 220, 140, true );
-		add_image_size( 'fullwidth', 940, null, true );
+		add_image_size( 'blog-post', 400, null, true );
+		add_image_size( 'blog-post-thumb', 190, 190, true );
+		add_image_size( 'fullwidth', 880, null, true );
 		
 		
 		// Add support for post formats
@@ -415,12 +412,12 @@ function sp_unregister_default_wp_widgets() {
 	unregister_widget('WP_Widget_Categories');
     unregister_widget('WP_Widget_Recent_Posts');
     unregister_widget('WP_Nav_Menu_Widget');
+	unregister_widget('WP_Widget_Search');
 	*/
     unregister_widget('WP_Widget_Recent_Comments');
     unregister_widget('WP_Widget_Tag_Cloud');
 	unregister_widget('WP_Widget_RSS');
 	unregister_widget('WP_Widget_Meta');
-    unregister_widget('WP_Widget_Search');
 }
 add_action('widgets_init', 'sp_unregister_default_wp_widgets', 1);
 

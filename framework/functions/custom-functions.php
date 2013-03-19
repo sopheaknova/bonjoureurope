@@ -352,6 +352,29 @@ if( !function_exists('sp_posted_on')) {
 
 }
 
+/* ---------------------------------------------------------------------- */
+/*	Show Event mata (Neat event, Start and End date)
+/* ---------------------------------------------------------------------- */
+if( !function_exists('sp_events_meta')) {
+
+	function sp_events_meta( $neat_event = 0, $start_date, $end_date ) {
+
+		global $post;
+		
+		$event_start_date = explode('-', $start_date);
+		$event_end_date = explode('-', $end_date);
+		
+		$output = '<span>' . $event_start_date[0] . ' ' . date( 'M', mktime(0, 0, 0, $event_start_date[1]) ) . '</span>';
+		
+		if ( $neat_event ) {
+		if ( !empty($end_date) )
+			$output .= ' &mdash; <span>' . $event_end_date[0] . ' ' . date( 'M', mktime(0, 0, 0, $event_end_date[1]) ) . '</span>';
+		}
+		
+		return $output;
+	}
+
+}
 
 /* ---------------------------------------------------------------------- */
 /*	View post by events type (Event in France or Europe)
