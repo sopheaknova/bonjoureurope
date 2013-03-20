@@ -31,9 +31,9 @@ jQuery(document).ready(function($) {
 	//MISC
 	/*
 	if ($(".menu-item:last")){
-		$(".menu-item:last").html($(".menu-item:last").html().replace("</a> -","</a>"));
-	}
-	$("#footer-cols .widget:last").addClass("last");  */
+		$(".menu-item:last").html($(".menu-item:last").html().replace("</a> -","</a>")); 
+	} */
+	$("#footer-cols .widget:last").addClass("last");  
 	/* ---------------------------------------------------------------------- */
 	/*	Featured Slideshow Cycle
 	/* ---------------------------------------------------------------------- */

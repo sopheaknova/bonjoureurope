@@ -36,27 +36,7 @@
            </div>
            <div class="cover-menu">
                 <?php echo sp_main_navigation(); ?>
-                <!--
-                <ul class="menu-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">News</a>
-                           <ul>
-                               <li><a href="#">Introduction before travel</a></li>
-                               <li><a href="#">Tourism News</a></li>
-                               <li><a href="#">Other Events</a>
-                                    <ul>
-                                        <li><a href="#">Festival in Europe</a></li>
-                                        <li><a href="#">Festival in France</a></li>
-                                        <li><a href="#">Famous Food in Europe</a></li>
-                                    </ul>
-                               </li>
-                           </ul>
-                    </li>
-                    <li><a href="#">Tourism Place</a></li>
-                    <li><a href="#">Pictures</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Game</a></li>
-                </ul>-->
+                
            </div>
            <div class="featured" id="slideshow">
                 <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_0007.jpg" width="880" height="250"/></div>

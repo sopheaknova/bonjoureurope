@@ -28,11 +28,12 @@
 <section id="footer-bottom">
 	    <div class="container clearfix">
 	    	 <div class="footer-menu">
-	    	 	   <ul>
+	    	 	   <?php echo sp_footer_navigation(); ?>
+	    	 	   <!--<ul>
 	    	 	   	   <li><a href="#">Author</a></li>
 	    	 	   	   <li><a href="#">Technical</a></li>
 	    	 	   	   <li><a href="#">Advertisement</a></li>
-	    	 	   </ul>
+	    	 	   </ul> -->
 	    	 </div>
 	    	 <div class="sponsors">
 	    	 	   Sponsors by &nbsp;:&nbsp;
