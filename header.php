@@ -25,27 +25,57 @@
 </head>
 
 <body <?php body_class(); ?>>
+<section id="header">
+     <div class="container clearfix">
+           <div class="logo">
+                 <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
+                 <?php if($data['theme_logo'] !== '') : ?>
+                 <img src="<?php echo $data['theme_logo']; ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
+                 <?php endif; ?>
+                 </a>
+           </div>
+           <div class="cover-menu">
+                <?php echo sp_main_navigation(); ?>
+                <!--
+                <ul class="menu-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a>
+                           <ul>
+                               <li><a href="#">Introduction before travel</a></li>
+                               <li><a href="#">Tourism News</a></li>
+                               <li><a href="#">Other Events</a>
+                                    <ul>
+                                        <li><a href="#">Festival in Europe</a></li>
+                                        <li><a href="#">Festival in France</a></li>
+                                        <li><a href="#">Famous Food in Europe</a></li>
+                                    </ul>
+                               </li>
+                           </ul>
+                    </li>
+                    <li><a href="#">Tourism Place</a></li>
+                    <li><a href="#">Pictures</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Game</a></li>
+                </ul>-->
+           </div>
+           <div class="featured" id="slideshow">
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_0007.jpg" width="880" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1018.jpg" width="880" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1026.jpg" width="880" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1038.jpg" width="880" height="250"/></div>
+           </div>
+     </div>
+</section>
+<section id="news-ticker">
+     <div class="container clearfix">
+          <span id="hot-news">Hot News&nbsp;:&nbsp;</span>
+          <span class="text-run">
+                <marquee direction="left" behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                    We are very please to inform that we have a greate game for new year jion with us now! you all will get award to go abroad or travel around Cambodia.
+                </marquee>
+          </span>
+     </div>
+</section>
 
-<header id="header">
-<div class="container clearfix">
-	<div class="logo">
-	  	<h2>
-        <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
-		<?php if($data['theme_logo'] !== '') : ?>
-        <img src="<?php echo $data['theme_logo']; ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
-        <?php else: ?>
-        <h1><?php bloginfo('name'); ?></h1>
-        <?php endif; ?>
-        </a>
-        </h2>
-  	</div><!-- end .logo -->
-</div><!-- end .container.clearfix -->
-</header><!-- end #header -->
-
-<nav id="menu-bar">
-<div class="container clearfix">
-    <?php echo sp_main_navigation(); ?>
-</div>
-</nav><!-- end .container.clearfix -->
 
 
