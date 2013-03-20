@@ -1,11 +1,35 @@
 <?php
 
+/*-----------------------------------------------------------------------------------*/
+/*  Set Max Content Width (use in conjuction with ".entry-content img" css)
+/* ----------------------------------------------------------------------------------*/
+if ( ! isset( $content_width ) )
+	$content_width = 415;
+
+if( !function_exists( 'sp_content_width' ) ) {
+    function sp_content_width() {
+        if( is_page_template( 'template-full-width.php' ) || is_attachment() || !sp_check_page_layout() ) {
+            global $content_width;
+            $content_width = 840;
+        }
+    }
+}
+add_action( 'template_redirect', 'sp_content_width' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	theme set up
+/*-----------------------------------------------------------------------------------*/
 if( !function_exists('sp_theme_setup') ) {
 
 	function sp_theme_setup() {
-
+		
 		// Make theme available for translation
-		load_theme_textdomain( 'sptheme', SP_BASE_DIR . 'languages' );
+		load_theme_textdomain( $shortname, SP_BASE_DIR . 'languages' );
+		
+		$locale = get_locale();
+    	$locale_file = get_template_directory() . "/languages/$locale.php";
+    	if ( is_readable( $locale_file ) )
+    		require_once( $locale_file );
 		
 		// Editor style
 		add_editor_style('css/editor-style.css');
