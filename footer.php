@@ -29,11 +29,7 @@
 	    <div class="container clearfix">
 	    	 <div class="footer-menu">
 	    	 	   <?php echo sp_footer_navigation(); ?>
-	    	 	   <!--<ul>
-	    	 	   	   <li><a href="#">Author</a></li>
-	    	 	   	   <li><a href="#">Technical</a></li>
-	    	 	   	   <li><a href="#">Advertisement</a></li>
-	    	 	   </ul> -->
+	    	 	   
 	    	 </div>
 	    	 <div class="sponsors">
 	    	 	   Sponsors by &nbsp;:&nbsp;
