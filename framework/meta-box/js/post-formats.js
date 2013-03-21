@@ -65,6 +65,15 @@ jQuery( document ).ready( function($) {
 		}
 	}	
 	
+	$pageLayout.each(function() {
+		
+		var $this = $(this);
+
+		if( $this.is(':checked') )
+			changePageLayout( $this.val() );
+
+	});
+	
 	$pageLayout.change(function() {
 		changePageLayout( $(this).val() );
 	})
@@ -77,7 +86,7 @@ jQuery( document ).ready( function($) {
 
 			$selectSidebar.hide();
 			
-		} else if( val === '2cr' ) {
+		} else if( val === '2cr' || val === '3col' ) {
 			$selectSidebar.show();
 		}
 	}
