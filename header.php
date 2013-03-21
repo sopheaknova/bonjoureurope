@@ -45,7 +45,7 @@
                       
                       if ( has_post_thumbnail() ) {?>
                       <div class="item-slide">
-                      <?php the_post_thumbnail('slideshow');?>
+                      <?php the_post_thumbnail('slideshow-header');?>
                       </div>
                       <?php }   
                       endwhile; ?> 

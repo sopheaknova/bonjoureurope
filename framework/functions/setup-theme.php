@@ -42,12 +42,21 @@ if( !function_exists('sp_theme_setup') ) {
 
 		// Post thumbnails
 		add_theme_support('post-thumbnails');
+<<<<<<< HEAD
 
 		add_image_size( 'blog-post', 400, null, true );
 		add_image_size( 'slideshow', 980, 250, true);
 		add_image_size( 'blog-post-thumb', 135, null, true );
 		add_image_size( 'fullwidth', 980, null, true );
+=======
+>>>>>>> d87d22cf81cdbfe8c5b51b873dcf22742061437d
 		
+		add_image_size( 'large', 440, null, true );
+		add_image_size( 'medium', 211, null, true );
+	
+		add_image_size( 'blog-post-left', 180, 120, true );
+		add_image_size( 'blog-post-right', 270, 180, true );
+		add_image_size( 'slideshow-header', 980, 250, true );
 		
 		// Add support for post formats
 		add_theme_support( 'post-formats', array( 'audio', 'video', 'link' ) ); // aside, gallery, image, link, quote, video, audio
