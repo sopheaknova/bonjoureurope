@@ -67,7 +67,7 @@ if (!function_exists('sp_footer_navigation')){
 			wp_nav_menu( array(
 				'container'      => false,
 				'menu_class'	 => 'footer-nav',
-				'after'		 	 => ' -',
+				'after'		 	 => ' |',
 				'theme_location' => 'footer_nav',
 				'fallback_cb'	 => 'sp_footer_nav_fallback'
 				));	
