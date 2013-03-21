@@ -149,42 +149,6 @@ $meta_boxes[] = array(
 	)
 );
 
-/* ---------------------------------------------------------------------- */
-/*	Post Format: Audio
-/* ---------------------------------------------------------------------- */
-$meta_boxes[] = array(
-	'id'       => 'post-audio-settings',
-	'title'    => __('Audio Settings', 'sptheme'),
-	'pages'    => array('post'),
-	'context'  => 'normal',
-	'priority' => 'high',
-	'fields'   => array(
-		array(
-			'name' => __('MP3 File URL', 'sptheme'),
-			'id'   => $prefix . 'audio_mp3',
-			'type' => 'text',
-			'std'  => '',
-			'desc' => __('For Safari, Internet Explorer, Chrome.', 'sptheme')
-		),
-		array(
-			'name' => __('OGG File URL', 'sptheme'),
-			'id'   => $prefix . 'audio_ogg',
-			'type' => 'text',
-			'std'  => '',
-			'desc' => __('For Firefox, Opera, Chrome.', 'sptheme')
-		),
-		array(
-			'name' => __('External Audio', 'sptheme'),
-			'id'   => $prefix . 'audio_external',
-			'type' => 'textarea',
-			'std'  => '',
-			'desc' => __('For example embed code. e.g: embeded code from soundcloud.com', 'sptheme'),
-			'cols' => '40',
-			'rows' => '8'
-		)
-	)
-);
-
 /********************* META BOX REGISTERING ***********************/
 
 /**

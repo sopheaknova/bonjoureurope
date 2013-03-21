@@ -233,7 +233,7 @@ div.aligncenter {
 }
 
     .button:hover, input[type="submit"]:hover, button:hover, #email-subscribe form .subscribe-btn:hover {
-        background: #3a3a3a;
+        background: #FFB611;
         color: #fff!important;
     }
 
@@ -511,37 +511,34 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 /* ---------------------------------------------------------------------- */
 /*  Content
 /* ---------------------------------------------------------------------- */
-#content { padding-bottom:20px; }
-
-.ie7 #content { padding-top: 25px; }
-
 .container{
     margin: 0 auto;
     position: relative;
-    width: 880px;
+    width: 980px;
     border: 0px solid #ccc;
+	background:#F9FAFB;
 }
+	.content-inner{
+		padding-bottom:20px;
+		padding-top:20px;	
+	}
 
     /* -------------------------------------------------- */
     /*  Main
     /* -------------------------------------------------- */
     .main {
             float: left;
-            margin: 0 15px 0 0;
-            width: 445px;
+            width: 470px;
           
         }
+		.main, .sidebar-left, .sidebar-right{margin:0 10px;}	
         .sidebar-left {
             float: left;
-            margin-right: 18px;
-            width: 166px;
-            overflow: hidden;
+            width: 180px;
         }
         .sidebar-right{
             float: right;
-            margin-right:  0;
-            overflow: hidden;
-            width: 230px; 
+            width: 270px; 
         }
         .entry-body{ background: #ECEEEF !important;}
 
@@ -559,7 +556,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         }
         .cover-menu{
             height: 61px;
-            background: url(images/dev/back-menu.png) no-repeat;
+            background:#424142 url(images/dev/back-menu.png) 100% 0 no-repeat;
         }
         
         .language{position:absolute; z-index:12; padding:3px; right:2px; top:2px;-moz-box-shadow: 0 1px 1px 0 #333; -webkit-box-shadow: 0 1px 1px 0 #333; box-shadow: 0 1px 1px 0 #333; background:#ffffff;}
@@ -1348,9 +1345,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
 
 /* END GENERAL LAYOUT */
 /* --------------------------------------------------------------------------------------------------- */ 
-#header .container, #news-ticker .container,#breadcrumb .container, #content .container{
-       background-color: #F9FAFB !important;
-}
 #breadcrumb .container{
        height: 30px;
     }
@@ -1442,6 +1436,9 @@ h5.label-mod{
        margin: 6px 0px 0px 12px;
        color: #fff!important;
     }
+	.sticky-marquee a{
+		color:#FFB611;	
+	}
     .stick-arrow-up{
        float: right;
        width: 20px;

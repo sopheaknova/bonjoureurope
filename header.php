@@ -39,10 +39,10 @@
                 
            </div>
            <div class="featured" id="slideshow">
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_0007.jpg" width="880" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1018.jpg" width="880" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1026.jpg" width="880" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1038.jpg" width="880" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_0007.jpg" width="980" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1018.jpg" width="980" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1026.jpg" width="980" height="250"/></div>
+                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1038.jpg" width="980" height="250"/></div>
            </div>
      </div>
 </section>

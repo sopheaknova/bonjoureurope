@@ -13,8 +13,8 @@
      </div>
 </section>
 <section id="content">
-	<div class="container clearfix">
-          <div class="sidebar-left clearfix">
+	<div class="container content-inner clearfix">
+          <!--<div class="sidebar-left">
           	   <h2 class="title-mod">Other Event</h2>
           	   <h5 class="label-mod">Festival in March</h5>
           	   <div class="defined-left">
@@ -30,8 +30,11 @@
                   <div class="defined-left clearfix">
                         <a class="read-more add-left">Months..</a>
                   </div>
-          </div>
+          </div>-->
           <!--end .sidebar-left-->
+          
+          <?php get_sidebar('left'); ?>
+          
           <div class="main">
           	   <h1 class="title-mod">News and Hot Informations</h1>
           	   <div class="entry-body clearfix">
@@ -49,18 +52,9 @@
                </div><!-- end .entry-body -->
           </div>
           <!--end .main-->
-          <div class="sidebar-right">
-
-          	   <h2 class="title-mod">Important Tips</h2>
-          	   <div class="defined-right">
-          	   	     <img src="<?php bloginfo('template_url');?>/images/dev/banner.jpg" width="230" height="142" />
-          	   </div>
-          	   <div class="defined-right">
-          	   	     <img src="<?php bloginfo('template_url');?>/images/dev/klm-logo.png" width="230" height="120" />
-          	   </div>
-
-          </div>
-          <!--end .sidebar-right-->
+          
+          <?php get_sidebar(); ?>
+          
     </div><!-- end .container -->
 </section><!-- end #content -->
 

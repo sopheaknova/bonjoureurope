@@ -416,7 +416,7 @@ if( !function_exists('get_events')) {
 	 		$output .= '<div class="event-items">';
 			$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
 			$output .= '<p>' . sp_excerpt_length(40) . '</p>';
-			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
+			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 			$output .= '</div>';   
 			endwhile;
 			wp_reset_postdata();

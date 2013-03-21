@@ -2,13 +2,15 @@
 
 <?php $has_sidebar = sp_check_page_layout(); ?>
 
-<section id="content" class="clearfix <?php echo sp_check_sidebar_position(); ?>">
+<section id="content" class="<?php echo sp_check_sidebar_position(); ?>">
 
-	<div class="container clearfix">
+	<div class="container content-inner clearfix">
 
 		<?php if( $has_sidebar ): ?>
-
-			<section id="main">
+		
+		<?php get_sidebar('left'); ?>
+        
+			<section class="main">
 
 		<?php endif; ?>
 		
