@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 	/*	Dropdown menu navigation
 	/* ---------------------------------------------------------------------- */ 
-	jQuery("#menu-bar ul.menu-nav a").removeAttr('title');
-	jQuery("#menu-bar ul.menu-nav ul").css({display: "none"}); // Opera Fix
-	jQuery("#menu-bar ul.menu-nav li").each(function()
+	jQuery("ul.menu-nav a").removeAttr('title');
+	jQuery("ul.menu-nav ul").css({display: "none"}); // Opera Fix
+	jQuery("ul.menu-nav li").each(function()
 		{	
 	var jQuerysubmeun = jQuery(this).find('ul:first');
 	jQuery(this).hover(function()
@@ -29,11 +29,47 @@ jQuery(document).ready(function($) {
 	});
 	
 	//MISC
+	/*
 	if ($(".menu-item:last")){
-		$(".menu-item:last").html($(".menu-item:last").html().replace("</a> -","</a>"));
-	}
-	$("#footer-cols .widget:last").addClass("last");
-	
+		$(".menu-item:last").html($(".menu-item:last").html().replace("</a> -","</a>")); 
+	} */
+	$("#footer-cols .widget:last").addClass("last");  
+	/* ---------------------------------------------------------------------- */
+	/*	Featured Slideshow Cycle
+	/* ---------------------------------------------------------------------- */
+	$(function() {
+        $('#slideshow').cycle({
+            fx:     'fade',
+            easing:   'easeInQuad',
+            speed: 3000,
+            delay: 3,
+            pause:    1,  // pause on hover
+            timeout: 3000,
+            slideExpr: '.img'
+      });
+    }); 
+    /* ---------------------------------------------------------------------- */
+	/*	Sticky-footer js
+	/* ---------------------------------------------------------------------- */ 
+	$('.content-sticky-1 .stick-arrow-up a').click(function(){
+	$(this).parent().parent().stop().animate({
+                                            margin: '35px 0px'
+	                                 },1000);
+	$('.content-sticky-2').stop().animate({
+                                            margin: '0px'
+	                                 },1200);
+
+	});
+	$('.content-sticky-2 .stick-arrow-up a').click(function(){
+	$(this).parent().parent().stop().animate({
+                                            margin: '41px 0px'
+	                                 },1000);
+	$('.content-sticky-1').stop().animate({
+                                            margin: '0px'
+	                                 },1200);
+
+	}); 
+
 	/* ---------------------------------------------------------------------- */
 	/*	Detect touch device
 	/* ---------------------------------------------------------------------- */
