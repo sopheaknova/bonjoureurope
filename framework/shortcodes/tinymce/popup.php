@@ -79,10 +79,11 @@ require_once( $path_to_wp.'/wp-load.php' );
                         	<!--<option value="post-carousel"><?php _e('Post Carousel', 'sptheme'); ?></option>
 							<option value="projects-carousel"><?php _e('Projects Carousel', 'sptheme'); ?></option>
 							<option value="slider"><?php _e('Slider', 'sptheme'); ?></option>
-							<option value="team-member"><?php _e('Team Member', 'sptheme'); ?></option>-->
-                            <option value="portfolio"><?php _e('Portfolio', 'sptheme'); ?></option>
+							<option value="team-member"><?php _e('Team Member', 'sptheme'); ?></option>
+                            <option value="portfolio"><?php _e('Portfolio', 'sptheme'); ?></option>-->
                             <option value="postlist"><?php _e('Post list', 'sptheme'); ?></option>
                             <option value="pagelist"><?php _e('Page list', 'sptheme'); ?></option>
+                            <option value="events"><?php _e('Events', 'sptheme'); ?></option>
 						</optgroup>
 						<optgroup label="- <?php _e('Misc', 'sptheme'); ?> -">
 							<!--<option value="fullwidth-map"><?php _e('Fullwidth Map', 'sptheme'); ?></option>-->
@@ -1244,8 +1245,8 @@ require_once( $path_to_wp.'/wp-load.php' );
 
 			</tr>
 			<!-- end portfolio -->
-
-			<!-- start slider -->
+            
+            <!-- start slider -->
 			<tr class="option slider">
 
 				<th class="label">
@@ -1397,6 +1398,97 @@ require_once( $path_to_wp.'/wp-load.php' );
            
            </tr>
             <!-- start pagelist -->
+            
+            <!-- start events -->
+			<tr class="option events">
+
+				<th class="label">
+
+                    <label for="postlist-num"><?php _e('Number of event', 'sptheme'); ?> </label>
+    
+                </th>
+    
+                <td class="field">
+                
+                    <input type="text" name="events-num" id="events-num" value="8" class="widefat">
+                    <em><?php _e('(Show all by put -1)', 'sptheme'); ?></em>
+    
+               </td>
+
+			</tr>
+            <tr class="option events">
+
+				<th class="label">
+
+					<label for="events-month"><?php _e('Month', 'sptheme'); ?></label>
+
+				</th>
+
+				<td class="field">
+				
+					<select name="events-month" id="events-month" class="widefat">
+						<option value="Jan"><?php _e('January', 'sptheme'); ?></option>
+						<option value="Feb"><?php _e('February', 'sptheme'); ?></option>
+						<option value="Mar"><?php _e('March', 'sptheme'); ?></option>
+                        <option value="Apr"><?php _e('April', 'sptheme'); ?></option>
+                        <option value="May"><?php _e('May', 'sptheme'); ?></option>
+                        <option value="Jun"><?php _e('June', 'sptheme'); ?></option>
+                        <option value="Jul"><?php _e('July', 'sptheme'); ?></option>
+						<option value="Aug"><?php _e('August', 'sptheme'); ?></option>
+						<option value="Sep"><?php _e('September', 'sptheme'); ?></option>
+                        <option value="Oct"><?php _e('October', 'sptheme'); ?></option>
+                        <option value="Nov"><?php _e('November', 'sptheme'); ?></option>
+                        <option value="Dec"><?php _e('December', 'sptheme'); ?></option>
+					</select>
+					
+				</td>
+
+			</tr>
+            <tr class="option events">
+
+				<th class="label">
+
+					<label for="events-order"><?php _e('Order by', 'sptheme'); ?></label>
+
+				</th>
+
+				<td class="field">
+				
+					<select name="events-order" id="events-order" class="widefat">
+						<option value="date"><?php _e('Date', 'sptheme'); ?></option>
+                        <option value="id"><?php _e('ID', 'sptheme'); ?></option>
+					</select>
+				</td>
+
+			</tr>
+            
+            <tr class="option events">
+
+				<th class="label">
+
+					<label for="events-type"><?php _e('Category', 'sptheme'); ?></label>
+
+				</th>
+
+				<td class="field">
+				
+					<select name="events-type" id="events-type" class="widefat">
+
+						<option value="" selected><?php _e('Please select', 'sptheme'); ?></option>
+
+					<?php $event_categories = get_terms( 'events-categories', array('order_by' => 'id') ); foreach( $event_categories as $category ): ?>
+
+						<option value="<?php echo $category->term_taxonomy_id; ?>"><?php echo $category->name; ?></option>
+
+					<?php endforeach; ?>
+
+					</select>
+					
+				</td>
+
+			</tr>
+            
+            <!-- end events -->
 
 			<!-- start fullwidth-map -->
 			<tr class="option fullwidth-map">

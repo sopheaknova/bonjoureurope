@@ -44,7 +44,7 @@ if( !function_exists('sp_theme_setup') ) {
 		add_theme_support('post-thumbnails');
 
 		add_image_size( 'blog-post', 400, null, true );
-		add_image_size( 'blog-post-thumb', 190, 190, true );
+		add_image_size( 'blog-post-thumb', 135, null, true );
 		add_image_size( 'fullwidth', 880, null, true );
 		
 		
@@ -160,7 +160,7 @@ function sp_register_styles() {
 	if( !is_admin() ) {
 
 	//wp_register_style( 'g_droidsans', 'http://fonts.googleapis.com/css?family=Droid+Sans', array(), THEME_VERSION ); //wp_register_style( $handle, $src, $deps, $ver, $media ); $media => 'all', 'screen', 'handheld', 'print'. default false
-	//wp_register_style( 'g_suwannaphum', 'http://fonts.googleapis.com/css?family=Suwannaphum', array(), THEME_VERSION );
+	wp_register_style( 'g_suwannaphum', 'http://fonts.googleapis.com/css?family=Suwannaphum', array(), THEME_VERSION );
 	wp_register_style( 'sp-theme-styles', SP_BASE_URL . 'style.css', array(), THEME_VERSION );
 	
 	/*if ( ICL_LANGUAGE_CODE == 'kh' ) {
@@ -189,7 +189,7 @@ function sp_enqueue_styles() {
 	}*/
 	
 	//wp_enqueue_style('g_droidsans');
-	//wp_enqueue_style('g_suwannaphum');
+	wp_enqueue_style('g_suwannaphum');
 	wp_enqueue_style('sp-theme-styles');
 	wp_enqueue_style('khcss');
 		

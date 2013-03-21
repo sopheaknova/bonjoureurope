@@ -10,25 +10,13 @@
 
 			<?php if ( have_posts() ): ?>
 				
-				<h1 class="page-title">
-					<?php
-						if ( is_day() ) :
-							printf( __( 'Daily Archives: %s', 'sptheme' ), '<span>' . get_the_date() . '</span>' );
-						elseif ( is_month() ) :
-							printf( __( 'Monthly Archives: %s', 'sptheme' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
-						elseif ( is_year() ) :
-							printf( __( 'Yearly Archives: %s', 'sptheme' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
-						else :
-							_e( 'Archives', 'sptheme' );
-						endif;
-					?>
-				</h1>
-
-				<?php rewind_posts(); ?>
-				
+            <h1 class="page-title">
+            <?php _e( 'Events Archive', 'sptheme' ); ?>	
+            </h1>
+			
 			<?php else: ?>
 			
-					<h1 class="page-title"><?php _e( 'Nothing Found', 'sptheme' ); ?></h1>
+			<h1 class="page-title"><?php _e( 'Nothing Found', 'sptheme' ); ?></h1>
 
 			<?php endif; ?>
 
@@ -43,7 +31,7 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
-					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content', 'events' ); ?>
 
 				</article><!-- end .hentry -->
 

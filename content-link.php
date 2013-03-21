@@ -13,18 +13,9 @@
     
     </div><!-- end .entry-meta -->
 	
-    <div class="entry-link">
-	<?php 
-	$source_meta = sp_get_custom_field( 'sp_news_source', $post->ID );
-	$link_meta = sp_get_custom_field( 'sp_news_file', $post->ID );
-	$file_url = wp_get_attachment_image_src($link_meta, 'full'); 
-	?>
-    <?php if ($file_url[0] != '') :?>
-    <p>
-    <a href="<?php echo $file_url[0]; ?>" rel="wp-prettyPhoto" class="newspaper"><?php _e('View the source file','sptheme'); ?></a>
-    <span class="news-source"><strong>Source:</strong> <?php echo $source_meta; ?></span>
-    </p>
-    <?php endif; ?>
-    </div>
+    <div class="entry-content">
+	<?php echo sp_post_content(); ?>
+    </div><!-- end .entry-content -->
+    <div class="clear"></div>
 
 </div><!-- end .entry-body -->

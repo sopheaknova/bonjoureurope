@@ -348,6 +348,15 @@
 
 			sp_show_option('.pagelist');
 			shortcode = '[pagelist page_id=""]';		
+			
+		/* -------------------------------------------------- */
+		/*	Post Event
+		/* -------------------------------------------------- */
+
+		} else if( $currentShortcode === 'events' ) {
+
+			sp_show_option('.events');
+			shortcode = '[events posts_per_page="1" meta_key="Jan" orderby="date" event_type=""]';	
 
 		/* -------------------------------------------------- */
 		/*	Fullwidth map
@@ -899,6 +908,29 @@
 			shortcode = '[pagelist';
 			
 			shortcode += ' page_id="' + pageId + '"';
+
+			shortcode += ']';	
+			
+		/* -------------------------------------------------- */
+		/*	Post Events [events posts_per_page="1" meta_key="Jan" orderby="date" event_type=""]
+		/* -------------------------------------------------- */
+
+		} else if( $currentShortcode === 'events' ) {
+
+			var numEvent = $('#events-num').val(),
+			monthEvent = $('#events-month').val(),
+			orderEvent = $('#events-order').val(),
+			typeEvent = $('#events-type').val();
+
+			shortcode = '[events';
+			
+			shortcode += ' posts_per_page="' + numEvent + '"';
+			
+			shortcode += ' meta_key="' + monthEvent + '"';
+			
+			shortcode += ' orderby="' + orderEvent + '"';
+			
+			shortcode += ' event_type="' + typeEvent + '"';
 
 			shortcode += ']';	
 

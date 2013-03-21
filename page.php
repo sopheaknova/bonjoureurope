@@ -21,7 +21,6 @@
 			<?php remove_filter( 'the_content', 'wpautop' ); the_content(); ?>
 			<div class="clear"></div>
 			<p><?php edit_post_link( __( 'Edit', 'sptheme' ), '', '' ); ?></p>
-            
         </div>    
 
 		<?php endwhile; ?>

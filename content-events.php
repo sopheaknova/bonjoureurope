@@ -1,19 +1,17 @@
 <div class="entry-body">
 	
-	<h1 class="title"><?php the_title(); ?></h1>
+	<?php if(is_single()) { ?>
+		<h1 class="title"><?php the_title(); ?></h1>
+    <?php } else {?>
+    	<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__('Permalink to %s', 'sptheme'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
+		<h1 class="title"><?php the_title(); ?></h1>
+	</a>
+    <?php } ?>
     
-    <div class="entry-meta">
-    	<?php
-		$neat_event = sp_get_custom_field( 'sp_neat_event', $post->ID );
-		$start_date = sp_get_custom_field( 'sp_event_start_date', $post->ID );
-		$end_date = sp_get_custom_field( 'sp_event_end_date', $post->ID );
-		
-		echo sp_events_meta($neat_event, $start_date, $end_date); 
-		?>
-    </div><!-- end .entry-meta --> 
-
-	<div class="entry-content">
+    <div class="entry-content">
 	<?php echo sp_post_content(); ?>
     </div><!-- end .entry-content -->
+    
+    <div class="clear"></div>
 
 </div><!-- end .entry-body -->

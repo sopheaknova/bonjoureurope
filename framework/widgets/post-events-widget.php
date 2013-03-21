@@ -1,17 +1,17 @@
 <?php 
 
-add_action('widgets_init','sp_widget_posts_type');
+add_action('widgets_init','sp_widget_post_event');
 
-function sp_widget_posts_type() {
-	register_widget('sp_widget_posts_type');
+function sp_widget_post_event() {
+	register_widget('sp_widget_post_event');
 	
 	}
 
-class sp_widget_posts_type extends WP_Widget {
-	function sp_widget_posts_type() {
+class sp_widget_post_event extends WP_Widget {
+	function sp_widget_post_event() {
 			
-		$widget_ops = array('classname' => 'posts-widget','description' => __('Widget display Posts from a certain category','sptheme'));
-		$this->WP_Widget('sp-posts', sprintf( esc_html__('%s: Posts by Category', 'sptheme'), THEME_NAME ), $widget_ops);
+		$widget_ops = array('classname' => 'posts-event-widget','description' => __('Widget display post Events from a certain category in current month','sptheme'));
+		$this->WP_Widget('sp-post-event', sprintf( esc_html__('%s: Post Event by Category', 'sptheme'), THEME_NAME ), $widget_ops);
 
 		}
 		
@@ -33,30 +33,46 @@ class sp_widget_posts_type extends WP_Widget {
 
 		<ul class="blog-posts-widget">
 		<?php 
-        $category_id = get_cat_ID($category);
         
-        $args = array (
-            'cat' 	=> $category_id,
-            'posts_per_page'	=> $count
-        );
-        $posttype_query = new WP_Query($args);
-        if ($posttype_query->have_posts()) :
-        while ( $posttype_query->have_posts() ) : $posttype_query->the_post();
+		$args = array(
+			'posts_per_page' => (int) $count,
+			'post_type' => 'events',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'events-categories',
+					'field' => 'id',
+					'terms' => $category
+				)
+			),
+			'meta_query' => array(
+				array(
+					'key' => 'sp_event_start_date',
+					'value' => date('M'),
+					'compare' => 'LIKE'
+				)
+			),
+			'orderby' => $orderby,
+			'no_found_rows' => true,
+		);
+		
+		$query = new WP_Query( $args  );
+		
+        if ( $query->have_posts() ) :
+			while ( $query->have_posts() ) : $query->the_post();
+			$post_thumb = get_post_thumbnail_id( $post->ID );
+			$image_src = wp_get_attachment_image_src($post_thumb, 'blog-post-thumb');
         ?>
 
 		<li class="blog-post">       
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		<div class="entry-meta">
-		<?php _e( 'Posted on: ', 'sptheme' ); ?><?php echo sp_posted_on(); ?>
-        </div><!-- end .entry-meta -->
-        
+        <a href="<?php get_permalink(); ?>"><img src="<?php echo $image_src[0]; ?>" class="alignnone" /></a>
 		</li>
 
-			<?php endwhile; ?>
-			<?php  else:  ?>
-			<!-- Else in here -->
-			<?php  endif; ?>
-			<?php wp_reset_query(); ?>
+		<?php endwhile; ?>
+        <?php  else:  ?>
+        <!-- Else in here -->
+        <?php  endif; ?>
+        <?php wp_reset_postdata(); ?>
 		</ul>
 
 <?php 
@@ -78,7 +94,7 @@ class sp_widget_posts_type extends WP_Widget {
 function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => __('Post Type','sptheme'), 
+		$defaults = array( 'title' => __('Events in this month','sptheme'), 
 			'count' => 3,
  			);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
@@ -92,11 +108,13 @@ function form( $instance ) {
         <select id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>" class="widefat">
         <?php 
 			$options_categories = array();  
-			$options_categories_obj = get_categories('hide_empty=0');
-			foreach ($options_categories_obj as $category) {
-				$options_categories[$category->cat_ID] = $category->cat_name;
+			$event_categories = get_terms( 'events-categories', array('order_by' => 'id') ); 
+			foreach( $event_categories as $category ) {
+				$options_categories[$category->term_taxonomy_id] = $category->name;
 		?>
-        <option <?php if ( $options_categories[$category->cat_ID] == $instance['category'] ) echo 'selected="selected"'; ?>><?php echo $options_categories[$category->cat_ID]; ?></option>
+        <option <?php if ( $options_categories[$category->term_taxonomy_id] == $instance['category'] ) echo 'selected="selected"'; ?> value="<?php echo $category->term_taxonomy_id; ?>">
+		<?php echo $options_categories[$category->term_taxonomy_id]; ?>
+        </option>
         <?php		
 			}
 		?>
@@ -104,7 +122,7 @@ function form( $instance ) {
 		</p>
         
        <p>
-		<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e('Number Of Posts:','sptheme'); ?></label>
+		<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e('Number Of Events:','sptheme'); ?></label>
 		<input id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo $instance['count']; ?>" class="widefat" />
 		</p>
    <?php  

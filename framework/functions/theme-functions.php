@@ -357,18 +357,22 @@ if( !function_exists('sp_posted_on')) {
 /* ---------------------------------------------------------------------- */
 if( !function_exists('sp_events_meta')) {
 
-	function sp_events_meta( $neat_event = 0, $start_date, $end_date ) {
+	function sp_events_meta() {
 
 		global $post;
+		
+		$neat_event = sp_get_custom_field( 'sp_neat_event', $post->ID );
+		$start_date = sp_get_custom_field( 'sp_event_start_date', $post->ID );
+		$end_date = sp_get_custom_field( 'sp_event_end_date', $post->ID );
 		
 		$event_start_date = explode('-', $start_date);
 		$event_end_date = explode('-', $end_date);
 		
-		$output = '<span>' . $event_start_date[0] . ' ' . date( 'M', mktime(0, 0, 0, $event_start_date[1]) ) . '</span>';
+		$output = '<span>' . $event_start_date[0] . ' ' . $event_start_date[1] . '</span>';
 		
 		if ( $neat_event ) {
 		if ( !empty($end_date) )
-			$output .= ' &mdash; <span>' . $event_end_date[0] . ' ' . date( 'M', mktime(0, 0, 0, $event_end_date[1]) ) . '</span>';
+			$output .= ' &mdash; <span>' . $event_end_date[0] . ' ' . $event_end_date[1]. '</span>';
 		}
 		
 		return $output;
@@ -381,17 +385,24 @@ if( !function_exists('sp_events_meta')) {
 /* ---------------------------------------------------------------------- */
 if( !function_exists('get_events')) {
 	
-	function get_events( $posts_per_page = 1, $orderby = 'none', $event_type = null ) {
+	function get_events( $posts_per_page = 1, $meta_key= 'Jan', $orderby = 'none', $event_type = null ) {
 		$args = array(
 			'posts_per_page' => (int) $posts_per_page,
 			'post_type' => 'events',
-			/*'tax_query' => array(
+			'tax_query' => array(
 				array(
-					'taxonomy' => 'events-category',
-					'field' => 'slug',
+					'taxonomy' => 'events-categories',
+					'field' => 'id',
 					'terms' => $event_type
 				)
-			),*/
+			),
+			'meta_query' => array(
+				array(
+					'key' => 'sp_event_start_date',
+					'value' => $meta_key,
+					'compare' => 'LIKE'
+				)
+			),
 			'orderby' => $orderby,
 			'no_found_rows' => true,
 		);
@@ -401,14 +412,17 @@ if( !function_exists('get_events')) {
 		$output = '';
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) : $query->the_post();
-	 
+			
+	 		$output .= '<div class="event-items">';
 			$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
 			$output .= '<p>' . sp_excerpt_length(40) . '</p>';
 			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
-			   
+			$output .= '</div>';   
 			endwhile;
 			wp_reset_postdata();
 		}
+		
+		$output .= '<a href="' . get_post_type_archive_link( 'events' ) . '">'. __( 'Events Archive', 'sptheme' ) .'</a>';
 	 
 		return $output;
 	}

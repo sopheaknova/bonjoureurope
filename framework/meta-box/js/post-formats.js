@@ -1,7 +1,6 @@
 jQuery( document ).ready( function($) {
 
 	var	$videoSettings = $('#post-video-settings').hide(),
-		$audioSettings = $('#post-audio-settings').hide(),
 		$linkSettings  = $('#post-link-settings').hide(), 
 		$postdivrich   = $('#postdivrich'),
 		$generalSettings  = $('#general-settings'), 
@@ -35,7 +34,6 @@ jQuery( document ).ready( function($) {
 	function changePostFormat( val ) {
 		
 		$videoSettings.hide();
-		$audioSettings.hide();
 		$linkSettings.hide();
 		$postdivrich.show();
 		$generalSettings.show();
@@ -44,10 +42,6 @@ jQuery( document ).ready( function($) {
 		if( val === 'video' ) {
 
 			$videoSettings.show();
-			
-		} else if( val === 'audio' ) {
-
-			$audioSettings.show();
 			
 		} else if( val === 'link' ) {
 

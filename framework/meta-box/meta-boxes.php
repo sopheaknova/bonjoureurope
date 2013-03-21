@@ -102,8 +102,8 @@ $meta_boxes[] = array(
 
 			// jQuery date picker options. See here http://jqueryui.com/demos/datepicker
 			'js_options' => array(
-				'appendText'      => '(dd-mm-yyyy)',
-				'dateFormat'      => 'dd-mm-yy',
+				'appendText'      => '(dd-M-yyyy)',
+				'dateFormat'      => 'dd-M-yy',
 				'changeMonth'     => true,
 				'changeYear'      => true,
 				'showButtonPanel' => true,
@@ -117,8 +117,8 @@ $meta_boxes[] = array(
 
 			// jQuery date picker options. See here http://jqueryui.com/demos/datepicker
 			'js_options' => array(
-				'appendText'      => '(dd-mm-yyyy)',
-				'dateFormat'      => 'dd-mm-yy',
+				'appendText'      => '(dd-M-yyyy)',
+				'dateFormat'      => 'dd-M-yy',
 				'changeMonth'     => true,
 				'changeYear'      => true,
 				'showButtonPanel' => true,
@@ -181,34 +181,6 @@ $meta_boxes[] = array(
 			'desc' => __('For example embed code. e.g: embeded code from soundcloud.com', 'sptheme'),
 			'cols' => '40',
 			'rows' => '8'
-		)
-	)
-);
-
-/* ---------------------------------------------------------------------- */
-/*	Post Format: Link
-/* ---------------------------------------------------------------------- */
-$meta_boxes[] = array(
-	'id'       => 'post-link-settings',
-	'title'    => __('Link Settings', 'sptheme'),
-	'pages'    => array('post'),
-	'context'  => 'normal',
-	'priority' => 'high',
-	'fields'   => array(
-		array(
-			'name' => __('Attach file', 'sptheme'),
-			'id'   => $prefix . 'news_file',
-			'type' => 'plupload_image',
-			'max_file_uploads' => 1,
-			'std'  => '',
-			'desc' => __('Upload news file (.gif, .png, .pdf) that you have scanned from newspaper or from other media.', 'sptheme')
-		),
-		array(
-			'name' => __('Source', 'sptheme'),
-			'id'   => $prefix . 'news_source',
-			'type' => 'text',
-			'std'  => '',
-			'desc' => __('Where is this new come from. e.g: Cambodia Daily or Phnom Penh Post...', 'sptheme')
 		)
 	)
 );

@@ -47,7 +47,7 @@ img { margin-bottom: 5px; }
 dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { margin-bottom: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #4e4e4e;
+    color: #00002b;
     font-weight: 400;
     line-height: 1.25;
     margin-bottom: 10px;
@@ -55,12 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #4e4e4e!important;
+    color: #00002b!important;
 }
 h3, h4, h5 { font-weight: 600; }
 
 a, a > * {
-    color: #4E4E4E;
+    color: #00002b;
     text-decoration: none;
     -webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
        -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
@@ -93,7 +93,7 @@ blockquote {
     line-height: 1.6;
     padding: 20px 20px 20px 55px;
     font-family:Georgia, "Times New Roman", Times, serif;
-    color:#4e4e4e;
+    color:#00002b;
 }
 
     blockquote.simple {
@@ -216,7 +216,7 @@ div.aligncenter {
 /* ---------------------------------------------------------------------- */
 
 .button, input[type="submit"], button {
-    background: #ff6633;
+    background: #00002b;
     border: none;
     color: #fff!important;
     cursor: pointer;    
@@ -976,7 +976,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         /*  Custom widget 
         /* ---------------------------------------- */
         .blog-posts-widget li a{ padding-bottom:0;}
-        .blog-posts-widget li a, .textwidget, .textwidget a{color:#4e4e4e;}
+        .blog-posts-widget li a, .textwidget, .textwidget a{color:#00002b;}
         .blog-posts-widget .entry-meta{padding-left:20px;}
         .blog-posts-widget, .textwidget{ background:#ececec;}
         
@@ -985,7 +985,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         .home .textwidget {padding:0; background:none;}
         .home .textwidget h2{font-size:24px; margin-bottom:30px;}
         .home .textwidget p{font-size:18px;}
-        .home .textwidget a:hover{color:#4e4e4e;}
+        .home .textwidget a:hover{color:#00002b;}
         .home .textwidget p{color:#808080;}
             
 
@@ -1027,7 +1027,7 @@ table tbody tr:hover td {
 .entry-body table{background-color:#fcfcfc;}
         
 /* ---------------------------------------------------------------------- */
-/*  Pagelist
+/*  Pagelist, Event
 /* ---------------------------------------------------------------------- */
 .pagelist-items{
     padding:12px 12px 3px;
@@ -1036,6 +1036,11 @@ table tbody tr:hover td {
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
             border-radius: 6px;
+}
+
+.event-items{
+	padding:12px 12px 3px;
+    margin:12px 0;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -1129,7 +1134,7 @@ table tbody tr:hover td {
                     box-shadow: 0 1px 1px 0 #dbdbdb;        
         }
         
-        .entry-meta a:hover, .entry-body a:hover {color: #4e4e4e;}
+        .entry-meta a:hover, .entry-body a:hover {color: #00002b;}
         .entry-meta a, .entry-body a {
             color: #FFB611;
         }
