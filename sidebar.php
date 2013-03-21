@@ -1,5 +1,9 @@
 <aside class="sidebar-right">
 <h2 class="title-mod"><?php _e('Important Tips', 'sptheme'); ?></h2>
+<<<<<<< HEAD
+=======
+<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar-right')){ 
+>>>>>>> Fixe Event CPT and its style
 
 <?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar-right')){
          

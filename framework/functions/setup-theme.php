@@ -145,8 +145,8 @@ function sp_widgets_init() {
 		'id' => 'sidebar-left',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="label-mod">',
+		'after_title'   => '</h5>',
 	));
 	// Main Widget Area
 	register_sidebar(array(

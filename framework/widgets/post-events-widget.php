@@ -35,7 +35,7 @@ class sp_widget_post_event extends WP_Widget {
 		<?php 
         
 		$args = array(
-			'posts_per_page' => (int) $count,
+			'posts_per_page' => $count,
 			'post_type' => 'events',
 			'tax_query' => array(
 				array(
@@ -97,8 +97,7 @@ function form( $instance ) {
 		$defaults = array( 'title' => __('Events in this month','sptheme'), 
 			'count' => 3,
  			);
-		$instance = wp_parse_args( (array) $instance, $defaults );
-		?>
+		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 	
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:','sptheme'); ?></label>
@@ -111,10 +110,10 @@ function form( $instance ) {
 			$options_categories = array();  
 			$event_categories = get_terms( 'events-categories', array('order_by' => 'id') ); 
 			foreach( $event_categories as $category ) {
-				$options_categories[$category->term_taxonomy_id] = $category->name;
+				//$options_categories[$category->term_taxonomy_id] = $category->term_taxonomy_id;
 		?>
-        <option <?php if ( $options_categories[$category->term_taxonomy_id] == $instance['category'] ) echo 'selected="selected"'; ?> value="<?php echo $category->term_taxonomy_id; ?>">
-		<?php echo $options_categories[$category->term_taxonomy_id]; ?>
+        <option <?php if ( $category->term_taxonomy_id == $instance['category'] ) echo 'selected="selected"'; ?> value="<?php echo $category->term_taxonomy_id; ?>">
+		<?php echo $category->name; ?>
         </option>
         <?php		
 			}

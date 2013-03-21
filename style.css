@@ -855,12 +855,9 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
             .widget li:last-child { border-bottom: none; padding-bottom:3px;}
 
                 .widget li a {
-                    color: #868686;
                     display: block;
                     padding: 5px 0 5px 20px;
                 }
-                    
-                    .widget li a:hover { color: #ff6633; }
 
         /* ---------------------------------------- */
         /*  Recent Comments
@@ -981,13 +978,10 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         .blog-posts-widget .entry-meta{padding-left:20px;}
         .blog-posts-widget, .textwidget{ background:#ececec;}
         
-        .textwidget{ padding:10px;}
-        
-        .home .textwidget {padding:0; background:none;}
-        .home .textwidget h2{font-size:24px; margin-bottom:30px;}
-        .home .textwidget p{font-size:18px;}
-        .home .textwidget a:hover{color:#00002b;}
-        .home .textwidget p{color:#808080;}
+        .event-posts-widget li{background:none; padding:10px 0;}
+		.event-posts-widget li a{padding:0;}
+		.event-posts-widget li img{margin-bottom:0;}
+
             
 
 /* ---------------------------------------------------------------------- */
