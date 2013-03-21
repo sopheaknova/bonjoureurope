@@ -1,7 +1,7 @@
 <section id="footer-cols">
          <div class="container">
-         	   <div class="columns clearfix">
-	               <ul>
+         	   <?php get_sidebar('footer');?>
+	               <!--<ul>
 	               	   <li><a href="#">Home</a></li>
 	               	   <li><a href="#">About Us</a></li>
 	               	   <li><a href="#">Visa</a></li>
@@ -20,9 +20,7 @@
 	               	   <li><a href="#">Tourism Places</a></li>
 	               	   <li><a href="#">Pictures</a></li>
 	               	   <li><a href="#">Contact Us</a></li>
-	               </ul>
-
-               </div>
+	               </ul>  -->
          </div>
 </section>
 <section id="footer-bottom">
