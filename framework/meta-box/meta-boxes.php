@@ -39,8 +39,8 @@ $meta_boxes[] = array(
 				//''     => '<img src="' . SP_BASE_URL . 'framework/assets/img/xcol.png" alt="' . __('Use theme default setting', 'sptheme') . '" title="' . __('Use theme default setting', 'sptheme') . '" />',
 				'1col' => '<img src="' . SP_BASE_URL . 'framework/assets/img/1col.png" alt="' . __('Fullwidth - No sidebar', 'sptheme') . '" title="' . __('Fullwidth - No sidebar"', 'sptheme') . ' />',
 				//'2cl'  => '<img src="' . SP_BASE_URL . 'framework/assets/img/2cl.png" alt="' . __('Sidebar on the left', 'sptheme') . '" title="' . __('Sidebar on the left', 'sptheme') . '" />',
-				'2cr'  => '<img src="' . SP_BASE_URL . 'framework/assets/img/2cr.png" alt="' . __('Sidebar on the right', 'sptheme') . '" title="' . __('Sidebar on the right', 'sptheme') . '" />',
-				//'3col' => '<img src="' . SP_BASE_URL . 'framework/assets/img/3col.png" alt="' . __('Sidebar on left and right', 'sptheme') . '" title="' . __('Sidebar on left and right', 'sptheme') . '" />'
+				//'2cr'  => '<img src="' . SP_BASE_URL . 'framework/assets/img/2cr.png" alt="' . __('Sidebar on the right', 'sptheme') . '" title="' . __('Sidebar on the right', 'sptheme') . '" />',
+				'3col' => '<img src="' . SP_BASE_URL . 'framework/assets/img/3col.png" alt="' . __('Sidebar on left and right', 'sptheme') . '" title="' . __('Sidebar on left and right', 'sptheme') . '" />'
 			),
 			'std'  => '1col',
 			'desc' => __('select the layout structure for this page.', 'sptheme')

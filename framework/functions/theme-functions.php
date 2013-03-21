@@ -124,7 +124,7 @@ if ( !function_exists('sp_check_page_layout') ) {
 		$site_structure = of_get_option('sp_site_structure');*/
 
 		//if( ( $page_layout == '2cl' || $page_layout == '2cr' ) || ( $page_layout != '1col' && ( $site_structure == '2cl' || $site_structure == '2cr' ) ) )
-		if( ( $page_layout == '2cl' || $page_layout == '2cr' ) )
+		if( ( $page_layout == '2cl' || $page_layout == '2cr' || $page_layout == '3col' ) )
 			return true;
 			
 		//if( ( $page_layout == '3col' ) )
