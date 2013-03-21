@@ -31,7 +31,7 @@ class sp_widget_post_event extends WP_Widget {
 			global $post;
 ?>
 
-		<ul class="blog-posts-widget">
+		<ul class="event-posts-widget">
 		<?php 
         
 		$args = array(
@@ -51,7 +51,7 @@ class sp_widget_post_event extends WP_Widget {
 					'compare' => 'LIKE'
 				)
 			),
-			'orderby' => $orderby,
+			'orderby' => 'rand',
 			'no_found_rows' => true,
 		);
 		
@@ -60,12 +60,12 @@ class sp_widget_post_event extends WP_Widget {
         if ( $query->have_posts() ) :
 			while ( $query->have_posts() ) : $query->the_post();
 			$post_thumb = get_post_thumbnail_id( $post->ID );
-			$image_src = wp_get_attachment_image_src($post_thumb, 'blog-post-thumb');
+			$image_src = wp_get_attachment_image_src($post_thumb, 'blog-post-left');
         ?>
 
-		<li class="blog-post">       
+		<li>       
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        <a href="<?php get_permalink(); ?>"><img src="<?php echo $image_src[0]; ?>" class="alignnone" /></a>
+        <a href="<?php get_permalink(); ?>"><img src="<?php echo $image_src[0]; ?>" /></a>
 		</li>
 
 		<?php endwhile; ?>
@@ -97,7 +97,8 @@ function form( $instance ) {
 		$defaults = array( 'title' => __('Events in this month','sptheme'), 
 			'count' => 3,
  			);
-		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
+		$instance = wp_parse_args( (array) $instance, $defaults );
+		?>
 	
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:','sptheme'); ?></label>
