@@ -1,8 +1,8 @@
 <aside class="sidebar-right">
-<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar-righ')){ ?>
-         <h2 class="title-mod"><?php _e('Important Tips', 'sptheme'); ?></h2>
-         <?php dynamic_sidebar('sidebar-right');
+<h2 class="title-mod"><?php _e('Important Tips', 'sptheme'); ?></h2>
 
+<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar-right')){
+         
       }else{?>
          <div class="non-widget">
          <h3><?php _e('About This Sidebar', 'sptheme'); ?></h3>

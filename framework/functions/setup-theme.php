@@ -44,8 +44,9 @@ if( !function_exists('sp_theme_setup') ) {
 		add_theme_support('post-thumbnails');
 
 		add_image_size( 'blog-post', 400, null, true );
+		add_image_size( 'slideshow', 980, 250, true);
 		add_image_size( 'blog-post-thumb', 135, null, true );
-		add_image_size( 'fullwidth', 880, null, true );
+		add_image_size( 'fullwidth', 980, null, true );
 		
 		
 		// Add support for post formats

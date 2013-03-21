@@ -1,26 +1,7 @@
 <section id="footer-cols">
          <div class="container">
          	   <?php get_sidebar('footer');?>
-	               <!--<ul>
-	               	   <li><a href="#">Home</a></li>
-	               	   <li><a href="#">About Us</a></li>
-	               	   <li><a href="#">Visa</a></li>
-	               </ul>
-	               <ul>
-	               	   <li><a href="#">Currency</a></li>
-	               	   <li><a href="#">Weather</a></li>
-	               	   <li><a href="#">Transportation</a></li>
-	               </ul>
-	               <ul>
-	               	   <li><a href="#">Accommodation</a></li>
-	               	   <li><a href="#">Festval Calendar</a></li>
-	               	   <li><a href="#">Tourism News</a></li>
-	               </ul>
-	               <ul>
-	               	   <li><a href="#">Tourism Places</a></li>
-	               	   <li><a href="#">Pictures</a></li>
-	               	   <li><a href="#">Contact Us</a></li>
-	               </ul>  -->
+	               
          </div>
 </section>
 <section id="footer-bottom">

@@ -570,6 +570,10 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         .featured{
             overflow: hidden;
         }
+        .featured .item-slide{
+            width: 980px;
+            height: 250px;
+        }
     
     /* ---------------------------------------------------------------------- */
     /*  Portfolio

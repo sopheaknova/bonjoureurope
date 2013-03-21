@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
             delay: 3,
             pause:    1,  // pause on hover
             timeout: 3000,
-            slideExpr: '.img'
+            slideExpr: '.item-slide'
       });
     }); 
     /* ---------------------------------------------------------------------- */

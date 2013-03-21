@@ -39,10 +39,16 @@
                 
            </div>
            <div class="featured" id="slideshow">
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_0007.jpg" width="980" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1018.jpg" width="980" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1026.jpg" width="980" height="250"/></div>
-                <div class="img"><img src="<?php bloginfo('template_url');?>/images/dev/slide_1038.jpg" width="980" height="250"/></div>
+                <?php $custom_slide = array('post_type'=>'slideshow');
+                      query_posts($custom_slide);
+                      while (have_posts()) : the_post(); 
+                      
+                      if ( has_post_thumbnail() ) {?>
+                      <div class="item-slide">
+                      <?php the_post_thumbnail('slideshow');?>
+                      </div>
+                      <?php }   
+                      endwhile; ?> 
            </div>
      </div>
 </section>

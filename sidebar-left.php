@@ -1,6 +1,7 @@
 <aside class="sidebar-left">
-<?php $sidebar_choice = get_post_meta($post->ID, 'sp_selected_sidebar', true); ?>
 <h2 class="title-mod"><?php _e('Other Events', 'sptheme'); ?></h2>
+<?php $sidebar_choice = get_post_meta($post->ID, 'sp_selected_sidebar', true); ?>
+
 <?php 
 if( ($sidebar_choice != "") && ($sidebar_choice != "sidebar-footer") && ($sidebar_choice != "sidebar-right") ) { 
 	if ( function_exists('dynamic_sidebar') && dynamic_sidebar($sidebar_choice) ) { } else {	
