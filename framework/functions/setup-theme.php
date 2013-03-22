@@ -127,11 +127,11 @@ function sp_widgets_init() {
 		'id' => 'sidebar-right',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="label-mod">',
+		'after_title'   => '</h5>',
 	));
 	
-	// Main Widget Area
+	// Left Widget Area
 	register_sidebar(array(
 		'name'          => __('Left Sidebar', 'sptheme'),
 		'id' => 'sidebar-left',
@@ -140,7 +140,7 @@ function sp_widgets_init() {
 		'before_title'  => '<h5 class="label-mod">',
 		'after_title'   => '</h5>',
 	));
-	// Main Widget Area
+	// Footer Widget Area
 	register_sidebar(array(
 		'name'          => __('Footer Sidebar', 'sptheme'),
 		'id' => 'sidebar-footer',
@@ -160,8 +160,8 @@ function sp_widgets_init() {
 			'description' 	=> 'Widgets in this area will be shown in the sidebar.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="label-mod">',
+			'after_title'   => '</h5>',
 			));
 		}
 	}
