@@ -66,7 +66,15 @@
           <span id="hot-news">Hot News&nbsp;:&nbsp;</span>
           <span class="text-run">
                 <marquee direction="left" behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
-                    We are very please to inform that we have a greate game for new year jion with us now! you all will get award to go abroad or travel around Cambodia.
+                <?php 
+                      $cat_id = get_cat_ID($data['ticker_cat']);
+                      $query_cat = new WP_Query(array('cat'=>$cat_id));
+                      if( $query_cat->have_posts()) :
+                      while( $query_cat->have_posts()) : $query_cat->the_post();
+                           the_title();
+                      endwhile;
+                      endif;
+                ?>
                 </marquee>
           </span>
      </div>

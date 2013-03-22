@@ -216,57 +216,17 @@ $of_options[] = array( "name" => "Disable post meta",
 						'no' => 'No')
 					);
 
-// Media Center Setting
-$of_options[] = array( "name" => "Media Center",
+// Ticker Setting
+$of_options[] = array( "name" => "Ticker Setting",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Select Media Center",
-					"desc" => "Select Media Center category",
+$of_options[] = array( "name" => "Select Ticker",
+					"desc" => "Select Ticker category",
 					"id" => "media_center_cat",
 					"std" => "Select a category:",
 					"type" => "select",
 					"options" => $of_categories
-					);
-
-$of_options[] = array( "name" => "Select BFC Voice",
-					"desc" => "Select BFC Voice category",
-					"id" => "bfc_voice_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);	
-										
-$of_options[] = array( "name" => "Select In focus",
-					"desc" => "Select In focus category",
-					"id" => "infocus_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);
-
-$of_options[] = array( "name" => "Select Latest news",
-					"desc" => "Select Latest news category",
-					"id" => "latest_news_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);	
-					
-$of_options[] = array( "name" => "Select Press release",
-					"desc" => "Select Press release category",
-					"id" => "press_release_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);
-					
-$of_options[] = array( "name" => "Select Video",
-					"desc" => "Select Video category",
-					"id" => "video_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);																														
+					);																							
 
 // Publication and Reports Setting
 $of_options[] = array( "name" => "Publication Report",
