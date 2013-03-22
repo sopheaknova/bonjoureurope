@@ -59,13 +59,13 @@ class sp_widget_post_event extends WP_Widget {
 		
         if ( $query->have_posts() ) :
 			while ( $query->have_posts() ) : $query->the_post();
-			$post_thumb = get_post_thumbnail_id( $post->ID );
-			$image_src = wp_get_attachment_image_src($post_thumb, 'blog-post-left');
         ?>
 
 		<li>       
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        <a href="<?php get_permalink(); ?>"><img src="<?php echo $image_src[0]; ?>" /></a>
+        <?php if ( has_post_thumbnail() ) {?>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-post-left') ?></a>
+        <?php } ?>
 		</li>
 
 		<?php endwhile; ?>

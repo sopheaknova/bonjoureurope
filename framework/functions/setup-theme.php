@@ -42,14 +42,6 @@ if( !function_exists('sp_theme_setup') ) {
 
 		// Post thumbnails
 		add_theme_support('post-thumbnails');
-<<<<<<< HEAD
-
-		add_image_size( 'blog-post', 400, null, true );
-		add_image_size( 'slideshow', 980, 250, true);
-		add_image_size( 'blog-post-thumb', 135, null, true );
-		add_image_size( 'fullwidth', 980, null, true );
-=======
->>>>>>> d87d22cf81cdbfe8c5b51b873dcf22742061437d
 		
 		add_image_size( 'large', 440, null, true );
 		add_image_size( 'medium', 211, null, true );

@@ -39,16 +39,25 @@
                 
            </div>
            <div class="featured" id="slideshow">
-                <?php $custom_slide = array('post_type'=>'slideshow');
-                      query_posts($custom_slide);
-                      while (have_posts()) : the_post(); 
-                      
-                      if ( has_post_thumbnail() ) {?>
-                      <div class="item-slide">
-                      <?php the_post_thumbnail('slideshow-header');?>
-                      </div>
-                      <?php }   
-                      endwhile; ?> 
+			<?php 
+			$args = array('post_type'=>'slideshow', 'orderby' => 'menu_order');
+			$query = new WP_Query( $args  );
+			
+			if ( $query->have_posts() ) :
+			while ( $query->have_posts() ) : $query->the_post();
+			?>
+            
+			<?php if ( has_post_thumbnail() ) {?>
+			<div class="item-slide">
+			<?php the_post_thumbnail('slideshow-header');?>
+			</div>
+			<?php } ?>
+            
+            <?php 
+			endwhile; 
+			endif;
+			wp_reset_postdata();
+			?> 
            </div>
      </div>
 </section>
