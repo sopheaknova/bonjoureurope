@@ -121,16 +121,6 @@ function sp_widgets_init() {
 	
 	global $data;
 	
-	// Main Widget Area
-	register_sidebar(array(
-		'name'          => __('Right Sidebar', 'sptheme'),
-		'id' => 'sidebar-right',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="label-mod">',
-		'after_title'   => '</h5>',
-	));
-	
 	// Left Widget Area
 	register_sidebar(array(
 		'name'          => __('Left Sidebar', 'sptheme'),
@@ -139,15 +129,6 @@ function sp_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="label-mod">',
 		'after_title'   => '</h5>',
-	));
-	// Footer Widget Area
-	register_sidebar(array(
-		'name'          => __('Footer Sidebar', 'sptheme'),
-		'id' => 'sidebar-footer',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
 	));
 	
 	$generate_sidebars = $data['sidebar_options']; 
@@ -165,6 +146,28 @@ function sp_widgets_init() {
 			));
 		}
 	}
+	
+	// Main Widget Area
+	register_sidebar(array(
+		'name'          => __('Right Sidebar', 'sptheme'),
+		'id' => 'sidebar-right',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="label-mod">',
+		'after_title'   => '</h5>',
+	));
+	
+	// Footer Widget Area
+	register_sidebar(array(
+		'name'          => __('Footer Sidebar', 'sptheme'),
+		'id' => 'sidebar-footer',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
+	
+	
 	
 	
 	

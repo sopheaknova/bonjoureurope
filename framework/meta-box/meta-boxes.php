@@ -42,7 +42,7 @@ $meta_boxes[] = array(
 				//'2cr'  => '<img src="' . SP_BASE_URL . 'framework/assets/img/2cr.png" alt="' . __('Sidebar on the right', 'sptheme') . '" title="' . __('Sidebar on the right', 'sptheme') . '" />',
 				'3col' => '<img src="' . SP_BASE_URL . 'framework/assets/img/3col.png" alt="' . __('Sidebar on left and right', 'sptheme') . '" title="' . __('Sidebar on left and right', 'sptheme') . '" />'
 			),
-			'std'  => '1col',
+			'std'  => '3col',
 			'desc' => __('select the layout structure for this page.', 'sptheme')
 		),
 		array(
