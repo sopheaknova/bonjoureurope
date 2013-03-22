@@ -4,7 +4,7 @@
 
 <section id="content" class="clearfix <?php echo sp_check_sidebar_position(); ?>">
 
-	<div class="container clearfix">
+	<div class="container content-inner clearfix">
 
 		<?php if( $has_sidebar ): ?>
 		

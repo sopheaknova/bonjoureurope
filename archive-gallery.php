@@ -6,12 +6,12 @@
 
 	<div class="container content-inner clearfix">
 
-		
 		<?php get_sidebar('left'); ?>
         
-			<section class="main">
+		<section class="main">
 		
-        <h2 class="title-mod"><?php printf( __( 'Category Archives: %s', 'sptheme' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
+        <h2 class="title-mod"><?php _e( 'Photo Gallery Archive', 'sptheme' ); ?></h2>
+
 
 		<?php if ( have_posts() ) : ?>
 
@@ -19,7 +19,7 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
-					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content', 'gallery' ); ?>
 
 				</article><!-- end .hentry -->
 

@@ -7,9 +7,9 @@
 
 <?php $has_sidebar = sp_check_page_layout(); ?>
 
-<section id="content" class="clearfix <?php echo sp_check_sidebar_position(); ?>">
+<section id="content" class="<?php echo sp_check_sidebar_position(); ?>">
 
-	<div class="container">
+	<div class="container content-inner clearfix">
 
 		<header class="page-header">
 
@@ -28,11 +28,10 @@
 		</header><!-- end .page-header -->
         <div class="clear"></div>
         
-		<?php if( $has_sidebar ): ?>
-
-			<section id="main">
+		<?php get_sidebar('left'); ?>
+        
+			<section class="main">
             
-		<?php endif; ?>
 		<div class="entry-body">
             <div class="one_half">
             
@@ -66,12 +65,10 @@
             </div><!-- end .one_half .last -->
             <div class="clear"></div>
 		</div><!-- end .entry-body -->
-		<?php if( $has_sidebar ): ?>				
+					
 			</section><!-- end #main -->
 
 			<?php get_sidebar(); ?>
-
-		<?php endif; ?>
         
     </div><!-- end .container.clearfix -->    
 

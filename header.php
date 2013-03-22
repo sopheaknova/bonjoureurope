@@ -72,5 +72,9 @@
      </div>
 </section>
 
-
+<section id="breadcrumb">
+     <div class="container clearfix">
+          <div id="title-map"><?php sp_breadcrumb(); ?></div>
+     </div>
+</section>
 

@@ -7,11 +7,6 @@
 ?>
 <?php get_header(); ?>
 
-<section id="breadcrumb">
-     <div class="container clearfix">
-          <span id="title-map">You are here&nbsp;:&nbsp;...</span>
-     </div>
-</section>
 <section id="content">
 	<div class="container content-inner clearfix">
           <!--<div class="sidebar-left">

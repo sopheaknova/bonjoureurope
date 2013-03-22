@@ -9,7 +9,7 @@ function sp_register_post_type_events() {
 
 	$labels = array(
 		'name'               => __( 'Events', 'sptheme' ),
-		'singular_name'      => __( 'Event', 'sptheme' ),
+		'singular_name'      => __( 'Events', 'sptheme' ),
 		'add_new'            => __( 'Add New', 'sptheme' ),
 		'add_new_item'       => __( 'Add New Event', 'sptheme' ),
 		'edit_item'          => __( 'Edit Event', 'sptheme' ),
@@ -36,7 +36,7 @@ function sp_register_post_type_events() {
 		'has_archive'         => true,
 		'query_var'           => true,
 		'can_export'          => true,
-		'rewrite'             => array( 'slug' => 'events-item' ),
+		'rewrite'             => array( 'slug' => 'events' ),
 		'capability_type'     => 'post',
 		'menu_position'       => null,
 		'menu_icon'           => SP_BASE_URL . 'framework/assets/img/icon-event.png'

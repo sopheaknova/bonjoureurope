@@ -33,11 +33,11 @@ body {
 ::selection { background: #fdb919; color: #fff; text-shadow: none; }
 
 /* Some basic settings */
-h1, h1 .button { font-size: 32px; }
-h2, h2 .button { font-size: 26px; }
-h3, h3 .button { font-size: 18px; }
-h4, h4 .button { font-size: 15px; }
-h5, h5 .button { font-size: 14px; }
+h1, h1 .button { font-size: 26px; }
+h2, h2 .button { font-size: 20px; }
+h3, h3 .button { font-size: 16px; }
+h4, h4 .button { font-size: 14px; }
+h5, h5 .button { font-size: 13px; }
 h6, h6 .button { font-size: 12px; }
 small { font-size: 10px; }
 ol { list-style: decimal; }
@@ -519,7 +519,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 }
 	.content-inner{
 		padding-bottom:20px;
-		padding-top:20px;	
+		padding-top:10px;	
 	}
 
     /* -------------------------------------------------- */
@@ -654,7 +654,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
     /*.widget{ font-size:0.9em; }*/
 
         .widget h5{
-            font-size:16px;
+            font-size:14px;
             font-weight:normal; 
             margin-bottom:0;
         }
@@ -878,7 +878,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         /*  Calendar
         /* ---------------------------------------- */
 
-        .widget_calendar table { width: 100%; }
+        .widget_calendar table { width: 100%; box-shadow:none; border:none;}
 
             .widget_calendar th, .widget_calendar td {
                 background: none;
@@ -888,12 +888,13 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 
             .widget_calendar caption {
                 font-size: 12px;
-                margin-bottom: 10px;
+                padding-bottom: 10px;
                 text-align: center;
             }
 
             .widget_calendar tr th {
                 font-size: 12px;
+				text-align:center;
             }
             
             .widget_calendar tr td {
@@ -1042,7 +1043,7 @@ table tbody tr:hover td {
 /*  Event
 /* ---------------------------------------------------------------------- */
 .event-items{
-	padding:12px 12px 3px;
+	padding:12px 0 3px;
     margin:12px 0;
 }
 /* ---------------------------------------------------------------------- */
@@ -1364,14 +1365,12 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
 
 /* END GENERAL LAYOUT */
 /* --------------------------------------------------------------------------------------------------- */ 
-#breadcrumb .container{
-       height: 30px;
-    }
+#news-ticker .container{padding-bottom:10px;}
 #hot-news, .text-run{
        font-size: 14px;
        padding-bottom: 5px;
     }
-#hot-news,span#title-map{
+#hot-news,div#title-map{
        padding-left: 7px;
     }
 
@@ -1400,7 +1399,7 @@ a.add-left{
 /* Title style */
 h2.title-mod, h1.title-mod{
        text-indent: 28px;
-       background: url(images/dev/larg-arrow.png) no-repeat -3px 7px;
+       background: url(images/dev/larg-arrow.png) no-repeat -3px 2px;
     }
 h2.title-mod{
        margin-top: 5px;

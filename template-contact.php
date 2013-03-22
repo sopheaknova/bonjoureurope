@@ -84,7 +84,7 @@ if(isset($_POST['submitted'])) {
 </div><!--/#map-wide-->
 
 <section id="content" class="clearfix ">
-	<div class="container">
+	<div class="container content-inner">
     
     <div class="one_third">
 

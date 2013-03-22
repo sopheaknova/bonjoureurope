@@ -186,6 +186,16 @@ $of_options[] = array( "name" => 'timeout',
 $of_options[] = array( "name" => "Post Setting",
 					"type" => "heading");																		
 
+$of_options[] = array( "name" => "Disable Breadcrum menu",
+					"desc" => "Show or hide breadcrum menu",
+					"id" => "disable_breadcrum",
+					"std" => "no",
+					"type" => "radio",
+					"options" => array(
+						'yes' => 'Yes',
+						'no' => 'No')
+					);
+
 $of_options[] = array( "name" => "Disable Share button",
 					"desc" => "Show or hide Share button for each news/events and latest offer",
 					"id" => "disable_share_post",

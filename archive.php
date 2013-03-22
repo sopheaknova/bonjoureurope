@@ -6,12 +6,24 @@
 
 	<div class="container content-inner clearfix">
 
-		
 		<?php get_sidebar('left'); ?>
         
 			<section class="main">
 		
-        <h2 class="title-mod"><?php printf( __( 'Category Archives: %s', 'sptheme' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
+        <h2 class="title-mod">
+		<?php
+			if ( is_day() ) :
+				printf( __( 'Daily Archives: %s', 'sptheme' ), '<span>' . get_the_date() . '</span>' );
+			elseif ( is_month() ) :
+				printf( __( 'Monthly Archives: %s', 'sptheme' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+			elseif ( is_year() ) :
+				printf( __( 'Yearly Archives: %s', 'sptheme' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+			else :
+				_e( 'Archives', 'sptheme' );
+			endif;
+		?>
+        </h2>
+
 
 		<?php if ( have_posts() ) : ?>
 
