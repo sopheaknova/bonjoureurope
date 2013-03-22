@@ -19,7 +19,7 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
-				<?php get_template_part( 'content', 'events' ); ?>
+				<?php get_template_part( 'content', 'gallery' ); ?>
 
 			</article><!-- end .hentry -->
 			

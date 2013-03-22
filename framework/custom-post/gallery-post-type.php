@@ -25,7 +25,7 @@ function sp_register_post_type_gallery() {
 	$args = array(
 		'labels'              => $labels,
 		'hierarchical'        => false,
-		'supports'            => array('title'),
+		'supports'            => array('title', 'thumbnail'),
 		'taxonomies'          => array(''),
 		'public'              => true,
 		'show_ui'             => true,
@@ -54,8 +54,7 @@ function sp_edit_gallery_columns() {
 		'cb'          => '<input type="checkbox" />',
 		'thumbnail'   => __( 'Cover Album', 'sptheme' ),
 		'title'       => __( 'Name', 'sptheme' ),		
-		'photo_number' => __( 'Photo number', 'sptheme' ),
-		'shortcode'   => __( 'Shortcode', 'sptheme' )
+		'photo_number' => __( 'Photo number', 'sptheme' )
 	);
 
 	return $columns;
@@ -85,12 +84,6 @@ function sp_manage_gallery_columns( $column, $post_id ) {
 			echo $photo_number;
 
 			break;
-		
-		case 'shortcode':
-			
-			echo '<span class="shortcode-field">[album_name id="'. $post->post_name . '"]</span>';
-
-			break;	
 		
 		default:
 			break;

@@ -21,15 +21,49 @@ Template Name: Gallery Page
 		<?php endif; ?>
 		
 
-		<?php while ( have_posts() ): the_post(); ?>
-        <div class="entry-body">
+		<div class="entry-body">
+        	<?php while ( have_posts() ): the_post(); ?>
         	<h1 class="page-title"><?php echo the_title(); ?></h1>	
             <?php remove_filter( 'the_content', 'wpautop' ); the_content(); ?>
 			<div class="clear"></div>
 			<p><?php edit_post_link( __( 'Edit', 'sptheme' ), '', '' ); ?></p>
+            <?php endwhile; ?>
+            
+            <?php 
+			$args = array('post_type'=>'gallery');
+			$query = new WP_Query( $args  );
+			
+			if ( $query->have_posts() ) :
+			?>
+            <ul class="galleries clearfix">
+            
+			<?php
+			while ( $query->have_posts() ) : $query->the_post();
+			$post_thumb = get_post_thumbnail_id( $post->ID );
+			$image_src = wp_get_attachment_image_src($post_thumb, 'large');
+			$image = aq_resize( $image_src[0], 200, 130, true ); //resize & crop the image
+			?>
+            
+			
+				<li>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                </a>
+                <span class="album-name"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span>
+				</li>
+			
+            <?php 
+			endwhile; 
+			?>
+            </ul><!-- end .galleries -->
+            <?php
+			endif;
+			wp_reset_postdata();
+			?> 
+            
         </div>    
 
-		<?php endwhile; ?>
+		
 		
 
 		<?php if( $has_sidebar ): ?>

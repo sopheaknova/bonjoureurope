@@ -7,8 +7,10 @@
 	<div class="container clearfix">
 
 		<?php if( $has_sidebar ): ?>
-
-			<section id="main">
+		
+		<?php get_sidebar('left'); ?>
+        
+			<section class="main">
 
 		<?php endif; ?>
 		

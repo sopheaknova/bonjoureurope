@@ -443,7 +443,6 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         color:#e5f0ff;
         font-size:15px;
         font-weight:bold;
-        text-shadow: 0 1px 1px #333;
         display:block;
     }
     ul.menu-nav > li > a{
@@ -486,7 +485,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
            font-size:14px;
            font-weight:normal;
     }
-    ul.menu-nav li a:hover {
+    ul.menu-nav li a:hover, ul.menu-nav li.current-menu-parent ul li.current-menu-item {
         background: url(images/dev/menu-repeat.png) repeat;
     }
     ul.menu-nav li ul li ul {
@@ -692,6 +691,13 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
             background-color:#eaeaea;
         }
         .nav-menu-widget ul li.current_page_item ul, .nav-menu-widget ul li ul{background-color:#FCFCFC;}
+		
+		/* ---------------------------------------- */
+        /*  Menu widget
+        /* ---------------------------------------- */
+		.widget_nav_menu ul.menu li.current-menu-item a{
+			color:#f9b927;	
+		}
         
         /* ---------------------------------------- */
         /*  Toggle Content
@@ -1032,11 +1038,26 @@ table tbody tr:hover td {
        -moz-border-radius: 6px;
             border-radius: 6px;
 }
-
+/* ---------------------------------------------------------------------- */
+/*  Event
+/* ---------------------------------------------------------------------- */
 .event-items{
 	padding:12px 12px 3px;
     margin:12px 0;
 }
+/* ---------------------------------------------------------------------- */
+/*  Gallery
+/* ---------------------------------------------------------------------- */
+.galleries li {list-style:none; margin-left:0; float:left; margin:5px}
+.galleries li a{display:block;}
+.galleries li a img{
+	border:5px solid #fcfcfc;
+	margin-bottom:0;
+}
+.galleries li a:hover img{
+	border:5px solid #f9b927;
+}
+.galleries li span.album-name{display:block; text-align:center;}
 
 /* ---------------------------------------------------------------------- */
 /*  Columns
@@ -1248,7 +1269,8 @@ table tbody tr:hover td {
 .category .page-title span, .archive .page-title span, .search .page-title span,
 .blog-posts-widget li a:hover, .textwidget a:hover, .nav-menu-widget ul li.current_page_item a, .nav-menu-widget ul li ul li a:hover, 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
-#featured-media .caption a:hover, #footer-cols a:hover, #footer-bottom a:hover, #footer-cols .widget .sub-menu li a:hover{
+#featured-media .caption a:hover, #footer-cols a:hover, #footer-bottom a:hover, #footer-cols .widget .sub-menu li a:hover,
+ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-nav>li.current-menu-parent>a, ul.menu-nav>li.current_page_parent>a{
     color:#ffb913!important;
 }   
 
