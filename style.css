@@ -429,7 +429,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         margin-bottom:0;
         float:right;
     }
-    ul.menu-nav > li { background: url(images/dev/medium-arrow.png) no-repeat -1px 5px;}
+    ul.menu-nav > li { background: url(images/medium-arrow.png) no-repeat -1px 5px;}
 
     ul.menu-nav li{
         list-style: none;
@@ -486,7 +486,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
            font-weight:normal;
     }
     ul.menu-nav li a:hover, ul.menu-nav li.current-menu-parent ul li.current-menu-item {
-        background: url(images/dev/menu-repeat.png) repeat;
+        background: url(images/menu-repeat.png) repeat;
     }
     ul.menu-nav li ul li ul {
            left:220px;
@@ -556,7 +556,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         }
         .cover-menu{
             height: 61px;
-            background:#424142 url(images/dev/back-menu.png) 100% 0 no-repeat;
+            background:#424142 url(images/back-menu.png) 100% 0 no-repeat;
         }
         
         .language{position:absolute; z-index:12; padding:3px; right:2px; top:2px;-moz-box-shadow: 0 1px 1px 0 #333; -webkit-box-shadow: 0 1px 1px 0 #333; box-shadow: 0 1px 1px 0 #333; background:#ffffff;}
@@ -1439,7 +1439,7 @@ a.add-left{
 /* Title style */
 h2.title-mod, h1.title-mod{
        text-indent: 28px;
-       background: url(images/dev/larg-arrow.png) no-repeat -3px 2px;
+       background: url(images/larg-arrow.png) no-repeat -3px 2px;
     }
 h2.title-mod{
        margin-top: 5px;
@@ -1448,7 +1448,7 @@ h2.title-mod{
 h5.label-mod{
        padding: 5px 0px;
        text-indent: 20px;
-       background: url(images/dev/medium-arrow.png) no-repeat 1px 6px;
+       background: url(images/medium-arrow.png) no-repeat 1px 6px;
        background-color:#ECEEEF;
     }
 /* Side left */
