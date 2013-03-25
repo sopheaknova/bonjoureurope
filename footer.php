@@ -12,8 +12,8 @@
 	    	 </div>
 	    	 <div class="sponsors">
 	    	 	   Sponsors by &nbsp;:&nbsp;
-	    	 	   <span><img src="<?php bloginfo('template_url');?>/images/dev/arfrance.png" width="109" height="12"/></span>
-	    	 	   <span><img src="<?php bloginfo('template_url');?>/images/dev/LOGO-KLM-H.png" width="78" height="30" /></span>
+	    	 	   <span><img src="<?php bloginfo('template_url');?>/images/arfrance.png" width="109" height="12"/></span>
+	    	 	   <span><img src="<?php bloginfo('template_url');?>/images/LOGO-KLM-H.png" width="78" height="30" /></span>
 	    	 </div>
 	    </div>
 </section>
@@ -22,10 +22,10 @@
 	    	  <div class="content-sticky-1">
 	    	  	    <div class="sticky-logos">
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/air-france-1.png" width="182" height="20" />
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/air-france-1.png" width="182" height="20" />
 	    	  	    	  </a>
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/klm.png" width="68" height="30" />
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/klm.png" width="68" height="30" />
 	    	  	    	  </a>
 	    	  	    </div>
 	    	  	    <div class="sticky-marquee">
@@ -35,7 +35,7 @@
 	    	  	    </div>
 	    	  	    <div class="stick-arrow-up">
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/arrow-up.png" width="19" height="16"/>
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/arrow-up.png" width="19" height="16"/>
 	    	  	    	  </a>
 	    	  	    </div>
 	    	  </div>
@@ -43,15 +43,15 @@
 	    	  <div class="content-sticky-2">
 	    	  	    <div class="sticky-small-logos">
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/air-france-small.png" width="146" height="14"/>
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/air-france-small.png" width="146" height="14"/>
 	    	  	    	  </a>
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/klm-small.png" width="63" height="28"/>
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/klm-small.png" width="63" height="28"/>
 	    	  	    	  </a>
 	    	  	    </div>
 	    	  	    <div class="stick-arrow-up">
 	    	  	    	  <a href="#">
-	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/dev/sticky/arrow-down.png" width="19" height="16"/>
+	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/arrow-down.png" width="19" height="16"/>
 	    	  	    	  </a>
 	    	  	    </div>
 	    	  </div>
