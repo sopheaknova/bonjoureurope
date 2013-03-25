@@ -540,6 +540,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
             width: 270px; 
         }
         .entry-body{ background: #ECEEEF !important;}
+        .entry-body{ margin: 20px 0px;}
 
     /* -------------------------------------------------- */
     /*  Header
