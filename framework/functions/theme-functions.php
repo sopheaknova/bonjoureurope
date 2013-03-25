@@ -465,7 +465,7 @@ if ( !function_exists('sp_breadcrumb') ) {
 	  $before = '<span class="current">'; // tag before the current crumb
 	  $after = '</span>'; // tag after the current crumb
 	 
-	  if ( !is_home() && !is_front_page() || is_paged() ) {
+	  if ( !is_home() && !is_front_page() && !is_404() || is_paged() ) {
 	 
 		echo '<div id="crumbs">';
 	 

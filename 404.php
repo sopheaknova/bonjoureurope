@@ -6,9 +6,8 @@
 
 	<div class="container clearfix">
 		
+        <div class="entry-body">
         <center>
-		<header class="page-header">
-		
 			<h1 class="page-title"><?php _e( 'Well this is somewhat embarrassing, isn&rsquo;t it?', 'sptheme' ); ?></h1>
 
 		<article id="post-0" class="post error404 not-found">
@@ -18,11 +17,8 @@
 		
 		</article><!-- end .hentry -->
         
-        </header><!-- end .page-header -->
-        
-        
         </center>
-        
+   </div><!-- end .entry-body -->     
     </div><!-- end .container.clearfix -->    
 
 </section><!-- end #content -->
