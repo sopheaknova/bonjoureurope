@@ -21,16 +21,16 @@
 	    <div class="sticky clearfix">
 	    	  <div class="content-sticky-1">
 	    	  	    <div class="sticky-logos">
-	    	  	    	  <a href="#">
+	    	  	    	  <a href="http://www.airfrance.com.kh/" target="_blank">
 	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/air-france-1.png" width="182" height="20" />
 	    	  	    	  </a>
-	    	  	    	  <a href="#">
+	    	  	    	  <a href="http://www.klm.com" target="_blank">
 	    	  	    	  <img src="<?php bloginfo('template_url');?>/images/sticky/klm.png" width="68" height="30" />
 	    	  	    	  </a>
 	    	  	    </div>
 	    	  	    <div class="sticky-marquee">
 	    	  	    	  <marquee direction="left" behavior="scroll" scrollamount="3">
-	    	  	    	  	  The cheapest price of Air France to Europe is online, book here <a href="http://www.airfrance.com.kh">www.airfrance.com.kh</a> + Air France has 4 flights/week with codeshare Bangkok Airways from Phnom Penh, as from April 2013. | The cheapest price of KLM to Europe is online, book here <a href="http://www.klm.com">www.klm.com</a>. + KLM has daily flight with codeshare bangkok airways from Phnom Penh, as from April 2013
+	    	  	    	  	  The cheapest price of Air France to Europe is online, book here <a href="http://www.airfrance.com.kh" target="_blank">www.airfrance.com.kh</a> + Air France has 4 flights/week with codeshare Bangkok Airways from Phnom Penh, as from April 2013. | The cheapest price of KLM to Europe is online, book here <a href="http://www.klm.com" target="_blank">www.klm.com</a>. + KLM has daily flight with codeshare bangkok airways from Phnom Penh, as from April 2013
 	    	  	    	  </marquee>
 	    	  	    </div>
 	    	  	    <div class="stick-arrow-up">

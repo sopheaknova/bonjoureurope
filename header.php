@@ -63,7 +63,7 @@
 </section>
 <section id="news-ticker">
      <div class="container clearfix">
-          <span id="hot-news">Hot News&nbsp;:&nbsp;</span>
+          <span id="hot-news"><?php _e('Hot news &nbsp;:&nbsp;', 'sptheme'); ?></span>
           <span class="text-run">
                 <marquee direction="left" behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
                 <?php 

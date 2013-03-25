@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bonjour Europe 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 16:06+0700\n"
-"PO-Revision-Date: 2013-03-20 16:18+0700\n"
+"POT-Creation-Date: 2013-03-25 16:34+0700\n"
+"PO-Revision-Date: 2013-03-25 16:35+0700\n"
 "Last-Translator: Dara <dara@fhi.org.kh>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,83 +14,82 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:12
+#: 404.php:11
 msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
 msgstr ""
 
-#: 404.php:16
-#: archive-events.php:51
-#: archive.php:63
-#: category.php:57
+#: 404.php:15
+#: archive-events.php:39
+#: archive-gallery.php:39
+#: archive.php:51
+#: category.php:39
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for..."
 msgstr ""
 
-#: 404.php:17
+#: 404.php:16
 #, php-format
 msgid "<strong>Please start over again</strong> with the %1$sHomepage%2$s."
 msgstr ""
 
-#: archive-events.php:14
+#: archive-events.php:13
 msgid "Events Archive"
 msgstr "ពិធីបុណ្យដែលមានកន្លងមក"
 
-#: archive-events.php:19
-#: archive.php:31
-#: category.php:17
-#: search.php:17
-msgid "Nothing Found"
-msgstr ""
+#: archive-gallery.php:13
+msgid "Photo Gallery Archive"
+msgstr "រូបភាពចាស់ៗ"
 
 #: archive.php:16
 #, php-format
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "ពត៏មានប្រចាំថ្ងៃ"
 
 #: archive.php:18
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "ពត៏មានប្រចាំខែ"
 
 #: archive.php:20
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr ""
+msgstr "ពត៏មានប្រចាំឆ្នាំ"
 
 #: archive.php:22
 msgid "Archives"
-msgstr ""
+msgstr "ពត៏មានចាស់ៗ"
 
 #: archives.php:18
 msgid "Archive Index Page"
-msgstr ""
+msgstr "ទំព័រពត៏មានចាស់ៗ"
 
 #: archives.php:20
 msgid "<p class=\"serif\">Read the rest of this entry &raquo;</p>"
 msgstr ""
 
-#: archives.php:39
+#: archives.php:38
 msgid "Pages"
 msgstr ""
 
-#: archives.php:47
+#: archives.php:46
 msgid "Archives by Year:"
 msgstr ""
 
-#: archives.php:52
+#: archives.php:51
 msgid "Archives by Month:"
 msgstr ""
 
-#: archives.php:57
+#: archives.php:56
 msgid "Archives by Subject:"
 msgstr ""
 
-#: category.php:13
+#: category.php:14
 #, php-format
 msgid "Category Archives: %s"
 msgstr ""
 
 #: content-audio.php:5
 #: content-events.php:6
+#: content-gallery.php:5
 #: content-link.php:5
 #: content-video.php:5
 #: content.php:5
@@ -98,51 +97,83 @@ msgstr ""
 msgid "Permalink to %s"
 msgstr ""
 
+#: header.php:66
+msgid "Hot news &nbsp;:&nbsp;"
+msgstr "ពត៏មានថ្មីៗ &nbsp;:&nbsp;"
+
 #: page.php:23
+#: template-photogallery.php:29
 msgid "Edit"
-msgstr ""
+msgstr "កែតម្រូវ"
 
 #: search.php:13
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "លទ្ធិផលសំរាប់ពាក្យ: %s"
+
+#: search.php:17
+msgid "Nothing Found"
+msgstr "មិនមានលទ្ធិផលទេ"
 
 #: search.php:48
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
+msgstr "មិនត្រឹមត្រូវទេ សូមព្យាយាមស្វែងរកម្តងទៀត"
 
 #: searchform.php:2
 #: searchform.php:3
 msgid "Search"
-msgstr ""
+msgstr "ស្វែងរក"
 
-#: sidebar.php:10
+#: sidebar-footer.php:6
+#: sidebar-left.php:10
+#: sidebar-left.php:20
+#: sidebar.php:7
 msgid "About This Sidebar"
 msgstr ""
 
-#: sidebar.php:11
+#: sidebar-footer.php:7
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place widgets into the <strong><em>Footer Sidebar</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar, នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក widgets ដាក់នៅក្នុង <strong><em>Footer Sidebar</em></strong>"
+
+#: sidebar-left.php:2
+msgid "Other Events"
+msgstr "បុណ្យផ្សេងៗ"
+
+#: sidebar-left.php:11
 msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place widgets into the <strong><em>"
 msgstr ""
 
+#: sidebar-left.php:21
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place widgets into the <strong><em>Left Sidebar</em></strong> Area"
+msgstr ""
+
+#: sidebar.php:2
+msgid "Important Tips"
+msgstr "ពត៏មានជំនួយ"
+
+#: sidebar.php:8
+msgid "To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; Widgets</em></strong> and place widgets into the <strong><em>Right Sidebar</em></strong> Area"
+msgstr "ដើម្បីបង្ហាញទិន្ន័យក្នុង sidebar, នេះសូមទៅកាន់ទំព័រ admin <strong><em>Appearance -&gt; Widgets</em></strong> ហើយទាញយក widgets ដាក់នៅក្នុង <strong><em>Right Sidebar</em></strong>"
+
 #: template-contact.php:12
 msgid "Please enter your name."
-msgstr ""
+msgstr "បញ្ជូលឈ្មោះរបស់អ្នក"
 
 #: template-contact.php:19
 msgid "Please enter your email address."
-msgstr ""
+msgstr "សូមបញ្ជូល E-mail របស់អ្នក"
 
 #: template-contact.php:29
 msgid "Please enter a message."
-msgstr ""
+msgstr "បញ្ជូលសារ"
 
 #: template-contact.php:117
 msgid "Thanks, your email was sent successfully."
-msgstr ""
+msgstr "សូមអរគុណ! E-mail​ របស់អ្នកត្រូវបានបញ្ជូនដោយជោគជ័យ"
 
 #: template-contact.php:123
 msgid "Name"
-msgstr ""
+msgstr "ឈោ្មះ"
 
 #: template-contact.php:130
 msgid "E-mail"
@@ -150,11 +181,11 @@ msgstr ""
 
 #: template-contact.php:137
 msgid "Message"
-msgstr ""
+msgstr "សារ"
 
 #: template-contact.php:144
 msgid "Send"
-msgstr ""
+msgstr "ផ្ញើ"
 
 #: framework/admin/classes/class.options_machine.php:481
 msgid "Last Backup : "
@@ -178,6 +209,9 @@ msgid "Options"
 msgstr ""
 
 #: framework/admin/functions/functions.mediauploader.php:210
+#: framework/custom-post/gallery-post-type.php:11
+#: framework/custom-post/gallery-post-type.php:12
+#: framework/custom-post/gallery-post-type.php:22
 msgid "Gallery"
 msgstr ""
 
@@ -186,12 +220,9 @@ msgid "Previously Uploaded"
 msgstr ""
 
 #: framework/custom-post/events-post-type.php:11
+#: framework/custom-post/events-post-type.php:12
 #: framework/custom-post/events-post-type.php:22
 msgid "Events"
-msgstr ""
-
-#: framework/custom-post/events-post-type.php:12
-msgid "Event"
 msgstr ""
 
 #: framework/custom-post/events-post-type.php:13
@@ -336,11 +367,7 @@ msgstr ""
 msgid "Photo number"
 msgstr ""
 
-#: framework/custom-post/gallery-post-type.php:58
-msgid "Shortcode"
-msgstr ""
-
-#: framework/custom-post/gallery-post-type.php:118
+#: framework/custom-post/gallery-post-type.php:111
 msgid "Enter gallery name here"
 msgstr ""
 
@@ -397,20 +424,28 @@ msgstr ""
 msgid "Footer Navigation"
 msgstr ""
 
-#: framework/functions/setup-theme.php:124
-msgid "Main Sidebar"
+#: framework/functions/setup-theme.php:126
+msgid "Left Sidebar"
 msgstr ""
 
-#: framework/functions/setup-theme.php:340
+#: framework/functions/setup-theme.php:152
+msgid "Right Sidebar"
+msgstr ""
+
+#: framework/functions/setup-theme.php:162
+msgid "Footer Sidebar"
+msgstr ""
+
+#: framework/functions/setup-theme.php:365
 #, php-format
 msgid "Search results for %s"
-msgstr ""
+msgstr "លទ្ធិផលសំរាប់ %s"
 
-#: framework/functions/setup-theme.php:343
-#: framework/functions/setup-theme.php:357
+#: framework/functions/setup-theme.php:368
+#: framework/functions/setup-theme.php:382
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "ទំព័រសំរាប់ %s"
 
 #: framework/functions/theme-functions.php:53
 msgid "Add Main menu"
@@ -441,8 +476,36 @@ msgstr ""
 msgid "<time datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr ""
 
-#: framework/functions/theme-functions.php:418
-msgid "Learn more »"
+#: framework/functions/theme-functions.php:419
+msgid "Read more »"
+msgstr ""
+
+#: framework/functions/theme-functions.php:464
+msgid "Home"
+msgstr "ទំព័រដើម"
+
+#: framework/functions/theme-functions.php:474
+msgid "You Are Here: "
+msgstr "ចាប់ផ្តើពីទំព័រ"
+
+#: framework/functions/theme-functions.php:536
+msgid "Search results for "
+msgstr "លទ្ធិផលសំរាប់"
+
+#: framework/functions/theme-functions.php:539
+msgid "Posts tagged "
+msgstr ""
+
+#: framework/functions/theme-functions.php:544
+msgid "Articles posted by "
+msgstr "សរសេរដោយ៖"
+
+#: framework/functions/theme-functions.php:547
+msgid "Error 404 "
+msgstr ""
+
+#: framework/functions/theme-functions.php:552
+msgid "Page"
 msgstr ""
 
 #: framework/functions/categories-images/categories-images.php:45
@@ -514,34 +577,6 @@ msgstr ""
 msgid "ex: http://www.youtube.com/watch?v=sdUUx5FdySs the id is \"sdUUx5FdySs\"."
 msgstr ""
 
-#: framework/meta-box/meta-boxes.php:157
-msgid "Audio Settings"
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:163
-msgid "MP3 File URL"
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:167
-msgid "For Safari, Internet Explorer, Chrome."
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:170
-msgid "OGG File URL"
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:174
-msgid "For Firefox, Opera, Chrome."
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:177
-msgid "External Audio"
-msgstr ""
-
-#: framework/meta-box/meta-boxes.php:181
-msgid "For example embed code. e.g: embeded code from soundcloud.com"
-msgstr ""
-
 #: framework/meta-box/inc/classes/meta-box.php:285
 msgid "Please correct the errors highlighted below and try again."
 msgstr ""
@@ -578,21 +613,11 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:110
 #: framework/meta-box/inc/fields/slider-slides.php:288
-#: framework/shortcodes/tinymce/popup.php:46
 msgid "Button"
 msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:111
 #: framework/meta-box/inc/fields/slider-slides.php:289
-#: framework/shortcodes/tinymce/popup.php:286
-#: framework/shortcodes/tinymce/popup.php:339
-#: framework/shortcodes/tinymce/popup.php:399
-#: framework/shortcodes/tinymce/popup.php:485
-#: framework/shortcodes/tinymce/popup.php:540
-#: framework/shortcodes/tinymce/popup.php:608
-#: framework/shortcodes/tinymce/popup.php:1024
-#: framework/shortcodes/tinymce/popup.php:1042
-#: framework/shortcodes/tinymce/popup.php:1516
 msgid "Content"
 msgstr ""
 
@@ -624,15 +649,11 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:142
 #: framework/meta-box/inc/fields/slider-slides.php:320
-#: framework/shortcodes/tinymce/popup.php:122
-#: framework/shortcodes/tinymce/popup.php:160
-#: framework/shortcodes/tinymce/popup.php:250
 msgid "Text"
 msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:154
 #: framework/meta-box/inc/fields/slider-slides.php:332
-#: framework/shortcodes/tinymce/popup.php:47
 msgid "Dropcap"
 msgstr ""
 
@@ -645,10 +666,6 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:167
 #: framework/meta-box/inc/fields/slider-slides.php:345
-#: framework/shortcodes/tinymce/popup.php:453
-#: framework/shortcodes/tinymce/popup.php:503
-#: framework/shortcodes/tinymce/popup.php:558
-#: framework/shortcodes/tinymce/popup.php:592
 msgid "Title"
 msgstr ""
 
@@ -669,7 +686,6 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:232
 #: framework/meta-box/inc/fields/slider-slides.php:410
-#: framework/shortcodes/tinymce/popup.php:54
 msgid "Lightbox"
 msgstr ""
 
@@ -680,13 +696,11 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:239
 #: framework/meta-box/inc/fields/slider-slides.php:417
-#: framework/shortcodes/tinymce/popup.php:426
 msgid "Iframe"
 msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:248
 #: framework/meta-box/inc/fields/slider-slides.php:426
-#: framework/shortcodes/tinymce/popup.php:176
 msgid "URL"
 msgstr ""
 
@@ -702,6 +716,11 @@ msgstr ""
 
 #: framework/meta-box/inc/fields/slider-slides.php:453
 msgid "Add New Slide"
+msgstr ""
+
+#: framework/shortcodes/shortcodes.php:671
+#: framework/shortcodes/shortcodes.php:729
+msgid "Learn more »"
 msgstr ""
 
 #: framework/shortcodes/shortcodes.php:684
@@ -1201,8 +1220,16 @@ msgstr ""
 msgid "Video Embed Code"
 msgstr ""
 
+#: framework/shortcodes/tinymce/popup.php:972
+msgid "MP3 File URL"
+msgstr ""
+
 #: framework/shortcodes/tinymce/popup.php:979
 msgid "(For Safari, Internet Explorer, Chrome)"
+msgstr ""
+
+#: framework/shortcodes/tinymce/popup.php:989
+msgid "OGG File URL"
 msgstr ""
 
 #: framework/shortcodes/tinymce/popup.php:996
@@ -1289,55 +1316,55 @@ msgstr ""
 
 #: framework/shortcodes/tinymce/popup.php:1423
 msgid "Month"
-msgstr ""
+msgstr "ខែ"
 
 #: framework/shortcodes/tinymce/popup.php:1430
 msgid "January"
-msgstr ""
+msgstr "មករា"
 
 #: framework/shortcodes/tinymce/popup.php:1431
 msgid "February"
-msgstr ""
+msgstr "កុម្ភះ"
 
 #: framework/shortcodes/tinymce/popup.php:1432
 msgid "March"
-msgstr ""
+msgstr "មីនា"
 
 #: framework/shortcodes/tinymce/popup.php:1433
 msgid "April"
-msgstr ""
+msgstr "មេសា"
 
 #: framework/shortcodes/tinymce/popup.php:1434
 msgid "May"
-msgstr ""
+msgstr "ឧសភា"
 
 #: framework/shortcodes/tinymce/popup.php:1435
 msgid "June"
-msgstr ""
+msgstr "មិថុនា"
 
 #: framework/shortcodes/tinymce/popup.php:1436
 msgid "July"
-msgstr ""
+msgstr "កក្កដា"
 
 #: framework/shortcodes/tinymce/popup.php:1437
 msgid "August"
-msgstr ""
+msgstr "សីហា"
 
 #: framework/shortcodes/tinymce/popup.php:1438
 msgid "September"
-msgstr ""
+msgstr "កញ្ញា"
 
 #: framework/shortcodes/tinymce/popup.php:1439
 msgid "October"
-msgstr ""
+msgstr "តុលា"
 
 #: framework/shortcodes/tinymce/popup.php:1440
 msgid "November"
-msgstr ""
+msgstr "វិច្ឆិកា"
 
 #: framework/shortcodes/tinymce/popup.php:1441
 msgid "December"
-msgstr ""
+msgstr "ធ្នូ"
 
 #: framework/shortcodes/tinymce/popup.php:1451
 msgid "Order by"
@@ -1385,6 +1412,8 @@ msgid "Facebook"
 msgstr ""
 
 #: framework/widgets/fb-likebox-widget.php:77
+#: framework/widgets/post-events-widget.php:103
+#: framework/widgets/video-widget.php:78
 msgid "Title:"
 msgstr ""
 
@@ -1408,58 +1437,25 @@ msgstr ""
 msgid "Facebook Page URL:"
 msgstr ""
 
-#: framework/widgets/newsletter-widget.php:12
-msgid "Widget display the Subscribe box"
+#: framework/widgets/post-events-widget.php:13
+msgid "Widget display post Events from a certain category in current month"
 msgstr ""
 
-#: framework/widgets/newsletter-widget.php:13
+#: framework/widgets/post-events-widget.php:14
 #, php-format
-msgid "%s: Newsletter"
+msgid "%s: Post Event by Category"
 msgstr ""
 
-#: framework/widgets/newsletter-widget.php:24
-msgid "Want to be notified when we updated? Enter your email address below to be the first to know."
+#: framework/widgets/post-events-widget.php:97
+msgid "Events in this month"
 msgstr ""
 
-#: framework/widgets/newsletter-widget.php:26
-msgid "Email subscription"
-msgstr ""
-
-#: framework/widgets/newsletter-widget.php:27
-msgid "Enter your email"
-msgstr ""
-
-#: framework/widgets/newsletter-widget.php:51
-msgid "Subscribe to our newsletter"
-msgstr ""
-
-#: framework/widgets/newsletter-widget.php:57
-msgid "feedburner name: (your name without http://feeds.feedburner.com/) "
-msgstr ""
-
-#: framework/widgets/posts-type-widget.php:13
-msgid "Widget display Posts from a certain category"
-msgstr ""
-
-#: framework/widgets/posts-type-widget.php:14
-#, php-format
-msgid "%s: Posts by Category"
-msgstr ""
-
-#: framework/widgets/posts-type-widget.php:50
-msgid "Posted on: "
-msgstr ""
-
-#: framework/widgets/posts-type-widget.php:81
-msgid "Post Type"
-msgstr ""
-
-#: framework/widgets/posts-type-widget.php:91
+#: framework/widgets/post-events-widget.php:107
 msgid "select category:"
 msgstr ""
 
-#: framework/widgets/posts-type-widget.php:107
-msgid "Number Of Posts:"
+#: framework/widgets/post-events-widget.php:125
+msgid "Number Of Events:"
 msgstr ""
 
 #: framework/widgets/subnav-widget.php:12
@@ -1482,31 +1478,6 @@ msgstr ""
 #: framework/widgets/text-image-widget.php:20
 #, php-format
 msgid "%s: Text With Image"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:12
-msgid "Widget display as text and html"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:13
-#, php-format
-msgid "%s: Register for traning"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:55
-msgid "Please join us!"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:57
-msgid "REGISTER TODAY"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:72
-msgid "Button text:"
-msgstr ""
-
-#: framework/widgets/training-register-widget.php:77
-msgid "Button link:"
 msgstr ""
 
 #: framework/widgets/video-widget.php:17
