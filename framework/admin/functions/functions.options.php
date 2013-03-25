@@ -215,6 +215,13 @@ $of_options[] = array( "name" => "Disable post meta",
 						'yes' => 'Yes',
 						'no' => 'No')
 					);
+$of_options[] = array( "name" => "Select News from Home page",
+					"desc" => "Select News category",
+					"id" => "news_cat",
+					"std" => "Select a category:",
+					"type" => "select",
+					"options" => $of_categories
+					);			
 
 // Ticker Setting
 $of_options[] = array( "name" => "Ticker Setting",
@@ -222,11 +229,11 @@ $of_options[] = array( "name" => "Ticker Setting",
 
 $of_options[] = array( "name" => "Select Ticker",
 					"desc" => "Select Ticker category",
-					"id" => "media_center_cat",
+					"id" => "ticker_cat",
 					"std" => "Select a category:",
 					"type" => "select",
 					"options" => $of_categories
-					);																							
+					);																												
 
 // Publication and Reports Setting
 $of_options[] = array( "name" => "Publication Report",

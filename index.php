@@ -32,19 +32,29 @@
           
           <div class="main">
           	   <h1 class="title-mod">News and Hot Informations</h1>
-          	   <div class="entry-body clearfix">
-                    <h3>Arstardam, the best choice in spring</h3>
-                    <div class="entry-meta">
-                        Post by Mr. Veasna <a href="">Arstardam, 10th Oct,2013</a>
-                    </div><!-- end .entry-meta -->
-                    <img src="<?php bloginfo('template_url');?>/images/dev/Tulips-garden.jpg" width="410" height="267" />
-	                <div class="entry-content">
-	                    the content page contain some information about this post article and describe 
-                        with illustration in short, you can see detail by click to see the link below
-
-                    </div><!-- end .entry-content -->
-                    <a class="read-more" href="#">Read more</a>
-               </div><!-- end .entry-body -->
+          	   <?php $cat_id = get_cat_ID($data['news_cat']);
+                $query  = new WP_Query(array('cat'=>$cat_id));
+                if( $query->have_posts()) :
+                while( $query->have_posts()) : $query->the_post();?>
+                
+                <div class="entry-body clearfix">
+                <h3><?php the_title();?></h3>
+                <div class="entry-meta">
+                  Post by&nbsp;<?php the_author();?>&nbsp;&nbsp;<a href=""><?php echo $data['news_cat'];?>,&nbsp;<?php the_modified_date('F j, Y'); ?></a>
+                </div><!-- end .entry-meta -->
+                <?php if(has_post_thumbnail()){
+                
+                the_post_thumbnail();
+                }?>
+                <div class="entry-content">
+                <?php the_content();?>
+                </div>
+                </div>
+                <!--end .entry-body clearfix -->
+              
+          <?php endwhile;
+                endif;?>
+               
           </div>
           <!--end .main-->
           
