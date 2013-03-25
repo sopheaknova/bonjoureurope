@@ -23,7 +23,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* BASIC HTML */
 body {
     background: #FFFFFF;
-    color: #808080;/*#7c7c7c;*/
+    color:#666;/*#7c7c7c;*/
     font: 12px/1.5 Arial, Helvetica, 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;

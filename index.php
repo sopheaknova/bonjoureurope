@@ -1,37 +1,19 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Better_Factories_Cambodia
- * @since Better Factories Cambodia 1.0
+ * @subpackage Bonjour_Europe
+ * @since Bonjour Europe 1.0
  */
 ?>
 <?php get_header(); ?>
 
 <section id="content">
 	<div class="container content-inner clearfix">
-          <!--<div class="sidebar-left">
-          	   <h2 class="title-mod">Other Event</h2>
-          	   <h5 class="label-mod">Festival in March</h5>
-          	   <div class="defined-left">
-          	   	    <h5>Binche Carnival</h5>
-          	   	    <img src="<?php bloginfo('template_url');?>/images/dev/Kiruna-Snow.png" width="135" height="160" />
-          	   	    19th to 25th, March
-          	   </div>
-          	   <div class="defined-left">
-          	   	    <h5>Kiruna​Snow​</h5>
-          	   	    <img src="<?php bloginfo('template_url');?>/images/dev/Starkbierzeit.png" width="135" height="160" />
-          	   	    28th to 30th, March
-          	   </div>
-                  <div class="defined-left clearfix">
-                        <a class="read-more add-left">Months..</a>
-                  </div>
-          </div>-->
-          <!--end .sidebar-left-->
           
-          <?php get_sidebar('left'); ?>
+		  <?php get_sidebar('left'); ?>
           
           <div class="main">
-          	   <h1 class="title-mod">News and Hot Informations</h1>
+          	   <h1 class="title-mod"><?php _e('News and Hot Informations', 'sptheme'); ?></h1>
           	   <?php $cat_id = get_cat_ID($data['news_cat']);
                 $query  = new WP_Query(array('cat'=>$cat_id));
                 if( $query->have_posts()) :
