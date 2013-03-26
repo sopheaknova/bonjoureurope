@@ -2,25 +2,15 @@
 
 <?php $has_sidebar = sp_check_page_layout(); ?>
 
-<section id="content" class="clearfix <?php echo sp_check_sidebar_position(); ?>">
+<section id="content" class="<?php echo sp_check_sidebar_position(); ?>">
 
-	<div class="container">
+	<div class="container content-inner clearfix">
 
-		<header class="page-header">
-
-			<?php if ( have_posts() ): ?>
-			
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'sptheme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-
-			<?php else: ?>
-			
-				<h1 class="page-title"><?php _e( 'Nothing Found', 'sptheme' ); ?></h1>
-
-			<?php endif; ?>
-
-		</header><!-- end .page-header -->
+		<?php get_sidebar('left'); ?>
+        
+			<section class="main">
 		
-			<section id="main">
+        <h2 class="title-mod"><?php printf( __( 'Search result for: %s', 'sptheme' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -40,27 +30,29 @@
 				else 
 					echo sp_pagination(); 
 			?>
-
+			
 		<?php else: ?>
 		
-			<article id="post-0" class="hentry post no-results not-found">
+			<article id="post-0" class="post no-results not-found">
 		
-				<h3><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sptheme' ); ?></h3>
+				<h3><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for...', 'sptheme' ); ?></h3>
 
 			</article><!-- end .hentry -->
 
 		<?php endif; ?>
-
 		
+
 			</section><!-- end #main -->
 
 			<?php get_sidebar(); ?>
-
+        
     </div><!-- end .container.clearfix -->    
 
 </section><!-- end #content -->
 
 <?php get_footer(); ?>
+
+
 
 
 

@@ -119,10 +119,10 @@ blockquote {
 p img {
     padding: 0;
 }
-img.aligncenter, img.alignright, img.alignleft, img.alignnone {
+/*img.aligncenter, img.alignright, img.alignleft, img.alignnone {
     border: 1px solid #ddd;
     padding: 6px;
-}
+}*/
 
 .alignright, img.alignright, a img.alignright {
     float: right;
