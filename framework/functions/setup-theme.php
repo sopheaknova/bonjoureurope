@@ -4,7 +4,7 @@
 /*  Set Max Content Width (use in conjuction with ".entry-content img" css)
 /* ----------------------------------------------------------------------------------*/
 if ( ! isset( $content_width ) )
-	$content_width = 415;
+	$content_width = 440;
 
 if( !function_exists( 'sp_content_width' ) ) {
     function sp_content_width() {
@@ -25,6 +25,11 @@ if( !function_exists('sp_theme_setup') ) {
 		
 		// Make theme available for translation
 		load_theme_textdomain( $shortname, SP_BASE_DIR . 'languages' );
+		
+		$locale = get_locale();
+    	$locale_file = get_template_directory() . "/languages/$locale.php";
+    	if ( is_readable( $locale_file ) )
+    		require_once( $locale_file );
 		
 		// Editor style
 		add_editor_style('css/editor-style.css');
@@ -183,10 +188,9 @@ function sp_register_styles() {
 	wp_register_style( 'g_suwannaphum', 'http://fonts.googleapis.com/css?family=Suwannaphum', array(), THEME_VERSION );
 	wp_register_style( 'sp-theme-styles', SP_BASE_URL . 'style.css', array(), THEME_VERSION );
 	
-	/*if ( ICL_LANGUAGE_CODE == 'kh' ) {
+	if ( ICL_LANGUAGE_CODE == 'kh' ) {
 		wp_register_style( 'khcss', SP_BASE_URL . 'css/kh.css', array(), THEME_VERSION );
-	}*/
-	wp_register_style( 'khcss', SP_BASE_URL . 'css/kh.css', array(), THEME_VERSION );
+	}
 		
 		wp_register_style( 'video-js',         SP_BASE_URL . 'css/video-js.min.css', array(), '3.2.0' );
 		wp_register_style( 'audioplayerv1',    SP_BASE_URL . 'css/audioplayerv1.min.css', array(), '1.1.3' );
@@ -202,20 +206,16 @@ add_action('init', 'sp_register_styles');
 function sp_enqueue_styles() {
 
 	if( !is_admin() ) {
-	/*if ( ICL_LANGUAGE_CODE == 'en' ) {	
+	if ( ICL_LANGUAGE_CODE == 'en' ) {	
 		wp_enqueue_style('g_droidsans');
-		wp_enqueue_style('g_suwannaphum');
-		wp_enqueue_style('sp-theme-styles');
-	}*/
+	}
 	
-	//wp_enqueue_style('g_droidsans');
 	wp_enqueue_style('g_suwannaphum');
 	wp_enqueue_style('sp-theme-styles');
-	wp_enqueue_style('khcss');
 		
-	/*if ( ICL_LANGUAGE_CODE == 'kh' ) {	
+	if ( ICL_LANGUAGE_CODE == 'kh' ) {	
 		wp_enqueue_style('khcss');
-	}*/
+	}
 		wp_enqueue_style('video-js');
 		wp_enqueue_style('audioplayerv1');
 		if ( !WP_PRETTY_PHOTO_PLUGIN_ACTIVE ) {

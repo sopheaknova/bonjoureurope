@@ -140,6 +140,18 @@ $meta_boxes[] = array(
 	'priority' => 'high',
 	'fields'   => array(
 		array(
+			'name' => __('Video type', 'sptheme'),
+			'id'   => $prefix . 'video_type',
+			'type' => 'select',
+			'options'  => array(
+				'youtube' => 'Youtube',
+				'daily' => 'Daily',
+				'vimeo' => 'Vimeo',
+			),
+			// Select multiple values, optional. Default is false.
+			'multiple' => false,
+		),
+		array(
 			'name' => __('Video id', 'sptheme'),
 			'id'   => $prefix . 'video_id',
 			'type' => 'text',

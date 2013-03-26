@@ -18,7 +18,7 @@
 		<?php while ( have_posts() ): the_post(); ?>
         <div class="entry-body">
         	<h1 class="page-title"><?php echo the_title(); ?></h1>	
-            <?php remove_filter( 'the_content', 'wpautop' ); the_content(); ?>
+            <?php the_content(); ?>
 			<div class="clear"></div>
 			<p><?php edit_post_link( __( 'Edit', 'sptheme' ), '', '' ); ?></p>
         </div>    

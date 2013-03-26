@@ -19,23 +19,61 @@
                 if( $query->have_posts()) :
                 while( $query->have_posts()) : $query->the_post();?>
                 
-                <div class="entry-body clearfix">
-                <h3><?php the_title();?></h3>
-                <div class="entry-meta">
-                  Post by&nbsp;<?php the_author();?>&nbsp;&nbsp;<a href=""><?php echo $data['news_cat'];?>,&nbsp;<?php the_modified_date('F j, Y'); ?></a>
-                </div><!-- end .entry-meta -->
-                <?php if(has_post_thumbnail()){
-                
-                the_post_thumbnail();
-                }?>
-                <div class="entry-content">
-                <?php the_content();?>
-                </div>
-                </div>
-                <!--end .entry-body clearfix -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					
+                    <div class="entry-body">
+                        
+                        <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__('Permalink to %s', 'sptheme'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
+                            <h1 class="title"><?php the_title(); ?></h1>
+                        </a>
+                        
+                        <div class="entry-meta">
+                        <?php echo sp_post_meta(); ?>
+                        </div><!-- end .entry-meta -->
+                        
+                        <?php if ( sp_post_image() ) { ?>
+                        
+                        <div class="cat-post-img">
+                        <?php
+						$post_type = get_post_format($post->ID);
+						$thumb = sp_post_image('large');
+						$img_thumb = aq_resize( $thumb, 440, 250, true );
+						?>
+                        <?php if ( $post_type == 'video' ) { ?>
+                        <img src="<?php echo sp_post_image(); ?>" width="440" height="250" align="<?php the_title(); ?>" />
+                        <?php } else { ?>
+                        <img src="<?php echo $img_thumb; ?>" align="<?php the_title(); ?>" />
+                        <?php } ?>
+                        </div><!-- end .cat-post-img -->
+                        
+						<?php } // sp_post_image() ?>
+                        
+                        <div class="entry-content">
+                        <?php echo sp_post_content(); ?>
+                        </div><!-- end .entry-content -->
+                        <div class="clear"></div>
+                    
+                    </div><!-- end .entry-body -->
+
+				</article><!-- end .post-entry -->
               
-          <?php endwhile;
-                endif;?>
+          <?php endwhile; ?>
+		  
+		  <?php // Pagination
+				if(function_exists('wp_pagenavi'))
+					wp_pagenavi();
+				else 
+					echo sp_pagination(); 
+			?>		
+          <?php else: ?>
+		
+                <article id="post-0" class="post no-results not-found">
+            
+                    <h3><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for...', 'sptheme' ); ?></h3>
+    
+                </article><!-- end .hentry -->
+    
+            <?php endif; ?>
                
           </div>
           <!--end .main-->

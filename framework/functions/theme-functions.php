@@ -300,42 +300,6 @@ if( !function_exists('sp_post_meta')) {
 }
 
 /* ---------------------------------------------------------------------- */
-/*	Show Heading image on page/post
-/* ---------------------------------------------------------------------- */
-
-if( !function_exists('sp_check_heading_image')) {
-
-	function sp_check_heading_image() {
-
-		global $post;
-		
-		$post_img =  rwmb_meta( 'sp_heading_image', $args = array('type' => 'plupload_image') );
-		$post_img_parent = rwmb_meta( 'sp_heading_image', $args = array('type' => 'plupload_image'), $post->post_parent );
-		
-		if( ( is_page() || is_page_template() || is_singular() || is_single() ) && ( $post_img ) ) {
-		
-			foreach ( $post_img as $image )
-			{
-				$output = '<img src="' . aq_resize( $image['full_url'], 980, 157, true ) . '" />';
-			}// end foreach
-		
-		} elseif ( ( is_page() ) && ( $post_img_parent ) ) {
-		
-			foreach ( $post_img_parent as $image_parent )
-			{
-				$output = '<img src="' . aq_resize( $image_parent['full_url'], 980, 157, true ) . '" />';
-			}// end foreach
-		
-		} else {
-			$output = '<img src="' . SP_BASE_URL . 'images/default-heading-image-' . rand(1,7) . '.jpg' . '" width="980" height="157" />';
-		}
-		
-		return $output;
-	}
-
-}
-
-/* ---------------------------------------------------------------------- */
 /*	The current post—date/time
 /* ---------------------------------------------------------------------- */
 
@@ -350,6 +314,61 @@ if( !function_exists('sp_posted_on')) {
 
 	}
 
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Get Post image
+/* ---------------------------------------------------------------------- */
+
+if( !function_exists('sp_post_image')) {
+
+	function sp_post_image($size = 'thumbnail'){
+		global $post;
+		$image = '';
+		//get the post thumbnail;
+		$image_id = get_post_thumbnail_id($post->ID);
+		$image = wp_get_attachment_image_src($image_id, $size);
+		$image = $image[0];
+		if ($image) return $image;
+		//if the post is video post and haven't a feutre image
+		$post_type = get_post_format($post->ID);
+		$vtype = sp_get_custom_field( 'sp_video_type', $post->ID );
+		$vId = get_post_meta($post->ID, 'sp_video_id', true);
+
+		if($post_type == 'video') {
+						if($vtype == 'youtube') {
+						  $image = 'http://img.youtube.com/vi/'.$vId.'/0.jpg';
+						} elseif ($vtype == 'vimeo') {
+						$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$vId.php"));
+						  $image = $hash[0]['thumbnail_large'];
+						} elseif ($vtype == 'daily') {
+						  $image = 'http://www.dailymotion.com/thumbnail/video/'.$vId;
+						}
+				}
+						
+		if ($image) return $image;
+		//If there is still no image, get the first image from the post
+		return sp_get_first_image();
+	}
+		
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Get first image in post
+/* ---------------------------------------------------------------------- */
+if( !function_exists('sp_get_first_image')) {
+	
+	function sp_get_first_image() {
+		global $post, $posts;
+		$first_img = '';
+		ob_start();
+		ob_end_clean();
+		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		$first_img = $matches[1][0];
+		
+		return $first_img;
+	}
 }
 
 /* ---------------------------------------------------------------------- */

@@ -11,10 +11,21 @@
         <?php echo sp_post_meta(); ?>
     
     </div><!-- end .entry-meta -->
-
-    <?php if( sp_get_custom_field( 'sp_video_id', $post->ID ) ) { ?>
+     
+    <?php
+	$vtype = sp_get_custom_field( 'sp_video_type', $post->ID );
+	$vId = get_post_meta($post->ID, 'sp_video_id', true);
+	?> 
+     
+    <?php if( $vId ) { ?>
     <div class="entry-video">
-    <iframe width="600" height="338" src="http://www.youtube.com/embed/<?php echo sp_get_custom_field( 'sp_video_id', $post->ID ); ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
+    <?php if ( $vtype == 'youtube' ) { ?>
+    <iframe width="600" height="338" src="http://www.youtube.com/embed/<?php echo $vId; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
+    <?php } elseif($vtype == 'vimeo') { ?>
+	<iframe src="http://player.vimeo.com/video/<?php echo $vId; ?>?title=0&amp;byline=0&amp;portrait=0&amp;color=ba0d16" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	<?php } elseif($vtype == 'daily') { ?>
+<iframe frameborder="0" width="600" height="338" src="http://www.dailymotion.com/embed/video/<?php echo $vId ?>?logo=0"></iframe>
+	<?php } ?>
 	</div><!-- end .entry-video -->
     <?php } ?>
 
