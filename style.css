@@ -1176,7 +1176,9 @@ table tbody tr:hover td {
     
     .single .entry-meta, .archive .entry-meta, .category .entry-meta{margin-bottom:20px;}
         .page-title, h1.title{
-            text-shadow:0 2px 0px #ffffff;  
+            text-shadow:0 2px 0px #e8e8e8;
+			font-size:20px;
+			line-height:28px;  
         }
         
         .entry-body, .page-header{

@@ -26,11 +26,6 @@ if( !function_exists('sp_theme_setup') ) {
 		// Make theme available for translation
 		load_theme_textdomain( $shortname, SP_BASE_DIR . 'languages' );
 		
-		$locale = get_locale();
-    	$locale_file = get_template_directory() . "/languages/$locale.php";
-    	if ( is_readable( $locale_file ) )
-    		require_once( $locale_file );
-		
 		// Editor style
 		add_editor_style('css/editor-style.css');
 		
