@@ -15,7 +15,8 @@
           <div class="main">
           	   <h1 class="title-mod"><?php _e('News and Hot Informations', 'sptheme'); ?></h1>
           	   <?php $cat_id = get_cat_ID($data['news_cat']);
-                $query  = new WP_Query(array('cat'=>$cat_id));
+                $query  = new WP_Query(array('cat'=>$cat_id, 'paged' => $paged));
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 if( $query->have_posts()) :
                 while( $query->have_posts()) : $query->the_post();?>
                 

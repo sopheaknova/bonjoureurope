@@ -521,6 +521,8 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 		padding-bottom:20px;
 		padding-top:10px;	
 	}
+	
+	#crumbs{font-size:11px;}
 
     /* -------------------------------------------------- */
     /*  Main
@@ -992,15 +994,16 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         /*  WP Wunderground widget - Weather
         /* ---------------------------------------- */
 		table.wp_wunderground {
+			background-color: #fff;
 			border:none;
+			border:2px solid #f2f2f2;
 			box-shadow:none;
 			margin:0;	
-			background-color:#F9FAFB;
 		}
 			table.wp_wunderground caption{
 				font-weight:bold;
-				padding:10px 0;	
-				background-color:#F9FAFB;
+				padding:5px 0;	
+				background-color:#f6f6f6;
 			}
 			table.wp_wunderground th{
 				font-size:13px;
@@ -1021,12 +1024,16 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 			margin:0;
 			width:auto;
 		}
+			a.V1label{ font-size:12px!important; line-height:16px!important;}
 			#V1form1 input[type="radio"]{
 				width:auto;
-				margin: 0 10px;
+				margin: 0 10px!important;
 			}  
 				.V1selectBox{
 					width:100%	
+				}
+				.V1textarea{
+					padding:0;	
 				}
 
 /* ---------------------------------------------------------------------- */
@@ -1172,7 +1179,7 @@ table tbody tr:hover td {
         margin-bottom:0;
     }
     
-    .entry-meta{margin-bottom:20px;}
+    .entry-meta{margin-bottom:20px; font-size:12px; color:#999;}
         .page-title, h1.title{
             text-shadow:0 2px 0px #e8e8e8;
 			font-size:22px;
@@ -1521,7 +1528,3 @@ h5.label-mod{
        width: 70%;
        margin-left: 12px;
     }
-   /* Exchange Rate */
-       #exchange-rate{ width:270px; background-color:#F9FAFF;border:1px solid #CCC;text-align:center;margin:0px;padding:0px;margin-top:10px;}
-       #inner-exchange{ background: transparent;border-bottom:1px solid #CCC;width:100%;margin:0px;padding:0px;align:center;text-align:center;}
-      a.V1label{ font-size:12px!important; line-height:16px!important;font-family: arial;text-decoration:none;color:#132105;margin-bottom:6px;}

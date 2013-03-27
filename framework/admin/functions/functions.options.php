@@ -235,28 +235,6 @@ $of_options[] = array( "name" => "Select Ticker",
 					"options" => $of_categories
 					);																												
 
-// Publication and Reports Setting
-$of_options[] = array( "name" => "Publication Report",
-					"type" => "heading");
-					
-$of_options[] = array( "name" => "Select Publication and Reports",
-					"desc" => "Select Publication and Reports category",
-					"id" => "publication_report_cat",
-					"std" => "Select a category:",
-					"type" => "select",
-					"options" => $of_categories
-					);					
-
-$of_options[] = array( "name" => "Disable category image",
-					"desc" => "If Yes, Will be disable category image in Publication and Reports landing page.",
-					"id" => "disable_cat_img",
-					"std" => "no",
-					"type" => "radio",
-					"options" => array(
-						'yes' => 'Yes',
-						'no' => 'No')
-					);					
-					
 // Contact
 $of_options[] = array( "name" => "Contact",
 					"type" => "heading");
