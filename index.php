@@ -74,6 +74,7 @@
                 </article><!-- end .hentry -->
     
             <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
                
           </div>
           <!--end .main-->

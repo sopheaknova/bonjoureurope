@@ -74,6 +74,7 @@
                            the_title();
                       endwhile;
                       endif;
+					  wp_reset_postdata();
                 ?>
                 </marquee>
           </span>
