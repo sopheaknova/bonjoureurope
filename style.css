@@ -1522,3 +1522,7 @@ h5.label-mod{
        width: 70%;
        margin-left: 12px;
     }
+  /* visitor counter*/
+   #visitor-counter{ width:270px; background-color:#F9FAFF;border:1px solid #CCC;text-align:center;margin:0px;padding:0px}
+   #inner-visitor{ background: transparent;border-bottom:1px solid #CCC;width:100%;margin:0px;padding:0px;align:center;text-align:center;}
+   a.V1label{ font-size:12px!important; line-height:16px!important;font-family: arial;text-decoration:none;color:#132105;margin-bottom:6px;}
