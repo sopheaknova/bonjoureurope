@@ -527,20 +527,18 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
     /* -------------------------------------------------- */
     .main {
             float: left;
-            width: 470px;
+            width: 460px;
           
         }
 		.main, .sidebar-left, .sidebar-right{margin:0 10px;}	
         .sidebar-left {
             float: left;
-            width: 180px;
+            width: 160px;
         }
         .sidebar-right{
             float: right;
-            width: 270px; 
+            width: 300px; 
         }
-        .entry-body{ background: #ECEEEF !important;}
-        .entry-body{ margin: 20px 0px;}
 
     /* -------------------------------------------------- */
     /*  Header
@@ -1177,20 +1175,21 @@ table tbody tr:hover td {
     .entry-meta{margin-bottom:20px;}
         .page-title, h1.title{
             text-shadow:0 2px 0px #e8e8e8;
-			font-size:20px;
+			font-size:22px;
 			line-height:28px;  
         }
         
         .entry-body, .page-header{
-            padding:20px 15px; 
-            background:#f9f9f9;
+            padding:15px 10px; 
+            background:#ECEEEF;
             background:url(images/bg-footer-cols.gif);
-            /*-webkit-border-radius: 6px;
+            -webkit-border-radius: 6px;
                -moz-border-radius: 6px;
-                    border-radius: 6px;*/
+                    border-radius: 6px;
             -moz-box-shadow: 0 1px 1px 0 #dbdbdb;
                 -webkit-box-shadow: 0 1px 1px 0 #dbdbdb;
-                    box-shadow: 0 1px 1px 0 #dbdbdb;        
+                    box-shadow: 0 1px 1px 0 #dbdbdb;  
+			margin: 10px 0px;		      
         }
         
         .entry-meta a:hover, .entry-body a:hover {color: #00002b;}

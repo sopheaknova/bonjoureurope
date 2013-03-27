@@ -46,8 +46,8 @@ if( !function_exists('sp_theme_setup') ) {
 		add_image_size( 'large', 440, null, true );
 		add_image_size( 'medium', 211, null, true );
 	
-		add_image_size( 'blog-post-left', 180, 120, true );
-		add_image_size( 'blog-post-right', 270, 180, true );
+		add_image_size( 'blog-post-left', 160, 115, true );
+		add_image_size( 'blog-post-right', 300, 200, true );
 		add_image_size( 'slideshow-header', 980, 250, true );
 		
 		// Add support for post formats

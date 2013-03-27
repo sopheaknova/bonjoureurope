@@ -267,11 +267,9 @@ if( !function_exists('sp_post_content')) {
 			$output .= wp_link_pages( array( 'echo' => false ) );
 
 		} else {
-			$output = sp_excerpt_length(40) ;	
+			$output = '<p>' . sp_excerpt_length(40) . '</p>';	
+			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
 		}
-		
-		/*if( user_can( $user_ID, 'edit_posts' ) )
-			$output .= '<p><a class="button" title="' . __('Edit Post', 'sptheme') . '" href="' . get_edit_post_link( $post->ID ) . '" class="post-edit-link">' . __('Edit', 'sptheme') . '</a></p>';*/
 		
 		return $output;
 
