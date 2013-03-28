@@ -1359,6 +1359,8 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
 		width:190px;
 		float:left;
 		margin-right:20px;
+		margin-bottom:0;
+		margin:5px 0 7px;
 	}
     #footer-cols .columns ul{
         margin-top:    4px;
@@ -1371,6 +1373,7 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
         margin-left: 10px;
 		border-bottom:none;
     }
+	#footer-cols .container, #footer-bottom .container{background-color:#fff;}
 
     /* ----------------------------------------------- */ 
     /* Footer bottom
