@@ -921,13 +921,6 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
                     border: 1px solid #ced8df;
                     font-weight: bold;
                 }
-            
-                #footer .widget_calendar tr td#today {
-                    background: #464646;
-                    border: 1px solid #363636;
-                    font-weight: bold;
-                }
-                
                     .widget_calendar tr td a {
                         display: inline;
                         font-weight: bold;
@@ -1360,10 +1353,14 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
         border-top:    1px solid #CCC;
         border-bottom: 3px solid #CCC;
         padding-left: 93px;
+		font-size:12px;
     }
+	#footer-cols .widget_nav_menu {
+		width:190px;
+		float:left;
+		margin-right:20px;
+	}
     #footer-cols .columns ul{
-        float:         left;
-        width:         190px;
         margin-top:    4px;
         padding:       6px 0px 7px 0px;
         border-left:   1px solid #CCC !important;
@@ -1372,7 +1369,7 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
     #footer-cols .columns ul li{
         list-style-type: none;
         margin-left: 10px;
-        padding: 5px 0;
+		border-bottom:none;
     }
 
     /* ----------------------------------------------- */ 
