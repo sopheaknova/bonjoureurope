@@ -53,6 +53,8 @@ if(isset($_POST['submitted'])) {
 
 
 <?php get_header(); ?>
+<section id="content">
+	<div class="container content-inner">
 
 <!--Map of casaankorhotel-->
 <div id="map-wide">
@@ -70,7 +72,7 @@ if(isset($_POST['submitted'])) {
 		}
 		var map = new google.maps.Map(document.getElementById("c-map"), myOptions);
 		
-		var image = '<?php echo SP_BASE_URL;?>images/bfc-marker.png';
+		var image = '<?php echo SP_BASE_URL;?>images/bonjour-europe-marker.png';
 		var marker = new google.maps.Marker({
 			position: myLatlng, 
 			map: map,
@@ -83,9 +85,7 @@ if(isset($_POST['submitted'])) {
 <div id="c-map"></div>
 </div><!--/#map-wide-->
 
-<section id="content" class="clearfix ">
-	<div class="container content-inner">
-    
+	<div class="entry-contact clearfix">
     <div class="one_third">
 
         <h1 class="page-title"><?php echo the_title(); ?></h1>
@@ -135,7 +135,7 @@ if(isset($_POST['submitted'])) {
             </div>
             <div class="clear"></div>
             <label for="message"><?php _e('Message', 'sptheme'); ?> *</label>
-            <textarea name="message" cols="83" rows="5" class="message"><?php if(isset($_POST['message'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['message']); } else { echo $_POST['message']; } } ?></textarea>
+            <textarea name="message" cols="81" rows="5" class="message"><?php if(isset($_POST['message'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['message']); } else { echo $_POST['message']; } } ?></textarea>
             <?php if($messageError != '') { ?>
                 <span class="error"><?php echo $messageError; ?></span> 
             <?php } ?>
@@ -145,6 +145,7 @@ if(isset($_POST['submitted'])) {
         </form>
         
     </div><!-- end .two_third -->
+    </div><!-- end .entry-body -->
     
     </div><!-- end .container -->
 </section><!-- end #content -->

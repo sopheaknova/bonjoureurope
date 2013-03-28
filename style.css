@@ -591,12 +591,15 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
     /*  Contact
     /* -------------------------------------------------- */
     #map-wide{
-        height:510px;
+        height:410px;
+		margin:20px 0;
     }
     #c-map{
         width:inherit;
-        height:510px;
+        height:410px;
+		
     }
+	.entry-contact{padding:0 12px;}
     form.contact-page .error{
         background:none;
         border:none;
@@ -1384,9 +1387,11 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
     }
     #footer-bottom .footer-menu{
         float: left;
+		padding-top:15px;
     }
     #footer-bottom .footer-menu ul{
         padding-left: 10px;
+		margin-bottom:0;
     }
     #footer-bottom .footer-menu ul li{
         display:    inline;
@@ -1395,21 +1400,25 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
     }
     #footer-bottom .footer-menu ul li a{
         height:       14px;
-        padding: 0px 10px;
+        padding: 0px 10px;		
     }
     #footer-bottom .footer-menu ul li:first-child a{ 
         border-left: none;
     }
-    #footer-bottom .sponsors{
+    .footer-menu a, .sponsors{
+		color:#858585;
+		font-size:11px;	
+	}
+	#footer-bottom .sponsors{
         float: right;
         padding-right: 10px;
     }
-    .sponsors span img{
-        margin: -1px 0px;
-    }
-    .footer-menu , .sponsors {
-        padding: 15px 0px;
-    }
+		.sponsors {
+			padding: 10px 0 0;
+		}
+		.sponsors span img{
+			margin: -1px 0px;
+		}
 
 /* END GENERAL LAYOUT */
 /* --------------------------------------------------------------------------------------------------- */ 
