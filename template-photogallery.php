@@ -30,15 +30,18 @@ Template Name: Gallery Page
             <?php endwhile; ?>
             
             <?php 
-			$args = array('post_type'=>'gallery');
-			$query = new WP_Query( $args  );
+			$album_query = (array('post_type'=>'gallery', 'paged' => $paged, 'posts_per_page' => 14));
 			
-			if ( $query->have_posts() ) :
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			
+			query_posts($album_query);
+			
+			if (have_posts()) : 
 			?>
             <ul class="galleries clearfix">
             
 			<?php
-			while ( $query->have_posts() ) : $query->the_post();
+			while(have_posts()) : the_post();
 			$post_thumb = get_post_thumbnail_id( $post->ID );
 			$image_src = wp_get_attachment_image_src($post_thumb, 'large');
 			$image = aq_resize( $image_src[0], 200, 130, true ); //resize & crop the image
@@ -52,16 +55,26 @@ Template Name: Gallery Page
                 <span class="album-name"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span>
 				</li>
 			
-            <?php 
-			endwhile; 
-			?>
+            <?php endwhile; ?>
             </ul><!-- end .galleries -->
-            <?php
-			endif;
-			wp_reset_postdata();
-			?> 
+            <?php // Pagination
+				if(function_exists('wp_pagenavi'))
+					wp_pagenavi();
+				else 
+					echo sp_pagination();
+			?>		
+          <?php else: ?>
+		
+                <article id="post-0" class="post no-results not-found">
             
-        </div>    
+                    <h3><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for...', 'sptheme' ); ?></h3>
+    
+                </article><!-- end .hentry -->
+    
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+            
+        </div><!-- end .entry-body -->
 
 		
 		
