@@ -267,7 +267,7 @@ if( !function_exists('sp_post_content')) {
 			$output .= wp_link_pages( array( 'echo' => false ) );
 
 		} else {
-			$output = '<p>' . sp_excerpt_length(40) . '</p>';	
+			$output = '<p>' . sp_excerpt_length(20) . '</p>';	
 			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
 		}
 		

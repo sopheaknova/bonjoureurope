@@ -1006,7 +1006,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 			table.wp_wunderground th{
 				font-size:13px;
 				border:none;
-				padding:0;	
+				padding:10px 0 0;	
 				font-weight:normal;
 				color:#6a6a6a;
 			}
