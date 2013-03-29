@@ -40,7 +40,7 @@
            </div>
            <div class="featured" id="slideshow">
 			<?php 
-			$args = array('post_type'=>'slideshow', 'orderby' => 'menu_order');
+			$args = array('post_type'=>'slideshow', 'posts_per_page'	=> -1);
 			$query = new WP_Query( $args  );
 			
 			if ( $query->have_posts() ) :
@@ -63,7 +63,7 @@
 </section>
 <section id="news-ticker">
      <div class="container clearfix">
-          <span id="hot-news"><?php _e('Hot news &nbsp;:&nbsp;', 'sptheme'); ?></span>
+          <span class="hot-news"><?php _e('Hot news &nbsp;:&nbsp;', 'sptheme'); ?></span>
           <span class="text-run">
                 <marquee direction="left" behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
                 <?php 
