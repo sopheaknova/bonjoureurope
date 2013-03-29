@@ -300,7 +300,7 @@ function sp_page_menu_args( $args ) {
 }
 add_filter('wp_page_menu_args', 'sp_page_menu_args');
 
-// Sets the post excerpt length
+// Sets the post excerpt length by word
 function sp_excerpt_length( $length ) {
 	global $post;
 	
@@ -318,6 +318,16 @@ function sp_excerpt_length( $length ) {
 
 }
 add_filter('excerpt_length', 'sp_excerpt_length');
+
+// Sets the post excerpt length by string length
+function sp_excerpt_string_length( $str_length = 130 ) {
+	global $post;
+		$excerpt = $post->post_excerpt;
+		if($excerpt==''){
+		$excerpt = get_the_content('');
+		}
+		echo wp_html_excerpt($excerpt,$str_length) . '...';
+}
 
 // Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis
 function sp_auto_excerpt_more( $more ) {

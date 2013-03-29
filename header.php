@@ -71,7 +71,7 @@
                       $query_cat = new WP_Query(array('cat'=>$cat_id));
                       if( $query_cat->have_posts()) :
                       while( $query_cat->have_posts()) : $query_cat->the_post();
-                           the_title();
+                           the_content();
                       endwhile;
                       endif;
 					  wp_reset_postdata();
