@@ -119,10 +119,12 @@ blockquote {
 p img {
     padding: 0;
 }
-/*img.aligncenter, img.alignright, img.alignleft, img.alignnone {
+
+img.aligncenter, img.alignright, img.alignleft, img.alignnone {
     border: 1px solid #ddd;
-    padding: 6px;
-}*/
+    padding: 4px;
+	background-color: #fcfcfc;
+}
 
 .alignright, img.alignright, a img.alignright {
     float: right;
@@ -136,6 +138,11 @@ p img {
     display: block;
     margin:6px auto 10px !important;
 }
+.size-full{
+	height: auto;
+	max-width: 97.5%;
+	}
+.size-full{width:auto; /* Prevent stretching of full-size images in IE8 */}
 
 /* `Image caption
 ----------------------------------------------------------------------------------------------------*/

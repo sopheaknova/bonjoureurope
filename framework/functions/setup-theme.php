@@ -43,7 +43,7 @@ if( !function_exists('sp_theme_setup') ) {
 		// Post thumbnails
 		add_theme_support('post-thumbnails');
 		
-		add_image_size( 'large', 440, null, true );
+		add_image_size( 'large', 429, null, true );
 		add_image_size( 'medium', 211, null, true );
 	
 		add_image_size( 'blog-post-left', 160, 115, true );
