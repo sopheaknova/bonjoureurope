@@ -41,9 +41,9 @@
 						$img_thumb = aq_resize( $thumb, 440, 250, true );
 						?>
                         <?php if ( $post_type == 'video' ) { ?>
-                        <img src="<?php echo sp_post_image(); ?>" width="440" height="250" align="<?php the_title(); ?>" />
+                        <img src="<?php echo sp_post_image(); ?>" width="440" height="250" alt="<?php the_title(); ?>" class="alignnone" />
                         <?php } else { ?>
-                        <img src="<?php echo $img_thumb; ?>" align="<?php the_title(); ?>" />
+                        <img src="<?php echo $img_thumb; ?>" alt="<?php the_title(); ?>" class="alignnone" />
                         <?php } ?>
                         </div><!-- end .cat-post-img -->
                         

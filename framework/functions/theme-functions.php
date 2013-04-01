@@ -269,7 +269,7 @@ if( !function_exists('sp_post_content')) {
 		} else {
 			//$output = '<p>' . sp_excerpt_length(20) . '</p>';	
 			$output = '<p>' . sp_excerpt_string_length(350) . '</p>';
-			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
+			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 		}
 		
 		return $output;
