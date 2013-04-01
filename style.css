@@ -1082,7 +1082,7 @@ table tbody tr:hover td {
 /*  Pagelist, Event
 /* ---------------------------------------------------------------------- */
 .pagelist-items{
-    padding:12px 12px 3px;
+    padding:12px 12px 12px;
     margin:12px 0;
     background-color:#fcfcfc;
     -webkit-border-radius: 6px;

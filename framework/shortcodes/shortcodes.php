@@ -638,7 +638,7 @@ add_shortcode('audio', 'sp_audio_sc');
 		
 		$post_thumb = get_post_thumbnail_id( $post->ID );
 		$image_src = wp_get_attachment_image_src($post_thumb, 'large');
-		$image = aq_resize( $image_src[0], 267, 175, true ); //resize & crop the image
+		$image = aq_resize( $image_src[0], 118, 118, true ); //resize & crop the image
 		
 		$output .= '<div class="pagelist-items">';
 		
@@ -668,7 +668,7 @@ add_shortcode('audio', 'sp_audio_sc');
 		$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
 
 		$output .= '<p>' . sp_excerpt_length(40) . '</p>';
-		$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
+		$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 		
 		$output .= '</div>';
 		$output .= '<div class="clear"></div>';
@@ -711,7 +711,7 @@ add_shortcode('audio', 'sp_audio_sc');
 		
 		$post_thumb = get_post_thumbnail_id( $post->ID );
 		$image_src = wp_get_attachment_image_src($post_thumb, 'large');
-		$image = aq_resize( $image_src[0], 267, 175, true ); //resize & crop the image
+		$image = aq_resize( $image_src[0], 118, 118, true ); //resize & crop the image
 		
 		$output .= '<div class="pagelist-items">';
 		$output .= '<div class="one_third">';
@@ -725,8 +725,8 @@ add_shortcode('audio', 'sp_audio_sc');
 		$output .= '<div class="two_third last">';
 		$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
 
-		$output .= '<p>' . sp_excerpt_length(40) . '</p>';
-		$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Learn more »', 'sptheme' ) . '</a>';
+		$output .= '<p>' . sp_excerpt_length(6) . '</p>';
+		$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 		
 		$output .= '</div>';
 		$output .= '<div class="clear"></div>';
