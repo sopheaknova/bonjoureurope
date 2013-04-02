@@ -752,7 +752,7 @@ add_shortcode('audio', 'sp_audio_sc');
 			'event_type' => '',
 		), $atts ) );
 	 
-		return get_events( $posts_per_page, $meta_key, $orderby, $event_type );
+		return sp_get_events( $posts_per_page, $meta_key, $orderby, $event_type );
 	}
 	add_shortcode( 'events', 'sp_events_shortcode' );
 

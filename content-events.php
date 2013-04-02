@@ -8,6 +8,10 @@
 	</a>
     <?php } ?>
     
+    <div class="entry-meta">
+	<?php echo sp_events_meta(); ?>
+    </div>
+    
     <div class="entry-content">
 	<?php echo sp_post_content(); ?>
     </div><!-- end .entry-content -->

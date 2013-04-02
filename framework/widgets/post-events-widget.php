@@ -29,6 +29,7 @@ class sp_widget_post_event extends WP_Widget {
 		if ( $title )
 			echo $before_title . $title . $after_title;
 			global $post;
+			$exclude_evt   = $post->ID;
 ?>
 
 		<ul class="event-posts-widget">
@@ -53,6 +54,7 @@ class sp_widget_post_event extends WP_Widget {
 			),
 			'orderby' => 'rand',
 			'no_found_rows' => true,
+			'post__not_in' => array($exclude_evt), // avoid duplicate event in event detail page
 		);
 		
 		$query = new WP_Query( $args  );
@@ -62,7 +64,10 @@ class sp_widget_post_event extends WP_Widget {
         ?>
 
 		<li>       
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>"><strong><?php the_title(); ?></strong></a>
+        <div class="entry-meta">
+        <?php echo sp_events_meta(); ?>
+        </div>
         <?php if ( has_post_thumbnail() ) {?>
         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-post-left') ?></a>
         <?php } ?>

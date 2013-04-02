@@ -31,8 +31,9 @@ require_once( SP_BASE_DIR . 'framework/meta-box/meta-boxes.php' );
 // Add widgets
 require_once( SP_BASE_DIR . 'framework/widgets/widgets.php' );
 
-require_once( SP_BASE_DIR . 'framework/functions/aq_resizer.php');
+// Add functions
 require_once( SP_BASE_DIR . 'framework/functions/theme-functions.php' );
+require_once( SP_BASE_DIR . 'framework/functions/aq_resizer.php');
 
 //Add Shortcodes
 require_once( SP_BASE_DIR . 'framework/shortcodes/shortcodes.php' );

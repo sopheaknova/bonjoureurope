@@ -13,6 +13,8 @@
     </div><!-- end .entry-meta -->
      
     <?php
+	if ( is_singular() ) {
+		
 	$vtype = sp_get_custom_field( 'sp_video_type', $post->ID );
 	$vId = get_post_meta($post->ID, 'sp_video_id', true);
 	?> 
@@ -27,7 +29,9 @@
 <iframe frameborder="0" width="600" height="338" src="http://www.dailymotion.com/embed/video/<?php echo $vId ?>?logo=0"></iframe>
 	<?php } ?>
 	</div><!-- end .entry-video -->
-    <?php } ?>
+    <?php } 
+	}
+	?>
 
 	<div class="entry-content">
 	<?php echo sp_post_content(); ?>

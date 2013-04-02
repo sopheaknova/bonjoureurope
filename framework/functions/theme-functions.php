@@ -324,11 +324,13 @@ if( !function_exists('sp_post_image')) {
 	function sp_post_image($size = 'thumbnail'){
 		global $post;
 		$image = '';
+		
 		//get the post thumbnail;
 		$image_id = get_post_thumbnail_id($post->ID);
 		$image = wp_get_attachment_image_src($image_id, $size);
 		$image = $image[0];
 		if ($image) return $image;
+		
 		//if the post is video post and haven't a feutre image
 		$post_type = get_post_format($post->ID);
 		$vtype = sp_get_custom_field( 'sp_video_type', $post->ID );
@@ -380,17 +382,80 @@ if( !function_exists('sp_events_meta')) {
 		global $post;
 		
 		$neat_event = sp_get_custom_field( 'sp_neat_event', $post->ID );
-		$start_date = sp_get_custom_field( 'sp_event_start_date', $post->ID );
-		$end_date = sp_get_custom_field( 'sp_event_end_date', $post->ID );
+		$start_date = explode('-', sp_get_custom_field( 'sp_event_start_date', $post->ID ));
+		$end_date = explode('-', sp_get_custom_field( 'sp_event_end_date', $post->ID ));
 		
-		$event_start_date = explode('-', $start_date);
-		$event_end_date = explode('-', $end_date);
-		
-		$output = '<span>' . $event_start_date[0] . ' ' . $event_start_date[1] . '</span>';
+		if ( $start_date[1] == $end_date[1] ) {
+			$output = '<span>' . __( 'From ', 'sptheme' ) . $start_date[0]  . '</span>';			
+		} else {
+			$output = '<span>' . __( 'From ', 'sptheme' ) . $start_date[0] . ' ' . sp_event_month_kh( $start_date[1] ) . '</span>';
+		}
 		
 		if ( $neat_event ) {
-		if ( !empty($end_date) )
-			$output .= ' &mdash; <span>' . $event_end_date[0] . ' ' . $event_end_date[1]. '</span>';
+			if ( !empty($end_date) )
+				$output .= ' <span>' . __( ' To ', 'sptheme' ) . $end_date[0] . ' ' . sp_event_month_kh( $end_date[1] ). '</span>';
+		}
+		
+		return $output;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Show Month of Event into string translation
+/* ---------------------------------------------------------------------- */
+if( !function_exists('sp_event_month_kh')) {
+
+	function sp_event_month_kh($month) {
+		
+		switch ($month) {
+			case 'Jan':
+				$output = __( 'January', 'sptheme' );	
+				break;
+				
+			case 'Feb':	
+				$output = __( 'February', 'sptheme' );
+				break;
+				
+			case 'Mar':	
+				$output = __( 'Mar', 'sptheme' );
+				break;
+				
+			case 'Apr':	
+				$output = __( 'April', 'sptheme' );
+				break;
+			
+			case 'May':
+				$output = __( 'May', 'sptheme' );	
+				break;
+				
+			case 'Jun':	
+				$output = __( 'June', 'sptheme' );
+				break;
+				
+			case 'Jul':	
+				$output = __( 'July', 'sptheme' );
+				break;
+				
+			case 'Aug':	
+				$output = __( 'August', 'sptheme' );
+				break;
+			
+			case 'Sep':
+				$output = __( 'September', 'sptheme' );	
+				break;
+				
+			case 'Oct':	
+				$output = __( 'October', 'sptheme' );
+				break;
+				
+			case 'Nov':	
+				$output = __( 'November', 'sptheme' );
+				break;
+				
+			case 'Dec':	
+				$output = __( 'December', 'sptheme' );
+				break;					
 		}
 		
 		return $output;
@@ -401,9 +466,9 @@ if( !function_exists('sp_events_meta')) {
 /* ---------------------------------------------------------------------- */
 /*	View post by events type (Event in France or Europe)
 /* ---------------------------------------------------------------------- */
-if( !function_exists('get_events')) {
+if( !function_exists('sp_get_events')) {
 	
-	function get_events( $posts_per_page = 1, $meta_key= 'Jan', $orderby = 'none', $event_type = null ) {
+	function sp_get_events( $posts_per_page = 1, $meta_key= 'Jan', $orderby = 'none', $event_type = null ) {
 		$args = array(
 			'posts_per_page' => (int) $posts_per_page,
 			'post_type' => 'events',
@@ -422,26 +487,47 @@ if( !function_exists('get_events')) {
 				)
 			),
 			'orderby' => $orderby,
-			'no_found_rows' => true,
+			'paged' => $paged,
 		);
 		
-		$query = new WP_Query( $args  );
-	 
 		$output = '';
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) : $query->the_post();
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		
+		query_posts($args);
+		if ( have_posts() ) {
+	
+			while ( have_posts() ) : the_post();
+			
 			
 	 		$output .= '<div class="event-items">';
 			$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
-			$output .= '<p>' . sp_excerpt_length(40) . '</p>';
+			$output .= '<div class="entry-meta">' . sp_events_meta() . '</div>';
+			
+			if ( sp_post_image() ) {
+				$thumb = sp_post_image('large');
+				$img_thumb = aq_resize( $thumb, 386, 250, true );
+				if ($img_thumb) {
+				$output .= '<a href="'.get_permalink().'"><img src="' . $img_thumb . '" class="alignnone" /></a>';
+				} else {
+				$output .= '<img src="' . SP_BASE_URL . 'images/blank-pagelist-photo.gif" width="386" height="250" alt="Blank photo" class="alignnone" />';	
+				}
+			}
+			
+			$output .= '<p>' . sp_excerpt_length(10) . '</p>';
 			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 			$output .= '</div>';   
 			endwhile;
-			wp_reset_postdata();
+			
+			// Pagination
+			if(function_exists('wp_pagenavi'))
+				$output .= wp_pagenavi();
+			else 
+				$output .= sp_pagination(); 
+			
+			wp_reset_query();
+			
 		}
 		
-		$output .= '<a href="' . get_post_type_archive_link( 'events' ) . '">'. __( 'Events Archive', 'sptheme' ) .'</a>';
-	 
 		return $output;
 	}
 
@@ -567,7 +653,7 @@ if ( !function_exists('sp_breadcrumb') ) {
 	 
 		if ( get_query_var('paged') ) {
 		  if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-		  echo __('Page', 'sptheme') . ' ' . get_query_var('paged');
+		  echo __(' &mdash; Page', 'sptheme') . ' ' . get_query_var('paged');
 		  if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 		}
 	 

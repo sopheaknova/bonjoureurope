@@ -1081,7 +1081,7 @@ table tbody tr:hover td {
 /* ---------------------------------------------------------------------- */
 /*  Pagelist, Event
 /* ---------------------------------------------------------------------- */
-.pagelist-items{
+.pagelist-items, .event-items{
     padding:12px 12px 12px;
     margin:12px 0;
     background-color:#fcfcfc;
@@ -1089,13 +1089,7 @@ table tbody tr:hover td {
        -moz-border-radius: 6px;
             border-radius: 6px;
 }
-/* ---------------------------------------------------------------------- */
-/*  Event
-/* ---------------------------------------------------------------------- */
-.event-items{
-	padding:12px 0 3px;
-    margin:12px 0;
-}
+
 /* ---------------------------------------------------------------------- */
 /*  Gallery
 /* ---------------------------------------------------------------------- */
@@ -1183,6 +1177,10 @@ table tbody tr:hover td {
         font-size:18px; 
         margin-bottom:0;
     }
+	
+	.page-template-default .entry-body{
+		margin:0 10px;	
+	}
     
     .entry-meta{margin-bottom:20px; font-size:12px; color:#999;}
         .page-title, h1.title{
@@ -1432,7 +1430,7 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
 /* END GENERAL LAYOUT */
 /* --------------------------------------------------------------------------------------------------- */ 
 #news-ticker .container{padding:10px 0;}
-#news-ticker .hot-news{padding-left:10px;}
+#news-ticker .hot-news{padding-left:10px;font-weight:bold;color:#00002B;}
 #news-ticker .text-run{
        float: right;
        width: 865px;
