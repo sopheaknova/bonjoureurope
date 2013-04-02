@@ -667,7 +667,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
     /*.widget{ font-size:0.9em; }*/
 
         .widget h5{
-            font-size:14px;
+            font-size:13px;
             font-weight:normal; 
             margin-bottom:0;
         }
@@ -865,7 +865,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         .widget ul { margin-bottom:0; }
 
             .widget li {
-                background: url(images/arrow-right-grey.png) no-repeat 0 11px;
+                background: url(images/arrow-right-grey.png) no-repeat 0 9px;
                 border-bottom: 1px dotted #ced8df;
                 list-style: none;
                 margin: 0;
@@ -875,7 +875,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 
                 .widget li a {
                     display: block;
-                    padding: 5px 0 5px 20px;
+                    padding: 5px 0 5px 10px;
                 }
 
         /* ---------------------------------------- */
@@ -989,7 +989,6 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
         .blog-posts-widget li a{ padding-bottom:0;}
         .blog-posts-widget li a, .textwidget, .textwidget a{color:#00002b;}
         .blog-posts-widget .entry-meta{padding-left:20px;}
-        .blog-posts-widget, .textwidget{ background:#ececec;}
         
         .event-posts-widget li{background:none; padding:10px 0;}
 		.event-posts-widget li a{padding:0;}
@@ -1040,7 +1039,10 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 				.V1textarea{
 					padding:0;	
 				}
-
+		.nav-menu-widget li a, .widget .entry-meta, .widget_categories li a, .blog-posts-widget li a, textwidget{
+			font-size:11px;	
+		}
+		
 /* ---------------------------------------------------------------------- */
 /*  table
 /* ---------------------------------------------------------------------- */

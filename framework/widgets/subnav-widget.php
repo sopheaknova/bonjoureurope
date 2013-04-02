@@ -105,7 +105,7 @@ class SP_Subnav_Widget extends WP_Widget {
 		if ($sidelinks) { ?>
             
             <?php if( $pagename == 'yes' ){ ?>
-            <h3 class="widget-title"><?php echo $submenutitle; ?></h3>
+            <h5 class="label-mod"><?php echo $submenutitle; ?></h5>
             <?php } ?>
             <ul>
             <?php echo $sidelinks; ?>
