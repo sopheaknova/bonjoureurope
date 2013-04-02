@@ -18,6 +18,7 @@
 	    </div>
 </section>
 
+<?php echo $data['google_analytics']; ?>
 
 <?php wp_footer(); ?>
 

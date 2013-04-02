@@ -221,7 +221,13 @@ $of_options[] = array( "name" => "Select News from Home page",
 					"std" => "Select a category:",
 					"type" => "select",
 					"options" => $of_categories
-					);			
+					);	
+$of_options[] = array( "name" => "Number of News show on homepage",
+					"desc" => "",
+					"id" => "news_number",
+					"std" => "5",
+					"type" => "text"
+					);							
 
 // Ticker Setting
 $of_options[] = array( "name" => "Ticker Setting",
@@ -252,35 +258,35 @@ $of_options[] = array( "name" => "Disable value bellow in contact page",
 $of_options[] = array( "name" => "Latitude",
 					"desc" => "Latitude of google map see <a href='http://itouchmap.com'>itouchmap.com</a>",
 					"id" => "map_lat",
-					"std" => "11.551249",
+					"std" => "11.558384",
 					"type" => "text"
 					);
 
 $of_options[] = array( "name" => "Longitude",
 					"desc" => "Longitude of google map see <a href='http://itouchmap.com'>itouchmap.com</a>",
 					"id" => "map_long",
-					"std" => "104.927920",
+					"std" => "104.919965",
 					"type" => "text"
 					);										
 					
 $of_options[] = array( "name" => "Address",
 					"desc" => "Enter your company or organization address",
 					"id" => "address",
-					"std" => "No. 9, St 322 Boeung Keng Kang 1 Chamcamon, Phnom Penh, Cambodia",
+					"std" => "Phnom Penh Tower 10th floor 445, Preah Monivong Boulevard, Phnom Penh - Cambodia",
 					"type" => "text"
 					);	
 					
 $of_options[] = array( "name" => "Telephone line 1",
 					"desc" => "",
 					"id" => "tel_1",
-					"std" => "+855 23 220 362",
+					"std" => "+855 23 955 500",
 					"type" => "text"
 					);	
 					
 $of_options[] = array( "name" => "Telephone line 2",
 					"desc" => "",
 					"id" => "tel_2",
-					"std" => "+855 23 212 847",
+					"std" => "+855 77 222 677",
 					"type" => "text"
 					);																								
 					
@@ -294,39 +300,19 @@ $of_options[] = array( "name" => "Fax",
 $of_options[] = array( "name" => "Email",
 					"desc" => "",
 					"id" => "email",
-					"std" => "betterfactories@ilo.org",
+					"std" => "info@bonjoureurope.com",
 					"type" => "text"
 					);					
 										
 // Footer
 $of_options[] = array( "name" => "Footer",
 					"type" => "heading");
-					
-$of_options[] = array( "name" => "Facebook URL",
-					"desc" => "Enter Facebook url/link",
-					"id" => "fb_url",
-					"std" => "#",
-					"type" => "text"
-					);
-					
-$of_options[] = array( "name" => "Youtube URL",
-					"desc" => "Enter Youtube url/link",
-					"id" => "youtube_url",
-					"std" => "#",
-					"type" => "text"
-					);
-					
-$of_options[] = array( "name" => "URl for ILO (International Labour Organization)",
-					"desc" => "Enter the url of ILO website address",
-					"id" => "ilo_url",
-					"std" => "http://www.ilo.org",
-					"type" => "text"
-					);										
+									
 					
 $of_options[] = array( "name" => "Copyright",
 					"desc" => "footer copyrights text",
 					"id" => "copyrights",
-					"std" => "© Better Factories Cambodia, All right Reserved ",
+					"std" => "© Bonjour Europe, All right Reserved ",
 					"type" => "text"
 					);
 
