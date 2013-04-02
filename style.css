@@ -23,7 +23,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* BASIC HTML */
 body {
     background: #FFFFFF;
-    color:#666;/*#7c7c7c;*/
+    color:#333;/*#7c7c7c;*/
     font: 12px/1.5 Arial, Helvetica, 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -500,19 +500,15 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
            top:0;
     }
 
-#searchform{
-    float:right;
-}
-    #searchform .search-submit {width:0px; text-indent:-9999px;padding:0;background:none;}
+
+#searchform .search-submit {width:0px; text-indent:-9999px;padding:0;background:none;}
     
-    .searchtxt{     
-        width:120px;
+    .searchtxt{ 
         padding:0 30px 0 10px;
-        background:#ffffff url(images/search.png) no-repeat 140px 4px;
-        -moz-box-shadow: 0 1px 1px 0 #333;
-        -webkit-box-shadow: 0 1px 1px 0 #333;
-        box-shadow: 0 1px 1px 0 #333;
+        background:#ffffff url(images/search.png) no-repeat 98% 4px;
     }
+	.sidebar-right .searchtxt{width:258px;}
+	.sidebar-left .searchtxt{width:118px;}
 
 /* ---------------------------------------------------------------------- */
 /*  Content
