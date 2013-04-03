@@ -1287,6 +1287,14 @@ table tbody tr:hover td {
         margin: 0 8px 0 0;
         padding: 2px 8px 4px;
     }
+	.pagination li{
+		list-style:none;
+		border: 1px solid transparent;
+        color: #9c9c9c;
+        display: inline-block;
+        margin: 0 5px 0 0;
+		}
+	.pagination li, .pagination a{padding:0;}
 
     .comments-pagination a, .comments-pagination span {
         margin-right: 5px;

@@ -188,63 +188,6 @@ if ( !function_exists('sp_get_the_post_thumbnail_data') ) {
 }
 
 /* ---------------------------------------------------------------------- */
-/*	Blog navigation
-/* ---------------------------------------------------------------------- */
-
-if ( !function_exists('sp_pagination') ) {
-
-	function sp_pagination( $pages = '', $range = 2 ) {
-
-		$showitems = ( $range * 2 ) + 1;
-
-		global $paged, $wp_query;
-
-		if( empty( $paged ) )
-			$paged = 1;
-
-		if( $pages == '' ) {
-
-			$pages = $wp_query->max_num_pages;
-
-			if( !$pages )
-				$pages = 1;
-
-		}
-
-		if( 1 != $pages ) {
-
-			$output = '<nav class="pagination">';
-
-			// if( $paged > 2 && $paged >= $range + 1 /*&& $showitems < $pages*/ )
-				// $output .= '<a href="' . get_pagenum_link( 1 ) . '" class="next">&laquo; ' . __('First', 'sptheme') . '</a>';
-
-			if( $paged > 1 /*&& $showitems < $pages*/ )
-				$output .= '<a href="' . get_pagenum_link( $paged - 1 ) . '" class="next">&larr; ' . __('Previous', 'sptheme') . '</a>';
-
-			for ( $i = 1; $i <= $pages; $i++ )  {
-
-				if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems ) )
-					$output .= ( $paged == $i ) ? '<span class="current">' . $i . '</span>' : '<a href="' . get_pagenum_link( $i ) . '">' . $i . '</a>';
-
-			}
-
-			if ( $paged < $pages /*&& $showitems < $pages*/ )
-				$output .= '<a href="' . get_pagenum_link( $paged + 1 ) . '" class="prev">' . __('Next', 'sptheme') . ' &rarr;</a>';
-
-			// if ( $paged < $pages - 1 && $paged + $range - 1 <= $pages /*&& $showitems < $pages*/ )
-				// $output .= '<a href="' . get_pagenum_link( $pages ) . '" class="prev">' . __('Last', 'sptheme') . ' &raquo;</a>';
-
-			$output .= '</nav>';
-
-			return $output;
-
-		}
-
-	}
-
-}
-
-/* ---------------------------------------------------------------------- */
 /*	Show the post content
 /* ---------------------------------------------------------------------- */
 
@@ -469,6 +412,19 @@ if( !function_exists('sp_event_month_kh')) {
 if( !function_exists('sp_get_events')) {
 	
 	function sp_get_events( $posts_per_page = 1, $meta_key= 'Jan', $orderby = 'none', $event_type = null ) {
+		
+		$temp ='';
+		$output = '';
+		
+		if (is_front_page())
+		{
+			$current_page = (get_query_var('page')) ? get_query_var('page') : 1;
+		}
+		else
+		{
+			$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		}
+		
 		$args = array(
 			'posts_per_page' => (int) $posts_per_page,
 			'post_type' => 'events',
@@ -487,17 +443,15 @@ if( !function_exists('sp_get_events')) {
 				)
 			),
 			'orderby' => $orderby,
-			'paged' => $paged,
+			'paged' => $current_page,
 		);
 		
-		$output = '';
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$post_list = new WP_Query($args);
 		
-		query_posts($args);
-		if ( have_posts() ) {
-	
-			while ( have_posts() ) : the_post();
+		ob_start();
+		if ($post_list && $post_list->have_posts()) {
 			
+			while ($post_list->have_posts()) : $post_list->the_post();
 			
 	 		$output .= '<div class="event-items">';
 			$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
@@ -518,17 +472,107 @@ if( !function_exists('sp_get_events')) {
 			$output .= '</div>';   
 			endwhile;
 			
-			// Pagination
-			if(function_exists('wp_pagenavi'))
-				$output .= wp_pagenavi();
-			else 
-				$output .= sp_pagination(); 
-			
-			wp_reset_query();
-			
+			$total = $post_list->max_num_pages;
+		
+			if (!$isotope && $total > 1)
+			{?>
+				<nav class="pagination clearfix">
+					<?php
+					// structure of "format" depends on whether we're using pretty permalinks
+					$permalink_structure = get_option('permalink_structure');
+					if (empty($permalink_structure))
+					{
+						if (is_front_page())
+						{
+							$format = '?paged=%#%';
+						}
+						else
+						{
+							$format = '&paged=%#%';
+						}
+					}
+					else
+					{
+						$format = 'page/%#%/';
+					}
+					
+					echo paginate_links(array(
+						'base'		=> get_pagenum_link(1) . '%_%',
+						'format'	=> $format,
+						'current'	=> $current_page,
+						'total'		=> $total,
+						'mid_size'	=> 1,
+						'prev_text' => '&larr; ' . __('Previous', 'sptheme'),
+						'next_text' => __('Next', 'sptheme') . ' &rarr;',
+						'type'		=> 'list'
+					));?>
+				
+					</nav><?php
+			} 
 		}
+		$temp = ob_get_clean();
+		$output .= $temp;
+		
+		wp_reset_postdata();
 		
 		return $output;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Blog navigation
+/* ---------------------------------------------------------------------- */
+
+if ( !function_exists('sp_pagination') ) {
+
+	function sp_pagination( $pages = '', $range = 2 ) {
+
+		$showitems = ( $range * 2 ) + 1;
+
+		global $paged, $wp_query;
+
+		if( empty( $paged ) )
+			$paged = 1;
+
+		if( $pages == '' ) {
+
+			$pages = $wp_query->max_num_pages;
+
+			if( !$pages )
+				$pages = 1;
+
+		}
+
+		if( 1 != $pages ) {
+
+			$output = '<nav class="pagination">';
+
+			// if( $paged > 2 && $paged >= $range + 1 /*&& $showitems < $pages*/ )
+				// $output .= '<a href="' . get_pagenum_link( 1 ) . '" class="next">&laquo; ' . __('First', 'sptheme') . '</a>';
+
+			if( $paged > 1 /*&& $showitems < $pages*/ )
+				$output .= '<a href="' . get_pagenum_link( $paged - 1 ) . '" class="next">&larr; ' . __('Previous', 'sptheme') . '</a>';
+
+			for ( $i = 1; $i <= $pages; $i++ )  {
+
+				if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems ) )
+					$output .= ( $paged == $i ) ? '<span class="current">' . $i . '</span>' : '<a href="' . get_pagenum_link( $i ) . '">' . $i . '</a>';
+
+			}
+
+			if ( $paged < $pages /*&& $showitems < $pages*/ )
+				$output .= '<a href="' . get_pagenum_link( $paged + 1 ) . '" class="prev">' . __('Next', 'sptheme') . ' &rarr;</a>';
+
+			// if ( $paged < $pages - 1 && $paged + $range - 1 <= $pages /*&& $showitems < $pages*/ )
+				// $output .= '<a href="' . get_pagenum_link( $pages ) . '" class="prev">' . __('Last', 'sptheme') . ' &raquo;</a>';
+
+			$output .= '</nav>';
+
+			return $output;
+
+		}
+
 	}
 
 }
