@@ -10,7 +10,7 @@
         
 			<section class="main">
 		
-        <h2 class="title-mod">
+        <h1 class="title-mod">
 		<?php
 			if ( is_day() ) :
 				printf( __( 'Daily Archives: %s', 'sptheme' ), '<span>' . get_the_date() . '</span>' );
@@ -22,7 +22,7 @@
 				_e( 'Archives', 'sptheme' );
 			endif;
 		?>
-        </h2>
+        </h1>
 
 
 		<?php if ( have_posts() ) : ?>

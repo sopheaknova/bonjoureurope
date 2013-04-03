@@ -155,8 +155,8 @@ if ( !function_exists('sp_check_sidebar_position') ) {
 		$site_structure = of_get_option('sp_site_structure');
 
 		if( $page_layout == '2cl' || ( $page_layout == '' && $site_structure == '2cl' ) )*/
-		if( $page_layout == '2cl' )
-			return 'sidebar-left';	
+		if( $page_layout == '1col' )
+			return 'full-width';	
 
 		return null;
 
@@ -459,7 +459,7 @@ if( !function_exists('sp_get_events')) {
 			
 			if ( sp_post_image() ) {
 				$thumb = sp_post_image('large');
-				$img_thumb = aq_resize( $thumb, 386, 250, true );
+				$img_thumb = aq_resize( $thumb, 406, 250, true );
 				if ($img_thumb) {
 				$output .= '<a href="'.get_permalink().'"><img src="' . $img_thumb . '" class="alignnone" /></a>';
 				} else {

@@ -16,6 +16,9 @@ class sp_widget_post_event extends WP_Widget {
 		}
 		
 	function widget( $args, $instance ) {
+		
+		global $post;
+		
 		extract( $args );
 		/* User-selected settings. */
 		$title = apply_filters('widget_title', $instance['title'] );
@@ -25,16 +28,9 @@ class sp_widget_post_event extends WP_Widget {
 		/* Before widget (defined by themes). */
 		echo $before_widget;
 
-		/* Title of widget (before and after defined by themes). */
-		if ( $title )
-			echo $before_title . $title . $after_title;
-			global $post;
-			$exclude_evt   = $post->ID;
-?>
-
-		<ul class="event-posts-widget">
-		<?php 
-        
+		
+		$exclude_evt   = $post->ID;
+		
 		$args = array(
 			'posts_per_page' => $count,
 			'post_type' => 'events',
@@ -60,8 +56,14 @@ class sp_widget_post_event extends WP_Widget {
 		$query = new WP_Query( $args  );
 		
         if ( $query->have_posts() ) :
-			while ( $query->have_posts() ) : $query->the_post();
-        ?>
+		
+		/* Title of widget (before and after defined by themes). */
+		if ( $title )
+			echo $before_title . $title . $after_title;
+?>
+
+		<ul class="event-posts-widget">
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<li>       
 		<a href="<?php the_permalink(); ?>"><strong><?php the_title(); ?></strong></a>
@@ -73,16 +75,24 @@ class sp_widget_post_event extends WP_Widget {
         <?php } ?>
 		</li>
 
-		<?php endwhile; ?>
+		<?php 
+		endwhile; 
+		?>
+        </ul>
+         
+         <a href="<?php echo get_post_type_archive_link( 'events' ); ?>" class="read-more button"><?php _e('Other events', 'sptheme'); ?></a>
+         <div class="clear"></div>
+         
+        <?php 
+		/* After widget (defined by themes). */
+		echo $after_widget;
+		?>
         <?php  else:  ?>
         <!-- Else in here -->
         <?php  endif; ?>
         <?php wp_reset_postdata(); ?>
-		</ul>
-
 <?php 
-		/* After widget (defined by themes). */
-		echo $after_widget;
+		
 	}
 	
 	function update( $new_instance, $old_instance ) {

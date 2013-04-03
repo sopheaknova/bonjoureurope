@@ -41,10 +41,10 @@
                         <?php
 						$post_type = get_post_format($post->ID);
 						$thumb = sp_post_image('large');
-						$img_thumb = aq_resize( $thumb, 440, 250, true );
+						$img_thumb = aq_resize( $thumb, 430, 250, true );
 						?>
                         <?php if ( $post_type == 'video' ) { ?>
-                        <img src="<?php echo sp_post_image(); ?>" width="440" height="250" alt="<?php the_title(); ?>" class="alignnone" />
+                        <img src="<?php echo sp_post_image(); ?>" width="430" height="250" alt="<?php the_title(); ?>" class="alignnone" />
                         <?php } else { ?>
                         <img src="<?php echo $img_thumb; ?>" alt="<?php the_title(); ?>" class="alignnone" />
                         <?php } ?>

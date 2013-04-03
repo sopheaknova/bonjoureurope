@@ -34,7 +34,7 @@ body {
 
 /* Some basic settings */
 h1, h1 .button { font-size: 26px; }
-h2, h2 .button { font-size: 20px; }
+h2, h2 .button { font-size: 24px; }
 h3, h3 .button { font-size: 16px; }
 h4, h4 .button { font-size: 14px; }
 h5, h5 .button { font-size: 13px; }
@@ -659,7 +659,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
     /*  Widgets
     /* -------------------------------------------------- */
 
-    .widget { margin: 0 0 30px;}
+    .widget { margin: 0 0 20px;}
     /*.widget{ font-size:0.9em; }*/
 
         .widget h5{
@@ -667,6 +667,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
             font-weight:normal; 
             margin-bottom:0;
         }
+		.widget img{margin-bottom:0;}
         
         .widget-title {
             font-size: 18px;
@@ -1035,7 +1036,7 @@ input.placeholder, textarea.placeholder, .wpcf7 .watermark { color: #b0b0b0; }
 				.V1textarea{
 					padding:0;	
 				}
-		.nav-menu-widget li a, .widget .entry-meta, .widget_categories li a, .blog-posts-widget li a, textwidget{
+		.nav-menu-widget li a, .widget .entry-meta, .widget_categories li a, .blog-posts-widget li a, textwidget, .widget_nav_menu li a{
 			font-size:11px;	
 		}
 		
@@ -1176,7 +1177,7 @@ table tbody tr:hover td {
         margin-bottom:0;
     }
 	
-	.page-template-default .entry-body{
+	.full-width .entry-body{
 		margin:0 10px;	
 	}
     
@@ -1429,8 +1430,8 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
 		.sponsors {
 			padding: 10px 0 0;
 		}
-		.sponsors span img{
-			margin: -1px 0px;
+		.sponsors img{
+			margin: -1px 0 0;
 		}
 
 /* END GENERAL LAYOUT */

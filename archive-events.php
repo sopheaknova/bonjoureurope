@@ -6,11 +6,11 @@
 
 	<div class="container content-inner clearfix">
 
-		<?php get_sidebar('left'); ?>
+		<?php get_sidebar('event'); ?>
         
 		<section class="main">
 		
-        <h2 class="title-mod"><?php _e( 'Events Archive', 'sptheme' ); ?></h2>
+        <h1 class="title-mod"><?php _e( 'Events Archive', 'sptheme' ); ?></h1>
 
 
 		<?php if ( have_posts() ) : ?>

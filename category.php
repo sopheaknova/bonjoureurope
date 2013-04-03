@@ -11,7 +11,7 @@
         
 			<section class="main">
 		
-        <h2 class="title-mod"><?php printf( __( 'Category Archives: %s', 'sptheme' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
+        <h1 class="title-mod"><?php printf( __( 'Category Archives: %s', 'sptheme' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 
 		<?php if ( have_posts() ) : ?>
 

@@ -658,7 +658,7 @@ add_shortcode('audio', 'sp_audio_sc');
 			if ($image) {
 			$output .= '<a href="'.get_permalink().'"><img src="' . $image . '" class="alignnone" /></a>';
 			} else {
-			$output .= '<img src="' . SP_BASE_URL . 'images/blank-pagelist-photo.gif" alt="Blank photo" class="alignnone" />';
+			$output .= '<img src="' . SP_BASE_URL . 'images/blank-pagelist-photo.gif" width="118" height="118" alt="Blank photo" class="alignnone" />';
 			}
 		endif;
 		
@@ -667,7 +667,7 @@ add_shortcode('audio', 'sp_audio_sc');
 		$output .= '<div class="two_third last">';
 		$output .= '<h3 class="name"><a href="'.get_permalink().'">' . get_the_title() .'</a></h3>';
 
-		$output .= '<p>' . sp_excerpt_length(40) . '</p>';
+		$output .= '<p>' . sp_excerpt_length(6) . '</p>';
 		$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 		
 		$output .= '</div>';
@@ -718,7 +718,7 @@ add_shortcode('audio', 'sp_audio_sc');
 		if ($image) {
 			$output .= '<a href="'.get_permalink().'"><img src="' . $image . '" class="alignnone" /></a>';
 		} else {
-			$output .= '<img src="' . SP_BASE_URL . 'images/blank-pagelist-photo.gif" alt="Blank photo" class="alignnone" />';
+			$output .= '<img src="' . SP_BASE_URL . 'images/blank-pagelist-photo.gif" width="118" height="118" alt="Blank photo" class="alignnone" />';
 		}
 		$output .= '</div>';
 		

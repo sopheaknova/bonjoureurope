@@ -8,7 +8,7 @@
 
 		<?php if( $has_sidebar ): ?>
 		
-		<?php get_sidebar('left'); ?>
+		<?php get_sidebar('gallery'); ?>
         
 			<section class="main">
 
