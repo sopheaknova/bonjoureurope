@@ -32,7 +32,7 @@ require_once( $path_to_wp.'/wp-load.php' );
 
 				<th class="label">
 
-					<label for="shortcode-dropdown"><?php _e('All shortcodes', 'sptheme'); ?></label>
+					<label for="shortcode-dropdown"><?php _e('All Shortcodes', 'sptheme'); ?></label>
 
 				</th>
 
@@ -1359,7 +1359,7 @@ require_once( $path_to_wp.'/wp-load.php' );
 
 				<td class="field">
                     
-                    <?php wp_dropdown_categories( array( 'hierarchical' => 1, 'depth' => '2', 'name' => 'postlist-category', 'orderby' => 'name' ) ); ?>
+                    <?php wp_dropdown_categories( array( 'hierarchical' => 1, 'depth' => '2', 'name' => 'postlist-categories', 'orderby' => 'name' ) ); ?>
 
 				</td>
            
