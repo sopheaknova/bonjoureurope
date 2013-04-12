@@ -24,7 +24,7 @@ if( !function_exists('sp_theme_setup') ) {
 	function sp_theme_setup() {
 		
 		// Make theme available for translation
-		load_theme_textdomain( $shortname, SP_BASE_DIR . 'languages' );
+		load_theme_textdomain( 'bonjoureurope', SP_BASE_DIR . 'languages' );
 		
 		$locale = get_locale();
     	$locale_file = get_template_directory() . "/languages/$locale.php";
@@ -105,14 +105,13 @@ if ( !WP_PRETTY_PHOTO_PLUGIN_ACTIVE ) {
 /* ---------------------------------------------------------------------- */
 /*	Insert Custom Sized Image Into Post Using Media Gallery
 /* ---------------------------------------------------------------------- */
-/*add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
+add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 function custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(
-		'portrait-thumb' => 'Portrait',
-		'landscape-thumb' => 'Landscape'
+		'slideshow-header' => 'Slideshow'
 	);
 	return array_merge( $sizes, $custom_sizes );
-}*/
+}
 
 /* ---------------------------------------------------------------------- */
 /*	Register sidebars
