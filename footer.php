@@ -1,3 +1,4 @@
+<?php global $data; ?>
 <section id="footer-cols">
          <div class="container">
          	   <?php get_sidebar('footer');?>
