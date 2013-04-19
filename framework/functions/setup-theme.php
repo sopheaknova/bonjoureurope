@@ -411,6 +411,8 @@ function sp_remove_link_on_admin_login_info() {
   
 add_filter('login_headerurl', 'sp_remove_link_on_admin_login_info');
 
+remove_action( 'wp_head', array($sitepress, 'meta_generator_tag' ) );
+
 // Change login logo title
 function sp_change_loging_logo_title(){
 	return 'Go to '.get_bloginfo('name').' Homepage';
