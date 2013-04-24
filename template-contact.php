@@ -4,6 +4,8 @@ Template Name: Contact us Page
 */
 ?>
 <?php 
+global $data;
+
 $nameError = '';
 $emailError = '';
 $messageError = '';
@@ -37,7 +39,7 @@ if(isset($_POST['submitted'])) {
 		}
 			
 		if(!isset($hasError)) {
-			$emailTo = 'sopheak.peas@novacambodia.com'; //$data['email'];
+			$emailTo = ''; //$data['email'];
 			if (!isset($emailTo) || ($emailTo == '') ){
 				$emailTo = $data['email'];
 			}
