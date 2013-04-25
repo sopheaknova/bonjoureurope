@@ -215,6 +215,8 @@ if( !function_exists('sp_post_content')) {
 			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
 		}
 		
+			$output .= sp_show_social_share();
+		
 		return $output;
 
 	}
@@ -229,12 +231,26 @@ if( !function_exists('sp_post_meta')) {
 
 	function sp_post_meta() {
 
-		global $post;
+		global $post, $data;
 		
+		$posttags = get_the_tags();
+		
+		if ($data['disable_post_by'] == 'no') {
 		$output = '<span>' . __('By: ', 'sptheme') . '</span>';
 		$output .= '<span class="title">' . get_the_author() . ' &mdash; </span>';
+		}
+		
 		$output .= sp_posted_on() . ' &mdash; ';
 		$output .= '<span class="post-categories">' . __(' in: ', 'sptheme') . ' ' . get_the_category_list(', ') . '</span>';
+		
+		if ($posttags) {
+		$output .= '<span class="post-tags">';	
+		  foreach($posttags as $tag) {
+			$output .= __(' tags: ', 'sptheme') . '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a> '; 
+		  }
+		$output .= '</span>';  
+		}
+		
 		
 		return $output;
 	}
@@ -469,6 +485,7 @@ if( !function_exists('sp_get_events')) {
 			
 			$output .= '<p>' . sp_excerpt_length(10) . '</p>';
 			$output .= '<a href="'.get_permalink().'" class="learn-more button">' . __( 'Read more »', 'sptheme' ) . '</a>';
+			$output .= sp_show_social_share();
 			$output .= '</div>';   
 			endwhile;
 			
@@ -573,6 +590,29 @@ if ( !function_exists('sp_pagination') ) {
 
 		}
 
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Show social share icons
+/* ---------------------------------------------------------------------- */
+if ( !function_exists('sp_show_social_share') ) {
+
+	function sp_show_social_share() {
+		global $post, $data;
+		
+		if ($data['disable_share_post'] == 'no') {
+		if ( in_array( 'share-this/sharethis.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {	
+			$output = '<div class="sp-sharethis">';
+			$output .= '<span class="st_facebook_hcount" st_title="' . get_the_title() . '" st_url="' . get_permalink($post->ID) . '" displayText="facebook"></span>';
+			$output .= '<span class="st_plusone_hcount" st_title="' . get_the_title() . '" st_url="' . get_permalink($post->ID) . '" displayText="plusone"></span>';
+			$output .= '<span class="st_twitter_hcount" st_title="' . get_the_title() . '" st_url="' . get_permalink($post->ID) . '" displayText="twitter"></span>';
+			$output .= '<span class="st_fblike_hcount" st_title="' . get_the_title() . '" st_url="' . get_permalink($post->ID) . '" displayText="fblike"></span>';
+			$output .= '</div>';
+		}
+		}
+		return $output;
 	}
 
 }

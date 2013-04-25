@@ -206,15 +206,16 @@ $of_options[] = array( "name" => "Disable Share button",
 						'no' => 'No')
 					);
 					
-$of_options[] = array( "name" => "Disable post meta",
-					"desc" => "Show or hide Posted By",
-					"id" => "disable_post_meta",
+$of_options[] = array( "name" => "Disable posted by author",
+					"desc" => "Show or hide posted by",
+					"id" => "disable_post_by",
 					"std" => "no",
 					"type" => "radio",
 					"options" => array(
 						'yes' => 'Yes',
 						'no' => 'No')
 					);
+										
 $of_options[] = array( "name" => "Select News from Home page",
 					"desc" => "Select News category",
 					"id" => "news_cat",

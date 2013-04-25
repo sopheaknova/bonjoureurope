@@ -6,12 +6,12 @@
 
 	<div class="container content-inner clearfix">
 
-		<?php get_sidebar('event'); ?>
-        
-		<section class="main">
 		
-        <h1 class="title-mod"><?php _e( 'Events Archive', 'sptheme' ); ?></h1>
-
+		<?php get_sidebar('left'); ?>
+        
+			<section class="main">
+		
+        <h1 class="title-mod"><?php printf( __( 'Tag Archives: %s', 'sptheme' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -19,11 +19,9 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
-					<?php get_template_part( 'content', 'events' ); ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 
 				</article><!-- end .hentry -->
-                
-                <?php echo sp_show_social_share(); ?>
 
 			<?php endwhile; ?>
 
