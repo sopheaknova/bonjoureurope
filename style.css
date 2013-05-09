@@ -1453,6 +1453,7 @@ ul.menu-nav>li.current_page_item>a, ul.menu-nav>li.current-menu-item>a, ul.menu-
        width: 865px;
 	   padding-right:10px;
     }
+#news-ticker .text-run p{margin-bottom:0;}	
 /* Read more */
 a.read-more{ 
        float: right;

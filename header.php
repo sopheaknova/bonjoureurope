@@ -68,7 +68,7 @@
                 <marquee direction="left" behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
                 <?php 
                       $cat_id = get_cat_ID($data['ticker_cat']);
-                      $query_cat = new WP_Query(array('cat'=>$cat_id));
+                      $query_cat = new WP_Query(array('cat'=>$cat_id, 'posts_per_page'	=> 1));
                       if( $query_cat->have_posts()) :
                       while( $query_cat->have_posts()) : $query_cat->the_post();
                            the_content();
