@@ -886,12 +886,12 @@
 
 		} else if( $currentShortcode === 'postlist' ) {
 
-			var category = $('#postlist-category').val(),
+			var category = $('#postlist-categories').val(),
 				postNum = $('#postlist-num').val();
 
 			shortcode = '[postlist';
 			
-			shortcode += ' category="' + category + '"';
+			shortcode += ' categories="' + category + '"';
 			
 			shortcode += ' num="' + postNum + '"'; 
 
