@@ -240,7 +240,25 @@ $of_options[] = array( "name" => "Select Ticker",
 					"std" => "Select a category:",
 					"type" => "select",
 					"options" => $of_categories
-					);																												
+					);		
+
+// Style Options
+$of_options[] = array( "name" => "Styling Options",
+					"type" => "heading");
+
+$of_options[] = array( "name" => "Body text link color",
+					"desc" => "Color link in body text",
+					"id" => "body_link_color",
+					"std" => "",
+					"type" => "color"
+					);
+					
+$of_options[] = array( "name" => "Body text hover color",
+					"desc" => "Color link in body text when put mouse over",
+					"id" => "body_hover_color",
+					"std" => "",
+					"type" => "color"
+					);																																				
 
 // Contact
 $of_options[] = array( "name" => "Contact",

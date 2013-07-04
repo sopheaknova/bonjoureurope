@@ -282,10 +282,24 @@ function sp_enqueue_scripts() {
 add_action('wp_print_scripts', 'sp_enqueue_scripts');
 
 function sp_dynamic_js() {
+	
+	global $data;
+	
 	if (!is_admin()) {
 		wp_register_script( 'scroll_to_top',    SP_BASE_URL . 'js/scroll.to.top.js', array(), THEME_VERSION, false, false );
 		wp_enqueue_script('scroll_to_top');
 	}
+	?>
+	<style type="text/css">
+	<?php if ( $data['body_hover_color'] !=='' ) ?>	
+		.entry-meta a:hover, .entry-body a:hover {color: <?php echo $data['body_hover_color']; ?>;}
+    
+    <?php if ( $data['body_link_color'] !=='' ) ?>    
+        .entry-meta a, .entry-body a {
+            color: <?php echo $data['body_link_color']; ?>;
+        }
+	</style>
+	<?php
 }
 add_action( 'wp_head', 'sp_dynamic_js' );
 
