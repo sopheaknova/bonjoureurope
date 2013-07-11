@@ -16,6 +16,7 @@
           	   <h1 class="title-mod"><?php _e('News and Hot Informations', 'sptheme'); ?></h1>
           	   <?php 
 			   $cat_id = get_cat_ID($data['news_cat']);
+         
                $post_num = $data['news_number'];
 			   
 			    $query  = new WP_Query(array('cat'=>$cat_id, 'paged' => $paged, 'posts_per_page' => $post_num));
