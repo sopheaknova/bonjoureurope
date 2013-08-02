@@ -32,22 +32,19 @@ if(isset($_POST['submitted'])) {
 			$hasError = true;
 		} else {
 			if(function_exists('stripslashes')) {
-				$messages = stripslashes(trim($_POST['comments']));
+				$messages = stripslashes(trim($_POST['message']));
 			} else {
-				$messages = trim($_POST['comments']);
+				$messages = trim($_POST['message']);
 			}
 		}
 			
 		if(!isset($hasError)) {
-			$emailTo = ''; //$data['email'];
-			if (!isset($emailTo) || ($emailTo == '') ){
-				$emailTo = $data['email'];
-			}
-			$subject = '[Contact Form] From '.$name;
+			$emailTo = $data['email'];
+			$subject = 'From '.$name;
 			$body = "Name: $name \n\nEmail: $email \n\nComments: $messages";
 			$headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 			
-			mail($emailTo, $subject, $body, $headers);
+			wp_mail($emailTo, $subject, $body, $headers);
 			$emailSent = true;
 		}
 	
